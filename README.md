@@ -5,8 +5,8 @@ This is a tic-tac-toe program that is unbeatable. In a 3x3 grid, you face off ag
 pick the next best possible move for themselves. At best you will be able to tie by filling up the board.
 
 # Required Installations
-- Clojure
-- Lein
+- [Clojure](https://clojure.org/guides/install_clojure)
+- [Leiningen](https://leiningen.org/)
 
 # How to Play
 1. Pull the repository to local git
