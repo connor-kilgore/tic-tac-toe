@@ -10,6 +10,6 @@ pick the next best possible move for themselves. At best you will be able to tie
 
 # How to Play
 1. Pull the repository to local git
-2. Navigate into tic-tac-toe directory
-3. execute the command <strong>"lein run"</strong>
+2. Navigate into the tic-tac-toe directory
+3. Execute the command <strong>"lein run"</strong>
 4. Have fun losing!
