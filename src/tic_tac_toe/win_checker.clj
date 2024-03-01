@@ -1,5 +1,4 @@
-(ns tic-tac-toe.win-checker
-  (:require [tic-tac-toe.symbols :as symbols]))
+(ns tic-tac-toe.win-checker)
 
 (defn horizontal-win? [board position]
   (and (not (= (get board position) 0))

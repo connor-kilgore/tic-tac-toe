@@ -5,6 +5,9 @@
 
 (defn is-ai-turn? [depth] (even? depth))
 
+(defn sleep-n-seconds [n]
+  (Thread/sleep (* n 1000)))
+
 (defn get-current-symbol [depth symbol]
   (if (is-ai-turn? depth) symbol (symbols/reverse-symbol symbol)))
 
@@ -38,3 +41,8 @@
          (if (> depth 0)
            (val (get-best-score depth scores))
            (get moves (key (get-best-score depth scores)))))))))
+
+(defn play-turn [board ai-symbol]
+  (println "\nThinking of move...")
+  (sleep-n-seconds 2)
+  (mini-max-algo board ai-symbol))

@@ -1,11 +1,6 @@
 (ns tic-tac-toe.tic-tac-toe-board
   (:require [tic-tac-toe.symbols :as symbols]))
 
-(def empty-board
-  [0 0 0
-   0 0 0
-   0 0 0])
-
 (def divider "\n-------")
 
 (defn get-tttb-string
