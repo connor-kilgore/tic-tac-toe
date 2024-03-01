@@ -13,7 +13,9 @@
 (defn play-user-turn [symbol board]
   (let [position (parse-position (menu/get-selection menu/rows-options) (menu/get-selection menu/cols-options))
         new-board (tttb/place-value-into-tttb board symbol position)]
-    (if (not (= new-board board)) new-board (recur symbol board))))
+    (if (not (= new-board board))
+      new-board
+      (do (println "\nSpace already taken, try again.") (recur symbol board)))))
 
 (defn sleep-n-seconds [n]
   (Thread/sleep (* n 1000)))

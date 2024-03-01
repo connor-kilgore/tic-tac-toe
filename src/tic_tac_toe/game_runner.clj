@@ -30,7 +30,8 @@
       (if retry? (recur) (menu/close-program)))))
 
 (def menu-options
-  {:print-statement menu/print-start-selection
+  {:print-statement (fn [] (println "\nPlease select an option!\n[1] Start Game.\n[2] Close Program."))
+   :error (fn [] (println "\nPlease select a valid option."))
    "1"              initialize-game
    "2"              menu/close-program})
 
