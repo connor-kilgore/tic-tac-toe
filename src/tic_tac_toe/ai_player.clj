@@ -1,13 +1,15 @@
 (ns tic-tac-toe.ai-player
-  (:require [tic-tac-toe.tic-tac-toe-board :as tttb]))
+  (:require [tic-tac-toe.tic-tac-toe-board :as tttb]
+            [tic-tac-toe.symbols :as symbols]
+            [tic-tac-toe.win-checker :as win?]))
 
 (defn is-ai-turn? [depth] (even? depth))
 
 (defn get-current-symbol [depth symbol]
-  (if (is-ai-turn? depth) symbol (get tttb/reverse-symbols symbol)))
+  (if (is-ai-turn? depth) symbol (symbols/reverse-symbol symbol)))
 
 (defn get-end-score [board depth ai-symbol]
-  (let [end-condition (tttb/get-winner-or-tie board)]
+  (let [end-condition (win?/get-winner-or-tie board)]
     (cond (nil? end-condition) nil
           (= end-condition "tie") 0
           (not (= end-condition ai-symbol)) (- depth 10)

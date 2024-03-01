@@ -1,7 +1,9 @@
 (ns tic-tac-toe.game-runner
   (:require [tic-tac-toe.tic-tac-toe-board :as tttb]
             [tic-tac-toe.turn-system :as turn]
-            [tic-tac-toe.menu-selector :as menu]))
+            [tic-tac-toe.menu-selector :as menu]
+            [tic-tac-toe.win-checker :as win?]
+            [tic-tac-toe.symbols :as symbols]))
 
 (defn print-starting-game [] (println "Starting game..."))
 
@@ -16,11 +18,11 @@
 
 (defn game-loop [board round user-symbol]
   (tttb/print-tttb board)
-  (let [winner (tttb/get-winner board)]
+  (let [winner (win?/get-winner board)]
     (cond (not (nil? winner)) winner
           (> round (count board)) nil
           (turn/is-user-turn? user-symbol round) (recur (turn/play-user-turn user-symbol board) (inc round) user-symbol)
-          :else (recur (turn/play-ai-turn board (get tttb/reverse-symbols user-symbol)) (inc round) user-symbol))))
+          :else (recur (turn/play-ai-turn board (symbols/reverse-symbol user-symbol)) (inc round) user-symbol))))
 
 (defn initialize-game []
   (let [user-symbol (menu/get-selection menu/symbol-options)]
@@ -35,5 +37,5 @@
    "1"              initialize-game
    "2"              menu/close-program})
 
-(defn start-menu []
+(defn -main []
   (menu/start-menu menu-options))
