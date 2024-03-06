@@ -1,34 +1,23 @@
 (ns tic-tac-toe.win-checker)
 
-(defn horizontal-win? [board position]
-  (and (not (= (get board position) 0))
-       (= (get board position) (get board (inc position)) (get board (+ position 2)))))
+(defn get-rows [board]
+  (->> board (partition (int (Math/sqrt (count board))))))
 
-(defn get-horizontal-winner
-  ([board] (get-horizontal-winner board 0))
-  ([board position]
-   (cond (>= position 9) nil
-         (horizontal-win? board position) (get board position)
-         :else (recur board (+ position 3)))))
+(defn get-cols [board]
+  (->> (map-indexed vector board) (group-by #(mod (first %) (int (Math/sqrt (count board))))) (map second) (map (fn [inner-map] (map #(second %) inner-map)))))
 
-(defn vertical-win? [board position]
-  (and (not (= (get board position) 0))
-       (= (get board position) (get board (+ position 3)) (get board (+ position 6)))))
+(defn get-diagonals [board]
+  (let [rows (get-rows board)]
+    (list (for [[i v] (map-indexed vector rows)] (nth v i)) (for [[i v] (map-indexed vector rows)] (nth v (- (dec (count v)) i))))))
 
-(defn get-vertical-winner
-  ([board] (get-vertical-winner board 0))
-  ([board position]
-   (cond (>= position 3) nil
-         (vertical-win? board position) (get board position)
-         :else (recur board (inc position)))))
+(defn get-horizontal-winner [board]
+  (->> (get-rows board) (filter #(and (not (= (apply + %) 0)) (apply = %))) (first) (first)))
 
-(defn diagonal-win? [board]
-  (and (not (= (get board 4) 0))
-       (or (= (get board 0) (get board 4) (get board 8))
-           (= (get board 2) (get board 4) (get board 6)))))
+(defn get-vertical-winner [board]
+  (->> (get-cols board) (filter #(and (not (= (apply + %) 0)) (apply = %))) (first) (first)))
 
 (defn get-diagonal-winner [board]
-  (if (diagonal-win? board) (get board 4) nil))
+  (->> (get-diagonals board) (filter #(and (not (= (apply + %) 0)) (apply = %))) (first) (first)))
 
 (defn get-winner [board]
   (first (filter #(not (nil? %)) [(get-vertical-winner board)
