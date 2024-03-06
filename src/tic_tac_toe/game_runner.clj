@@ -25,25 +25,33 @@
           :else (recur (turn/play-next-turn board players round) (inc round) players))))
 
 (defn initialize-one-player []
-  (print-starting-game)
-  (let [user-symbol (menu/get-selection menu/symbol-options)
-        players {"Player 1" user-symbol "AI" (-> user-symbol (mod 2) inc)}
-        winner (game-loop empty-board 1 players)
-        retry? (end-game winner players)]
-      (if retry? (recur) (menu/close-program))))
-(defn initialize-two-player []
-  (print-starting-game)
-  (let [players {"Player 1" 1 "Player 2" 2}
-        winner (game-loop empty-board 1 players)
-        retry? (end-game winner players)]
-    (if retry? (recur) (menu/close-program))))
+  (let [user-symbol (menu/get-selection menu/symbol-options)]
+    {"Player" user-symbol "AI" (-> user-symbol (mod 2) inc)}))
+
+(def board-size-options
+  {:print-statement (fn [] (println "\nPlease select a board size!\n[1] 3x3 (classic)\n[2] 4x4"))
+   :error          (fn [] (println "\n Please select a valid size!"))
+   "1"             3
+   "2"             4})
+
+(defn make-board [size]
+  (into [] (repeat (* size size) 0)))
+
+(defn initialize-game [players]
+  (let [size (menu/get-selection board-size-options)]
+    (print-starting-game)
+    (let [winner (game-loop (make-board size) 1 players)
+          retry? (end-game winner players)]
+      (if retry? (recur players) nil))))
 
 (def menu-options
   {:print-statement (fn [] (println "\nPlease select an option!\n[1] Single Player.\n[2] Two Player.\n[3] Close Program."))
    :error           (fn [] (println "\nPlease select a valid option."))
-   "1"              initialize-one-player
-   "2"              initialize-two-player
+   "1"              (fn [] (initialize-game (initialize-one-player)))
+   "2"              (fn [] (initialize-game {"Player 1" 1 "Player 2" 2}))
    "3"              menu/close-program})
 
 (defn -main []
-  (menu/start-menu menu-options))
+  (if (= (menu/start-menu menu-options) menu/close-program)
+    (menu/close-program)
+    (recur)))
