@@ -38,20 +38,43 @@
     (apply max-key val scores)
     (apply min-key val scores)))
 
+(defn get-new-alpha [score alpha depth]
+  (if (is-ai-turn? depth)
+    )
+  )
+
+(defn get-new-beta []
+  )
+
 (defn mini-max-algo
-  ([board symbol] (mini-max-algo board symbol 0))
-  ([board symbol depth]
+  ([board symbol] (mini-max-algo board symbol 0 (-> board (count) (inc) (* -1)) (-> board (count) (inc))))
+  ([board symbol depth alpha beta]
    (let [end-condition (get-end-score board symbol)]
      (if (not (nil? end-condition))
        end-condition
-       (let [moves (make-hypothetical-moves board (get-current-symbol depth symbol))
-             scores (if (below-depth-limit? board)
-                      (second (first moves))
-                      (apply merge (for [[k v] moves] {k (mini-max-algo v symbol (inc depth))})))]
+       (let [moves (make-hypothetical-moves board (get-current-symbol depth symbol))]
 
          (cond (below-depth-limit? board) scores
                (> depth 0) (val (get-best-score depth scores))
-               :else (get moves (key (get-best-score depth scores)))))))))
+               :else (get moves (key (get-best-score depth scores))))
+
+         (loop [i 0
+                a alpha
+                b beta
+                best-score []]
+
+           (cond (below-depth-limit? board) (second (first moves))
+                 (= depth 0) (if (>= i (count board)) (get moves (first best-score)) (second best-score))
+                 (nil? (get moves i)) (recur (inc i) a b best-score)
+                 (<= b a) (second best-score)
+                 :else (let [score [i (mini-max-algo (get moves i) symbol (inc depth) a b)]
+                             new-score (get-new-score best-score score depth)
+                             new-alpha (get-new-alpha score a depth)
+                             new-beta (get-new-beta score b depth)]
+                         (recur (inc i) new-alpha new-beta new-score)
+                         )))
+
+         )))))
 
 (defn play-turn [board ai-symbol]
   (println "\nThinking of move...")
