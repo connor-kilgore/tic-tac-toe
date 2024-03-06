@@ -39,12 +39,14 @@
     (apply min-key val scores)))
 
 (defn get-new-alpha [score alpha depth]
-  (if (is-ai-turn? depth)
-    )
-  )
+  (if (and (is-ai-turn? depth) (not (empty? score)))
+    (max (second score) alpha)
+    alpha))
 
-(defn get-new-beta []
-  )
+(defn get-new-beta [score beta depth]
+  (if (or (is-ai-turn? depth) (empty? score))
+    beta
+    (min (second score) beta)))
 
 (defn mini-max-algo
   ([board symbol] (mini-max-algo board symbol 0 (-> board (count) (inc) (* -1)) (-> board (count) (inc))))
