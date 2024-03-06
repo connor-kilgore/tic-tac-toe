@@ -1,15 +1,8 @@
 (ns tic-tac-toe.tic-tac-toe-board
   (:require [tic-tac-toe.symbols :as symbols]))
 
-(def divider "\n-------")
-
-(defn get-tttb-string
-  ([board] (get-tttb-string board 0))
-  ([board i]
-   (cond (= i 8) (str (symbols/symbol-at i board) "|" divider)
-         (= (mod i 3) 2) (str (symbols/symbol-at i board) "|" (get-tttb-string board (inc i)))
-         (= (mod i 3) 0) (str divider "\n|" (symbols/symbol-at i board) "|" (get-tttb-string board (inc i)))
-         :else (str (symbols/symbol-at i board) "|" (get-tttb-string board (inc i))))))
+(defn get-tttb-string [board]
+  (str "\n" (->> (map #(interpose "|" %) (->> board (map symbols/symbols) (partition (int (Math/sqrt (count board)))))) (interpose (str "\n" (apply str (repeat (+ (Math/sqrt (count board)) (dec (Math/sqrt (count board)))) "=")) "\n")) (apply concat) (apply str))))
 
 (defn print-tttb [board]
   (println (get-tttb-string board)))
