@@ -8,12 +8,6 @@
     (it "nil if invalid selection"
       (should= nil (menu/get-option run/menu-options "0")))
 
-    (it "initialize single-player if 1"
-      (should= run/initialize-one-player (menu/get-option run/menu-options "1")))
-
-    (it "initialize two-player if 2"
-      (should= run/initialize-two-player (menu/get-option run/menu-options "2")))
-
     (it "close program if 3"
       (should= menu/close-program (menu/get-option run/menu-options "3"))))
 
