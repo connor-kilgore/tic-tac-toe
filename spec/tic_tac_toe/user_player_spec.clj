@@ -5,5 +5,5 @@
 (describe "User Player"
   (context "parses the position on the board with row and col"
     (it "gets the position with a proper row and col"
-      (should= 0 (user/parse-position 0 0))
-      (should= 3 (user/parse-position 1 0)))))
+      (should= 0 (user/parse-position 3 0 0))
+      (should= 3 (user/parse-position 3 1 0)))))
