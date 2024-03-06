@@ -43,4 +43,9 @@
                                (tttb/place-value-into-tttb 1 7))))
 
     (it "returns board input if value is attempting to overwrite X or O"
-      (should= mixed-board (tttb/place-value-into-tttb mixed-board 2 0)))))
+      (should= mixed-board (tttb/place-value-into-tttb mixed-board 2 0))))
+
+  (context "gives the absolute depth of the board"
+    (it "0 if the board is empty"
+      (should= 0 (tttb/get-absolute-depth [0 0 0 0 0 0 0 0 0]))))
+  )

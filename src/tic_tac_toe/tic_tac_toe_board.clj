@@ -12,3 +12,9 @@
 
 (defn place-value-into-tttb [board value position]
   (if (not (spot-available? board position)) board (assoc board position value)))
+
+(defn not-zero? [x]
+  (not (zero? x)))
+
+(defn get-absolute-depth [board]
+  (count board )(->> board (filter not-zero?) (count)))
