@@ -15,17 +15,23 @@
 (describe "Tic Tac Toe Board"
   (context "gets string representing tttb"
     (it "an empty board"
-      (should= "\n-------\n| | | |\n-------\n| | | |\n-------\n| | | |\n-------" (tttb/get-tttb-string empty-board)))
+      (should= "\n | | \n=====\n | | \n=====\n | | "  (tttb/get-tttb-string (repeat 9 0))))
 
     (it "a mixed board of x's and o's factoring in the color changes for x and o"
-      (should= (str "\n-------\n|" (get symbols/symbols 1) "| |" (get symbols/symbols 2) "|\n-------\n| |" (get symbols/symbols 2) "|" (get symbols/symbols 1) "|\n-------\n|" (get symbols/symbols 2) "|" (get symbols/symbols 1) "| |\n-------") (tttb/get-tttb-string mixed-board))))
+      (should= (str "\n" (get symbols/symbols 1) "| |" (get symbols/symbols 2) "\n=====\n |" (get symbols/symbols 2) "|" (get symbols/symbols 1) "\n=====\n" (get symbols/symbols 2) "|" (get symbols/symbols 1) "| ") (tttb/get-tttb-string mixed-board))))
 
   (context "places a value into the tttb"
+    (it "checks if the position is empty to place"
+      (should (tttb/spot-available? empty-board 0))
+      (should-not (tttb/spot-available? [1 0 0 0 0 0 0 0 0] 0))
+      (should-not (tttb/spot-available? [1 1 1 1 1 1 1 1 1] 4)))
+
     (it "an X into top left corner"
       (should= [0 0 2 0 0 0 0 0 0] (tttb/place-value-into-tttb empty-board 2 2)))
-
     (it "an X and O in opposite corners"
       (should= [1 0 0 0 0 0 0 0 2] (-> empty-board (tttb/place-value-into-tttb 1 0) (tttb/place-value-into-tttb 2 8))))
+    (it "an X on a spot where an O exists"
+      (should= [2 0 0 0 0 0 0 0 0] (-> empty-board (tttb/place-value-into-tttb 2 0) (tttb/place-value-into-tttb 1 0))))
 
     (it "a series of inputs"
       (should= mixed-board (-> empty-board
