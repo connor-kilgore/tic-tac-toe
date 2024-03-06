@@ -49,19 +49,19 @@
 
   (context "makes the best possible move based on an algorithm"
     (it "moves to any space when absolute depth is below 5"
-      (should= [0 0 0 0 0 0 0 0 1] (ai/mini-max-algo [0 0 0 0 0 0 0 0 0] 1))
-      (should= [1 0 0 0 0 0 0 0 2] (ai/mini-max-algo [1 0 0 0 0 0 0 0 0] 2)))
+      (should= [1 0 0 0 0 0 0 0 0] (ai/mini-max-algo [0 0 0 0 0 0 0 0 0] 1))
+      (should= [1 2 0 0 0 0 0 0 0] (ai/mini-max-algo [1 0 0 0 0 0 0 0 0] 2)))
 
 
-    (xit "actively blocks player movement until tie or ai wins"
+    (it "actively blocks player movement until tie or ai wins"
       (should= [1 2 1 0 2 2 2 1 1] (ai/mini-max-algo [1 2 1 0 2 0 2 1 1] 2))
       (should= [1 2 1 0 2 0 0 0 0] (ai/mini-max-algo [1 0 1 0 2 0 0 0 0] 2))
       (should= [1 2 1 0 2 0 0 2 1] (ai/mini-max-algo [1 2 1 0 2 0 0 0 1] 2))
       (should= [1 2 1 2 2 0 0 1 0] (ai/mini-max-algo [1 2 1 0 2 0 0 1 0] 2))
       (should= [1 2 1 2 2 1 0 1 2] (ai/mini-max-algo [1 2 1 2 2 1 0 1 0] 2)))
 
-    (xit "works for 4x4 too"
-      (should= [] (ai/mini-max-algo [0 0 0 0 0 1 0 0 0 1 2 0 0 1 0 2] 2)))
+    (it "works for 4x4 too"
+      (should= [0 2 0 0 0 1 0 0 0 1 2 0 0 1 0 2] (ai/mini-max-algo [0 0 0 0 0 1 0 0 0 1 2 0 0 1 0 2] 2)))
     )
 
 

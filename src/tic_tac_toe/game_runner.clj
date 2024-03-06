@@ -52,6 +52,5 @@
    "3"              menu/close-program})
 
 (defn -main []
-  (if (= (menu/start-menu menu-options) menu/close-program)
-    (menu/close-program)
+  (if (not (= (menu/start-menu menu-options) -1))
     (recur)))

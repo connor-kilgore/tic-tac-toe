@@ -4,8 +4,8 @@
             [tic-tac-toe.win-checker :as win?]))
 
 (def depth-limit
-  {9  3
-   16 5})
+  {9  5
+   16 6})
 
 (defn below-depth-limit? [board]
   (< (tttb/get-absolute-depth board) (get depth-limit (count board))))
@@ -23,8 +23,8 @@
         depth (tttb/get-absolute-depth board)]
     (cond (= end-condition "tie") 0
           (nil? end-condition) nil
-          (not (= end-condition ai-symbol)) (- depth 10)
-          :else (- 10 depth))))
+          (not (= end-condition ai-symbol)) (- depth (inc (count board)))
+          :else (- (inc (count board)) depth))))
 
 (defn make-hypothetical-moves
   ([board symbol] (make-hypothetical-moves board symbol 0 {}))
@@ -48,6 +48,17 @@
     beta
     (min (second score) beta)))
 
+(defn get-new-score [score-1 score-2 depth]
+  (cond (empty? score-1) score-2
+        (empty? score-2) score-1
+        (is-ai-turn? depth) (apply max-key second [score-2 score-1])
+        :else (apply min-key second [score-2 score-1])))
+
+(defn get-depth-score [depth]
+  (if (is-ai-turn? depth)
+    depth
+    (* depth -1)))
+
 (defn mini-max-algo
   ([board symbol] (mini-max-algo board symbol 0 (-> board (count) (inc) (* -1)) (-> board (count) (inc))))
   ([board symbol depth alpha beta]
@@ -56,27 +67,24 @@
        end-condition
        (let [moves (make-hypothetical-moves board (get-current-symbol depth symbol))]
 
-         (cond (below-depth-limit? board) scores
-               (> depth 0) (val (get-best-score depth scores))
-               :else (get moves (key (get-best-score depth scores))))
-
          (loop [i 0
                 a alpha
                 b beta
                 best-score []]
 
-           (cond (below-depth-limit? board) (second (first moves))
-                 (= depth 0) (if (>= i (count board)) (get moves (first best-score)) (second best-score))
+           (cond (> depth (get depth-limit (count board))) (get-depth-score depth)
+                 (and (= depth 0) (>= i (count board))) (get moves (first best-score))
+                 (>= i (count board)) (second best-score)
                  (nil? (get moves i)) (recur (inc i) a b best-score)
-                 (<= b a) (second best-score)
+                 (<= b a) (recur (inc i) a b best-score)
                  :else (let [score [i (mini-max-algo (get moves i) symbol (inc depth) a b)]
                              new-score (get-new-score best-score score depth)
                              new-alpha (get-new-alpha score a depth)
                              new-beta (get-new-beta score b depth)]
                          (recur (inc i) new-alpha new-beta new-score)
-                         )))
+                         ))))
 
-         )))))
+         ))))
 
 (defn play-turn [board ai-symbol]
   (println "\nThinking of move...")

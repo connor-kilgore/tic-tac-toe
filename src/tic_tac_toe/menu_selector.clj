@@ -4,7 +4,8 @@
   (println "\nWelcome to the Unsolvable Tic Tac Toe!"))
 
 (defn close-program []
-  (println "\nClosing Program! Goodbye."))
+  (println "\nClosing Program! Goodbye.")
+  -1)
 
 (def retry-options
   {:print-statement (fn [] (println "\nWould you like to try again?\n[1] Yes\n[2] No"))
