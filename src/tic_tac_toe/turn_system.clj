@@ -12,6 +12,6 @@
 (defn play-next-turn [board players round]
   (let [current-player (get-current-player players round)]
     (println (str "\n=== " (first current-player) " ==="))
-    (if (= (first current-player) "AI")
+    (if (= (subs (first current-player) 0 2) "AI")
       (ai/play-turn board (second current-player))
       (user/play-turn board (second current-player)))))

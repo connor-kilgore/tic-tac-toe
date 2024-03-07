@@ -86,5 +86,4 @@
 
 (defn play-turn [board ai-symbol]
   (println "\nThinking of move...")
-  (sleep-n-seconds 2)
   (mini-max-algo board ai-symbol))

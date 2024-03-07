@@ -4,11 +4,15 @@
   (->> board (partition (int (Math/sqrt (count board))))))
 
 (defn get-cols [board]
-  (->> (map-indexed vector board) (group-by #(mod (first %) (int (Math/sqrt (count board))))) (map second) (map (fn [inner-map] (map #(second %) inner-map)))))
+  (->> (map-indexed vector board)
+       (group-by #(mod (first %) (int (Math/sqrt (count board)))))
+       (map second)
+       (map (fn [inner-map] (map #(second %) inner-map)))))
 
 (defn get-diagonals [board]
   (let [rows (get-rows board)]
-    (list (for [[i v] (map-indexed vector rows)] (nth v i)) (for [[i v] (map-indexed vector rows)] (nth v (- (dec (count v)) i))))))
+    (list (for [[i v] (map-indexed vector rows)] (nth v i))
+          (for [[i v] (map-indexed vector rows)] (nth v (- (dec (count v)) i))))))
 
 (defn get-horizontal-winner [board]
   (->> (get-rows board) (filter #(and (not (= (apply + %) 0)) (apply = %))) (first) (first)))

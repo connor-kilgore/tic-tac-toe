@@ -8,8 +8,8 @@
     (it "nil if invalid selection"
       (should= nil (menu/get-option run/menu-options "0")))
 
-    (it "close program if 3"
-      (should= menu/close-program (menu/get-option run/menu-options "3"))))
+    (it "close program if 4"
+      (should= menu/close-program (menu/get-option run/menu-options "4"))))
 
   (context "gives a symbol based on a symbol selection"
     (it "nil if invalid selection"

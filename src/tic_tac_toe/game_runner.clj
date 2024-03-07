@@ -43,11 +43,12 @@
       (if retry? (recur players) nil))))
 
 (def menu-options
-  {:print-statement (fn [] (println "\nPlease select an option!\n[1] Single Player.\n[2] Two Player.\n[3] Close Program."))
+  {:print-statement (fn [] (println "\nPlease select an option!\n[1] Single Player.\n[2] Two Player.\n[3] AI vs. AI\n[4] Close Program."))
    :error           (fn [] (println "\nPlease select a valid option."))
    "1"              (fn [] (initialize-game (initialize-one-player)))
    "2"              (fn [] (initialize-game {"Player 1" 1 "Player 2" 2}))
-   "3"              menu/close-program})
+   "3"              (fn [] (initialize-game {"AI 1" 1 "AI 2" 2}))
+   "4"              menu/close-program})
 
 (defn -main []
   (if (not (= (menu/start-menu menu-options) -1))
