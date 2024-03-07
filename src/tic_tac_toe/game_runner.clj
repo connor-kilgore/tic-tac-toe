@@ -30,7 +30,7 @@
 
 (def board-size-options
   {:print-statement (fn [] (println "\nPlease select a board size!\n[1] 3x3 (classic)\n[2] 4x4"))
-   :error          (fn [] (println "\n Please select a valid size!"))
+   :error          (fn [] (println "\nPlease select a valid size!"))
    "1"             3
    "2"             4})
 

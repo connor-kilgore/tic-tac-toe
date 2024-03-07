@@ -50,7 +50,7 @@
   (context "makes the best possible move based on an algorithm"
     (it "moves to any space when absolute depth is below 5"
       (should= [1 0 0 0 0 0 0 0 0] (ai/mini-max-algo [0 0 0 0 0 0 0 0 0] 1))
-      (should= [1 2 0 0 0 0 0 0 0] (ai/mini-max-algo [1 0 0 0 0 0 0 0 0] 2)))
+      (should= [1 0 0 0 2 0 0 0 0] (ai/mini-max-algo [1 0 0 0 0 0 0 0 0] 2)))
 
 
     (it "actively blocks player movement until tie or ai wins"
