@@ -82,11 +82,9 @@
                              new-alpha (get-new-alpha score a depth)
                              new-beta (get-new-beta score b depth)]
                          (recur (inc i) new-alpha new-beta new-score)
-                         ))))
-
-         ))))
+                         ))))))))
 
 (defn play-turn [board ai-symbol]
   (println "\nThinking of move...")
-  ;(sleep-n-seconds 2)
+  (sleep-n-seconds 2)
   (mini-max-algo board ai-symbol))

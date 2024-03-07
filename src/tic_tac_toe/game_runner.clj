@@ -4,8 +4,6 @@
             [tic-tac-toe.menu-selector :as menu]
             [tic-tac-toe.win-checker :as win?]))
 
-(def empty-board [0 0 0 0 0 0 0 0 0])
-
 (defn print-starting-game [] (println "Starting game..."))
 
 (defn get-end-condition-string [winner players]

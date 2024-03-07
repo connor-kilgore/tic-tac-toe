@@ -20,11 +20,11 @@
    "o"              2 "O" 2})
 
 (def rows-options
-  {9 {:print-statement (fn [] (println "\nSelect a row [0-2]"))
-      :error           (fn [] (println "\nPlease select a valid row."))
-      "0"              0
-      "1"              1
-      "2"              2}
+  {9  {:print-statement (fn [] (println "\nSelect a row [0-2]"))
+       :error           (fn [] (println "\nPlease select a valid row."))
+       "0"              0
+       "1"              1
+       "2"              2}
    16 {:print-statement (fn [] (println "\nSelect a row [0-3]"))
        :error           (fn [] (println "\nPlease select a valid row."))
        "0"              0
@@ -33,11 +33,11 @@
        "3"              3}})
 
 (def cols-options
-  {9 {:print-statement (fn [] (println "Select a column [0-2]"))
-      :error           (fn [] (println "\nPlease select a valid column."))
-      "0"              0
-      "1"              1
-      "2"              2}
+  {9  {:print-statement (fn [] (println "Select a column [0-2]"))
+       :error           (fn [] (println "\nPlease select a valid column."))
+       "0"              0
+       "1"              1
+       "2"              2}
    16 {:print-statement (fn [] (println "Select a column [0-3]"))
        :error           (fn [] (println "\nPlease select a valid column."))
        "0"              0

@@ -61,8 +61,7 @@
       (should= [1 2 1 2 2 1 0 1 2] (ai/mini-max-algo [1 2 1 2 2 1 0 1 0] 2)))
 
     (it "works for 4x4 too"
-      (should= [0 2 0 0 0 1 0 0 0 1 2 0 0 1 0 2] (ai/mini-max-algo [0 0 0 0 0 1 0 0 0 1 2 0 0 1 0 2] 2)))
-    )
+      (should= [0 2 0 0 0 1 0 0 0 1 2 0 0 1 0 2] (ai/mini-max-algo [0 0 0 0 0 1 0 0 0 1 2 0 0 1 0 2] 2))))
 
 
   (context "gives the best best score for the algorithm"
@@ -71,7 +70,5 @@
       (should= [3 4] (ai/get-best-score 0 {3 4 1 2})))
     (it "the smallest score if not the ai's turn"
       (should= [1 2] (ai/get-best-score 1 {1 2 3 4}))
-      (should= [1 2] (ai/get-best-score 1 {3 4 1 2}))))
-
-  )
+      (should= [1 2] (ai/get-best-score 1 {3 4 1 2})))))
 

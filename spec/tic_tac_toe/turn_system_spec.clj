@@ -13,7 +13,4 @@
 
     (it "returning the player if it's their turn"
       (should= [:player1 1] (turn/get-current-player {:player1 1 :ai 1} 1))
-      (should= [:ai 1] (turn/get-current-player {:player1 1 :ai 1} 2))
-      )
-    )
-  )
+      (should= [:ai 1] (turn/get-current-player {:player1 1 :ai 1} 2)))))
