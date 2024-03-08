@@ -1,9 +1,9 @@
 (ns tic-tac-toe.symbols)
 
 (def symbols
-  {0 " "
-   1 (str "\u001b[38;5;" 1 "m" "X" "\u001b[0m")
-   2 (str "\u001b[38;5;" 4 "m" "O" "\u001b[0m")})
+  {0 0
+   1 (str "\u001b[38;5;" 1 "m" " X" "\u001b[0m")
+   2 (str "\u001b[38;5;" 4 "m" " O" "\u001b[0m")})
 
 (def reverse-symbols
   {1 2

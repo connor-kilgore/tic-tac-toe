@@ -14,11 +14,17 @@
 
 (describe "Tic Tac Toe Board"
   (context "gets string representing tttb"
+
+    (it "converts the board values to a more readable set of symbols"
+      (should= [[(get symbols/symbols 1) (get symbols/symbols 2) " 2"] [(get symbols/symbols 2) " 4" (get symbols/symbols 1)] [" 6" (get symbols/symbols 1) (get symbols/symbols 2)]] (tttb/convert-board-vals-to-symbols [1 2 0 2 0 1 0 1 2]))
+      (should= [[" 0" " 1" " 2" " 3"] [" 4" " 5" " 6" " 7"] [" 8" " 9" "10" "11"] ["12" "13" "14" "15"]] (tttb/convert-board-vals-to-symbols (repeat 16 0))))
+
     (it "an empty board"
-      (should= "\n | | \n=====\n | | \n=====\n | | "  (tttb/get-tttb-string (repeat 9 0))))
+      (should= "\n 0| 1| 2\n========\n 3| 4| 5\n========\n 6| 7| 8"  (tttb/get-tttb-string (repeat 9 0)))
+      (should= "\n 0| 1| 2| 3\n===========\n 4| 5| 6| 7\n===========\n 8| 9|10|11\n===========\n12|13|14|15" (tttb/get-tttb-string (repeat 16 0))))
 
     (it "a mixed board of x's and o's factoring in the color changes for x and o"
-      (should= (str "\n" (get symbols/symbols 1) "| |" (get symbols/symbols 2) "\n=====\n |" (get symbols/symbols 2) "|" (get symbols/symbols 1) "\n=====\n" (get symbols/symbols 2) "|" (get symbols/symbols 1) "| ") (tttb/get-tttb-string mixed-board))))
+      (should= (str "\n" (get symbols/symbols 1) "| 1|" (get symbols/symbols 2) "\n========\n 3|" (get symbols/symbols 2) "|" (get symbols/symbols 1) "\n========\n" (get symbols/symbols 2) "|" (get symbols/symbols 1) "| 8") (tttb/get-tttb-string mixed-board))))
 
   (context "places a value into the tttb"
     (it "checks if the position is empty to place"

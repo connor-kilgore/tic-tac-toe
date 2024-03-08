@@ -6,9 +6,7 @@
   (+ (* row side-len) col))
 
 (defn play-turn [board symbol]
-  (let [position (parse-position (int (Math/sqrt (count board)))
-                                 (menu/get-selection (get menu/rows-options (count board)))
-                                 (menu/get-selection (get menu/cols-options (count board))))
+  (let [position (menu/get-selection (get menu/move-options (count board)))
         new-board (tttb/place-value-into-tttb board symbol position)]
     (if (not (= new-board board))
       new-board

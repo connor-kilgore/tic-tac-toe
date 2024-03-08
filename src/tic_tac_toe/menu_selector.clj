@@ -19,31 +19,15 @@
    "x"              1 "X" 1
    "o"              2 "O" 2})
 
-(def rows-options
-  {9  {:print-statement (fn [] (println "\nSelect a row [0-2]"))
-       :error           (fn [] (println "\nPlease select a valid row."))
-       "0"              0
-       "1"              1
-       "2"              2}
-   16 {:print-statement (fn [] (println "\nSelect a row [0-3]"))
-       :error           (fn [] (println "\nPlease select a valid row."))
-       "0"              0
-       "1"              1
-       "2"              2
-       "3"              3}})
-
-(def cols-options
-  {9  {:print-statement (fn [] (println "Select a column [0-2]"))
-       :error           (fn [] (println "\nPlease select a valid column."))
-       "0"              0
-       "1"              1
-       "2"              2}
-   16 {:print-statement (fn [] (println "Select a column [0-3]"))
-       :error           (fn [] (println "\nPlease select a valid column."))
-       "0"              0
-       "1"              1
-       "2"              2
-       "3"              3}})
+(def move-options
+  {9  (conj
+        {:print-statement (fn [] (println "\nSelect a space [0-8]"))
+         :error           (fn [] (println "\nPlease select a valid space."))}
+        (zipmap (map str (range 9)) (range 9)))
+   16 (conj
+        {:print-statement (fn [] (println "\nSelect a space [0-15]"))
+         :error           (fn [] (println "\nPlease select a valid space."))}
+        (zipmap (map str (range 16)) (range 16)))})
 
 (defn get-option [selected-map option]
   (get selected-map option))
