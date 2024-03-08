@@ -29,6 +29,13 @@
          :error           (fn [] (println "\nPlease select a valid space."))}
         (zipmap (map str (range 16)) (range 16)))})
 
+(def difficulty-options
+  {:print-statement (fn [] (println "\nPlease select a difficulty!\n[1] Unbeatable\n[2] Medium\n[3] Easy"))
+   :error           (fn [] (println "\nPlease select a valid difficulty."))
+   "1"              10
+   "2"              9
+   "3"              0})
+
 (defn get-option [selected-map option]
   (get selected-map option))
 

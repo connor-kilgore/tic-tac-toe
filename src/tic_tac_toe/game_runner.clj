@@ -15,12 +15,12 @@
   (println (get-end-condition-string winner players))
   (menu/get-selection menu/retry-options))
 
-(defn game-loop [board round players]
+(defn game-loop [board round players difficulty]
   (tttb/print-tttb board)
   (let [winner (win?/get-winner board)]
     (cond (not (nil? winner)) winner
           (> round (count board)) nil
-          :else (recur (turn/play-next-turn board players round) (inc round) players))))
+          :else (recur (turn/play-next-turn board players round difficulty) (inc round) players difficulty))))
 
 (defn initialize-one-player []
   (let [user-symbol (menu/get-selection menu/symbol-options)]
@@ -36,11 +36,15 @@
   (into [] (repeat (* size size) 0)))
 
 (defn initialize-game [players]
-  (let [size (menu/get-selection board-size-options)]
+  (let [difficulty (if (turn/has-ai? (into [] players))
+                     (menu/get-selection menu/difficulty-options)
+                     nil)
+        size (menu/get-selection board-size-options)]
+    (loop []
     (print-starting-game)
-    (let [winner (game-loop (make-board size) 1 players)
+    (let [winner (game-loop (make-board size) 1 players difficulty)
           retry? (end-game winner players)]
-      (if retry? (recur players) nil))))
+      (if retry? (recur) nil)))))
 
 (def menu-options
   {:print-statement (fn [] (println "\nPlease select an option!\n[1] Single Player.\n[2] Two Player.\n[3] AI vs. AI\n[4] Close Program."))

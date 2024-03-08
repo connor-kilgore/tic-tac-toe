@@ -84,6 +84,15 @@
                          (recur (inc i) new-alpha new-beta new-score)
                          ))))))))
 
-(defn play-turn [board ai-symbol]
+(defn place-random-spot [board symbol]
+  (let [position (rand-int (count board))]
+    (if (tttb/spot-available? board position)
+      (tttb/place-value-into-tttb board symbol position)
+      (recur board symbol))))
+
+(defn play-turn [board ai-symbol difficulty]
   (println "\nThinking of move...")
-  (mini-max-algo board ai-symbol))
+  (if (> (rand-int 11) difficulty)
+    (place-random-spot board ai-symbol)
+    (mini-max-algo board ai-symbol))
+    )
