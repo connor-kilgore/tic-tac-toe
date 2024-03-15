@@ -1,0 +1,17 @@
+{:board [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0], :round 1, :players {"AI 1" 1, "AI 2" 2}, :difficulty 10}
+{:board [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0], :round 2, :players {"AI 1" 1, "AI 2" 2}, :difficulty 10}
+{:board [1 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0], :round 3, :players {"AI 1" 1, "AI 2" 2}, :difficulty 10}
+{:board [1 2 1 0 0 0 0 0 0 0 0 0 0 0 0 0], :round 4, :players {"AI 1" 1, "AI 2" 2}, :difficulty 10}
+{:board [1 2 1 2 0 0 0 0 0 0 0 0 0 0 0 0], :round 5, :players {"AI 1" 1, "AI 2" 2}, :difficulty 10}
+{:board [1 2 1 2 1 0 0 0 0 0 0 0 0 0 0 0], :round 6, :players {"AI 1" 1, "AI 2" 2}, :difficulty 10}
+{:board [1 2 1 2 1 2 0 0 0 0 0 0 0 0 0 0], :round 7, :players {"AI 1" 1, "AI 2" 2}, :difficulty 10}
+{:board [1 2 1 2 1 2 1 0 0 0 0 0 0 0 0 0], :round 8, :players {"AI 1" 1, "AI 2" 2}, :difficulty 10}
+{:board [1 2 1 2 1 2 1 2 0 0 0 0 0 0 0 0], :round 9, :players {"AI 1" 1, "AI 2" 2}, :difficulty 10}
+{:board [1 2 1 2 1 2 1 2 1 0 0 0 0 0 0 0], :round 10, :players {"AI 1" 1, "AI 2" 2}, :difficulty 10}
+{:board [1 2 1 2 1 2 1 2 1 0 0 0 2 0 0 0], :round 11, :players {"AI 1" 1, "AI 2" 2}, :difficulty 10}
+{:board [1 2 1 2 1 2 1 2 1 1 0 0 2 0 0 0], :round 12, :players {"AI 1" 1, "AI 2" 2}, :difficulty 10}
+{:board [1 2 1 2 1 2 1 2 1 1 2 0 2 0 0 0], :round 13, :players {"AI 1" 1, "AI 2" 2}, :difficulty 10}
+{:board [1 2 1 2 1 2 1 2 1 1 2 1 2 0 0 0], :round 14, :players {"AI 1" 1, "AI 2" 2}, :difficulty 10}
+{:board [1 2 1 2 1 2 1 2 1 1 2 1 2 2 0 0], :round 15, :players {"AI 1" 1, "AI 2" 2}, :difficulty 10}
+{:board [1 2 1 2 1 2 1 2 1 1 2 1 2 2 1 0], :round 16, :players {"AI 1" 1, "AI 2" 2}, :difficulty 10}
+{:board [1 2 1 2 1 2 1 2 1 1 2 1 2 2 1 2], :round 17, :players {"AI 1" 1, "AI 2" 2}, :difficulty 10}
