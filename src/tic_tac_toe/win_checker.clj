@@ -15,13 +15,16 @@
           (for [[i v] (map-indexed vector rows)] (nth v (- (dec (count v)) i))))))
 
 (defn get-horizontal-winner [board]
-  (->> (get-rows board) (filter #(and (not (= (apply + %) 0)) (apply = %))) (first) (first)))
+  (->> (get-rows board) (filter #(and (not (= (apply + %) 0))
+                                      (apply = %))) (first) (first)))
 
 (defn get-vertical-winner [board]
-  (->> (get-cols board) (filter #(and (not (= (apply + %) 0)) (apply = %))) (first) (first)))
+  (->> (get-cols board) (filter #(and (not (= (apply + %) 0))
+                                      (apply = %))) (first) (first)))
 
 (defn get-diagonal-winner [board]
-  (->> (get-diagonals board) (filter #(and (not (= (apply + %) 0)) (apply = %))) (first) (first)))
+  (->> (get-diagonals board) (filter #(and (not (= (apply + %) 0))
+                                           (apply = %))) (first) (first)))
 
 (defn get-winner [board]
   (first (filter #(not (nil? %)) [(get-vertical-winner board)

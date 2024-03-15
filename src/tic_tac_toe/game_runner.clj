@@ -20,7 +20,8 @@
   (let [winner (win?/get-winner board)]
     (cond (not (nil? winner)) winner
           (> round (count board)) nil
-          :else (recur (turn/play-next-turn board players round difficulty) (inc round) players difficulty))))
+          :else (recur (turn/play-next-turn board players round difficulty)
+                       (inc round) players difficulty))))
 
 (defn initialize-one-player []
   (let [user-symbol (menu/get-selection menu/symbol-options)]
@@ -47,7 +48,8 @@
       (if retry? (recur) nil)))))
 
 (def menu-options
-  {:print-statement (fn [] (println "\nPlease select an option!\n[1] Single Player.\n[2] Two Player.\n[3] AI vs. AI\n[4] Close Program."))
+  {:print-statement (fn [] (println (str "\nPlease select an option!\n[1] Single Player\n"
+                                         "[2] Two Player\n[3] AI vs. AI\n[4] Close Program")))
    :error           (fn [] (println "\nPlease select a valid option."))
    "1"              (fn [] (initialize-game (initialize-one-player)))
    "2"              (fn [] (initialize-game {"Player 1" 1 "Player 2" 2}))

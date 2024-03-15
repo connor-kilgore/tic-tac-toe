@@ -12,12 +12,14 @@
 (defn add-vertical-dividers [board]
   (map #(interpose "|" %) (convert-board-vals-to-symbols board)))
 
-(def horizontal-dividers
+(def horizontal-divider-count
   {9  8
    16 11})
 
 (defn add-horizontal-dividers [board board-str]
-  (->> board-str (interpose (str "\n" (apply str (repeat (get horizontal-dividers (count board)) "=")) "\n"))))
+  (->> board-str (interpose
+                   (str "\n" (apply str (repeat (get horizontal-divider-count
+                                                     (count board)) "=")) "\n"))))
 
 (defn get-tttb-string [board]
   (str "\n" (->> (add-vertical-dividers board)
@@ -31,7 +33,9 @@
   (= (get board position) 0))
 
 (defn place-value-into-tttb [board value position]
-  (if (not (spot-available? board position)) board (assoc board position value)))
+  (if (not (spot-available? board position))
+    board
+    (assoc board position value)))
 
 (defn not-zero? [x]
   (not (zero? x)))

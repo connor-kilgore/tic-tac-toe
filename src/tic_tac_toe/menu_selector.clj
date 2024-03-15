@@ -34,7 +34,7 @@
    :error           (fn [] (println "\nPlease select a valid difficulty."))
    "1"              10
    "2"              9
-   "3"              0})
+   "3"              -1})
 
 (defn get-option [selected-map option]
   (get selected-map option))

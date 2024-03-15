@@ -61,7 +61,8 @@
       (should= [1 2 1 2 2 1 0 1 2] (ai/mini-max-algo [1 2 1 2 2 1 0 1 0] 2)))
 
     (it "works for 4x4 too"
-      (should= [0 2 0 0 0 1 0 0 0 1 2 0 0 1 0 2] (ai/mini-max-algo [0 0 0 0 0 1 0 0 0 1 2 0 0 1 0 2] 2))))
+      (should= [0 2 0 0 0 1 0 0 0 1 2 0 0 1 0 2]
+               (ai/mini-max-algo [0 0 0 0 0 1 0 0 0 1 2 0 0 1 0 2] 2))))
 
 
   (context "gives the best best score for the algorithm"

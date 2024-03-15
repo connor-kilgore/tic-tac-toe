@@ -11,14 +11,13 @@
     (it "close program if 4"
       (should= menu/close-program (menu/get-option run/menu-options "4"))))
 
-  (context "gives a symbol based on a symbol selection"
-    (it "nil if invalid selection"
-      (should= nil (menu/get-option menu/symbol-options "a")))
-
-    (it "X if x or X"
-      (should= 1 (menu/get-option menu/symbol-options "x"))
-      (should= 1 (menu/get-option menu/symbol-options "X")))
-
-    (it "O if o or O"
-      (should= 2 (menu/get-option menu/symbol-options "o"))
-      (should= 2 (menu/get-option menu/symbol-options "O")))))
+  (context "gets selection of a given map by"
+    (it "returning valid user selection"
+      (with-redefs [read-line (fn [] "2")
+                    println (fn [_] nil)]
+        (should= 9 (menu/get-selection menu/difficulty-options))))
+    (it "having user re-choose if invalid selection"
+      (with-redefs [read-line (fn [] (str (+ (rand-int 2) 3)))
+                    println (fn [_] nil)]
+        (should= -1 (menu/get-selection menu/difficulty-options)))))
+  )

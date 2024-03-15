@@ -1,9 +1,13 @@
 (ns tic-tac-toe.user-player-spec
   (:require [speclj.core :refer :all]
+            [tic-tac-toe.menu-selector :as menu]
             [tic-tac-toe.user-player :as user]))
 
 (describe "User Player"
-  (context "parses the position on the board with row and col"
-    (it "gets the position with a proper row and col"
-      (should= 0 (user/parse-position 3 0 0))
-      (should= 3 (user/parse-position 3 1 0)))))
+  (it "plays user turn"
+    (with-redefs [menu/get-selection (fn [_] 4)]
+      (should= [0 0 0 0 1 0 0 0 0] (user/play-turn [0 0 0 0 0 0 0 0 0] 1)))
+    (with-redefs [menu/get-selection (fn [_] (rand-int 2))
+                  println (fn [_] nil)]
+      (should= [1 1 0 0 0 0 0 0 0] (user/play-turn [0 1 0 0 0 0 0 0 0] 1))))
+  )

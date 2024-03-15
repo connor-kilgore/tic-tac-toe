@@ -30,7 +30,10 @@
   ([board symbol] (make-hypothetical-moves board symbol 0 {}))
   ([board symbol position new-boards]
    (cond (>= position (count board)) new-boards
-         (tttb/spot-available? board position) (recur board symbol (inc position) (conj {position (tttb/place-value-into-tttb board symbol position)} new-boards))
+         (tttb/spot-available? board position)
+         (recur board symbol
+                (inc position)
+                (conj {position (tttb/place-value-into-tttb board symbol position)} new-boards))
          :else (recur board symbol (inc position) new-boards))))
 
 (defn get-best-score [depth scores]
@@ -60,7 +63,9 @@
     (* depth -1)))
 
 (defn mini-max-algo
-  ([board symbol] (mini-max-algo board symbol 0 (-> board (count) (inc) (* -1)) (-> board (count) (inc))))
+  ([board symbol] (mini-max-algo
+                    board symbol 0
+                    (-> board (count) (inc) (* -1)) (-> board (count) (inc))))
   ([board symbol depth alpha beta]
    (let [end-condition (get-end-score board symbol)]
      (if (not (nil? end-condition))
