@@ -15,9 +15,13 @@
 (defn has-ai? [players]
   (some true? (map #(is-ai? %) players)))
 
-(defn play-next-turn [board players round difficulty]
+(defn print-player-turn [player tui?]
+  (if tui?
+    (println (str "\n=== " (first player) " ==="))))
+
+(defn play-next-turn [board players round difficulty tui?]
   (let [current-player (get-current-player players round)]
-    (println (str "\n=== " (first current-player) " ==="))
+    (print-player-turn current-player tui?)
     (if (is-ai? current-player)
       (ai/play-turn board (second current-player) difficulty)
-      (user/play-turn board (second current-player)))))
+      (user/play-turn board (second current-player) tui?))))

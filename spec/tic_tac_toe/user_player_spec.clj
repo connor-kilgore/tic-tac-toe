@@ -5,9 +5,9 @@
 
 (describe "User Player"
   (it "plays user turn"
-    (with-redefs [menu/get-selection (fn [_] 4)]
-      (should= [0 0 0 0 1 0 0 0 0] (user/play-turn [0 0 0 0 0 0 0 0 0] 1)))
-    (with-redefs [menu/get-selection (fn [_] (rand-int 2))
+    (with-redefs [menu/get-selection (fn [_ _] 4)]
+      (should= [0 0 0 0 1 0 0 0 0] (user/play-turn [0 0 0 0 0 0 0 0 0] 1 true)))
+    (with-redefs [menu/get-selection (fn [_ _] (rand-int 2))
                   println (fn [_] nil)]
-      (should= [1 1 0 0 0 0 0 0 0] (user/play-turn [0 1 0 0 0 0 0 0 0] 1))))
+      (should= [1 1 0 0 0 0 0 0 0] (user/play-turn [0 1 0 0 0 0 0 0 0] 1 true))))
   )

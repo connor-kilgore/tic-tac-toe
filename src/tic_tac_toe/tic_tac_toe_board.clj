@@ -1,5 +1,6 @@
 (ns tic-tac-toe.tic-tac-toe-board
-  (:require [tic-tac-toe.symbols :as symbols]))
+  (:require [tic-tac-toe.symbols :as symbols]
+            [tic-tac-toe.gui :as gui]))
 
 (defn replace-0-with-index [index val]
   (if (= val 0) (format "%2d" index) val))

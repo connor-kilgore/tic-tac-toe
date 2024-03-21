@@ -96,7 +96,6 @@
       (recur board symbol))))
 
 (defn play-turn [board ai-symbol difficulty]
-  (println "\nThinking of move...")
   (if (> (rand-int 11) difficulty)
     (place-random-spot board ai-symbol)
     (mini-max-algo board ai-symbol))

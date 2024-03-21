@@ -21,13 +21,13 @@
                     println (fn [_] nil)]
       (should= "AI" (turn/play-next-turn [0 0 0 0 0 0 0 0 0]
                                          {"Player 1" 1 "AI" 2}
-                                         2 10))))
+                                         2 10 false))))
     (it "player's turn"
-      (with-redefs [user/play-turn (fn [_ _] "Player")
+      (with-redefs [user/play-turn (fn [_ _ _] "Player")
                     println (fn [_] nil)]
         (should= "Player" (turn/play-next-turn [0 0 0 0 0 0 0 0 0]
                                            {"Player 1" 1 "AI" 2}
-                                           1 10)))))
+                                           1 10 false)))))
 
 (context "checks if it is players turn by"
   (it "returning true if it is"

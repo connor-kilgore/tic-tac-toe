@@ -3,34 +3,59 @@
             [tic-tac-toe.turn-system :as turn]
             [tic-tac-toe.menu-selector :as menu]
             [tic-tac-toe.win-checker :as win?]
-            [tic-tac-toe.file-saver :as file])
+            [tic-tac-toe.file-saver :as file]
+            [tic-tac-toe.gui :as gui])
   (:import (java.text SimpleDateFormat)
            (java.util Date)))
 
+(def tui? (atom true))
+
+(defn print-to-ui [s]
+  (if @tui?
+    (println s)))
+
+(defn print-gui-text [s]
+  (if (not @tui?)
+    (gui/update-state s)))
+
 (defn print-starting-game []
-  (println "\nStarting game..."))
+  (print-to-ui "\nStarting game..."))
+
+(defn display-board [board]
+  (if @tui?
+    (tttb/print-tttb board)
+    (gui/update-state board)))
 
 (defn get-end-condition-string [winner players]
   (cond (nil? winner) "\nTie!"
         (= (second (first players)) winner) (str "\n" (first (first players)) " wins!")
         :else (str "\n" (first (second players)) " wins!")))
 
+(defn end-game-to-ui [end-condition-str]
+  (if @tui?
+    (print-to-ui end-condition-str)
+    (do (print-gui-text end-condition-str) (Thread/sleep 4000))))
+
 (defn end-game [winner players]
   (file/wipe-saved-game)
-  (println (get-end-condition-string winner players))
-  (menu/get-selection menu/retry-options))
+  (let [end-condition-str (get-end-condition-string winner players)]
+    (end-game-to-ui end-condition-str))
+  (menu/get-selection menu/retry-options @tui?))
 
 (defn game-loop [board round players difficulty archive-path]
   (file/set-save-game-state board round players difficulty archive-path)
-  (tttb/print-tttb board)
+  (display-board board)
   (let [winner (win?/get-winner board)]
     (cond (not (nil? winner)) winner
           (> round (count board)) nil
-          :else (recur (turn/play-next-turn board players round difficulty)
-                       (inc round) players difficulty archive-path))))
+          :else (recur (turn/play-next-turn board players round difficulty @tui?)
+                       (inc round)
+                       players
+                       difficulty
+                       archive-path))))
 
 (defn initialize-one-player []
-  (let [user-symbol (menu/get-selection menu/symbol-options)]
+  (let [user-symbol (menu/get-selection menu/symbol-options @tui?)]
     {"Player" user-symbol "AI" (-> user-symbol (mod 2) inc)}))
 
 (def board-size-options
@@ -48,9 +73,9 @@
 (defn initialize-game
   ([players]
    (let [difficulty (if (turn/has-ai? (into [] players))
-                      (menu/get-selection menu/difficulty-options)
+                      (menu/get-selection menu/difficulty-options @tui?)
                       nil)
-         size (menu/get-selection board-size-options)]
+         size (menu/get-selection board-size-options @tui?)]
      (initialize-game players difficulty size)))
   ([players difficulty size]
    (print-starting-game)
@@ -70,6 +95,9 @@
       (if retry? (initialize-game (:players saved-game) (:difficulty saved-game)
                                   (int (Math/sqrt (count (:board saved-game))))) nil))))
 
+(defn close-program []
+  (menu/close-program @tui?))
+
 
 (def menu-options
   {:print-statement (fn [] (println (str "\nPlease select an option!\n[1] Single Player\n"
@@ -78,10 +106,10 @@
    "1"              (fn [] (initialize-game (initialize-one-player)))
    "2"              (fn [] (initialize-game {"Player 1" 1 "Player 2" 2}))
    "3"              (fn [] (initialize-game {"AI 1" 1 "AI 2" 2}))
-   "4"              menu/close-program})
+   "4"              close-program})
 
 (defn start-menu-loop []
-  (if (not (= (menu/start-menu menu-options) -1))
+  (if (not (= (menu/start-menu menu-options @tui?) -1))
     (recur)))
 
 (def resume-options
@@ -107,6 +135,8 @@
                           (game-to-str game-state))))
 
 (defn -main [& args]
-  (cond (not (nil? (first args))) (print-archived-game (first args))
-        (not (nil? (file/get-last-game-state))) (menu/start-menu resume-options)
+  (reset! tui? (not (= (first args) "--gui")))
+
+  (cond (not (nil? (file/get-last-game-state))) (menu/start-menu resume-options @tui?)
+        (and tui? (not (nil? (first args)))) (print-archived-game (first args))
         :else (start-menu-loop)))

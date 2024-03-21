@@ -20,18 +20,18 @@
 
   (context "runs the game-loop"
     (it "until a tie"
-      (with-redefs [turn/play-next-turn (fn [_ _ _ _] [0 0 0 0 0 0 0 0 0])
+      (with-redefs [turn/play-next-turn (fn [_ _ _ _ _] [0 0 0 0 0 0 0 0 0])
                     tttb/print-tttb (fn [_] nil)
                     file/set-save-game-state (fn [_ _ _ _ _] nil)]
         (should= nil (game-loop [0 0 0 0 0 0 0 0 0] 1 {"Player 1" 1 "AI" 2} 10 nil))))
     (it "until a win"
-      (with-redefs [turn/play-next-turn (fn [_ _ _ _] [1 1 1 0 0 0 0 0 0])
+      (with-redefs [turn/play-next-turn (fn [_ _ _ _ _] [1 1 1 0 0 0 0 0 0])
                     tttb/print-tttb (fn [_] nil)
                     file/set-save-game-state (fn [_ _ _ _ _] nil)]
         (should= 1 (game-loop [0 0 0 0 0 0 0 0 0] 1 {"Player 1" 1 "AI" 2} 10 nil)))))
 
   (it "initializes a one player game"
-    (with-redefs [menu/get-selection (fn [_] 2)]
+    (with-redefs [menu/get-selection (fn [_ _] 2)]
       (should= {"Player" 2 "AI" 1} (initialize-one-player))))
 
   (it "makes an empty board given a side length"
