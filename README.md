@@ -13,3 +13,7 @@ pick the next best possible move for themselves. At best you will be able to tie
 2. Navigate into the tic-tac-toe directory
 3. Execute the command <strong>"lein run"</strong>
 4. Have fun losing!
+
+# Flags
+1. --gui to run the game with a GUI
+2. --archive (saved game file name) to look at a previous game
