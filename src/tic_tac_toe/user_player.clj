@@ -10,7 +10,7 @@
 (defmulti make-move :ui)
 
 (defmethod make-move :tui [board]
-  (menu/get-selection {:options (get menu/move-options (count (:board board))) :ui board}))
+  (menu/get-selection {:options (get menu/move-options (count (:board board))) :ui (:ui board)}))
 
 (defmethod make-move :gui [board]
   (gui/get-selection {:board (:board board)}))

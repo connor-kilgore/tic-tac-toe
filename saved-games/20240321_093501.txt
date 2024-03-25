@@ -1,9 +1,0 @@
-{:board [0 0 0 0 0 0 0 0 0], :round 1, :players {"Player" 1, "AI" 2}, :difficulty 10}
-{:board [0 1 0 0 0 0 0 0 0], :round 2, :players {"Player" 1, "AI" 2}, :difficulty 10}
-{:board [0 1 0 0 0 0 0 2 0], :round 3, :players {"Player" 1, "AI" 2}, :difficulty 10}
-{:board [0 1 1 0 0 0 0 2 0], :round 4, :players {"Player" 1, "AI" 2}, :difficulty 10}
-{:board [2 1 1 0 0 0 0 2 0], :round 5, :players {"Player" 1, "AI" 2}, :difficulty 10}
-{:board [2 1 1 0 1 0 0 2 0], :round 6, :players {"Player" 1, "AI" 2}, :difficulty 10}
-{:board [2 1 1 0 1 0 2 2 0], :round 7, :players {"Player" 1, "AI" 2}, :difficulty 10}
-{:board [2 1 1 1 1 0 2 2 0], :round 8, :players {"Player" 1, "AI" 2}, :difficulty 10}
-{:board [2 1 1 1 1 0 2 2 2], :round 9, :players {"Player" 1, "AI" 2}, :difficulty 10}

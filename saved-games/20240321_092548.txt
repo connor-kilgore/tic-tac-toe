@@ -1,4 +1,0 @@
-{:board [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0], :round 1, :players {"Player" 2, "AI" 1}, :difficulty -1}
-{:board [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0], :round 2, :players {"Player" 2, "AI" 1}, :difficulty -1}
-{:board [0 0 0 0 0 0 0 1 0 0 0 2 0 0 0 0], :round 3, :players {"Player" 2, "AI" 1}, :difficulty -1}
-{:board [0 0 0 1 0 0 0 1 0 0 0 2 0 0 0 0], :round 4, :players {"Player" 2, "AI" 1}, :difficulty -1}

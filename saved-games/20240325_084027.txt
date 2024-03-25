@@ -1,7 +1,0 @@
-{:players {"Player 1" 1, "Player 2" 2}, :difficulty nil, :board [0 0 0 0 0 0 0 0 0], :round 1}
-{:board [1 0 0 0 0 0 0 0 0], :round 2, :players {"Player 1" 1, "Player 2" 2}, :difficulty nil}
-{:board [1 0 2 0 0 0 0 0 0], :round 3, :players {"Player 1" 1, "Player 2" 2}, :difficulty nil}
-{:board [1 1 2 0 0 0 0 0 0], :round 4, :players {"Player 1" 1, "Player 2" 2}, :difficulty nil}
-{:board [1 1 2 0 0 2 0 0 0], :round 5, :players {"Player 1" 1, "Player 2" 2}, :difficulty nil}
-{:board [1 1 2 0 1 2 0 0 0], :round 6, :players {"Player 1" 1, "Player 2" 2}, :difficulty nil}
-{:board [1 1 2 0 1 2 0 0 2], :round 7, :players {"Player 1" 1, "Player 2" 2}, :difficulty nil}
