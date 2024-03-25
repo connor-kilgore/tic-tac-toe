@@ -14,6 +14,6 @@ pick the next best possible move for themselves. At best you will be able to tie
 3. Execute the command <strong>"lein run"</strong>
 4. Have fun losing!
 
-# Flags
+# Options
 1. --gui to run the game with a GUI
-2. --archive (saved game file name) to look at a previous game
+2. --archive displays previous games archived in the saved-games folder. You must follow the flag with the name of the game you wish to see e.g. "lein run --archive test.txt"
