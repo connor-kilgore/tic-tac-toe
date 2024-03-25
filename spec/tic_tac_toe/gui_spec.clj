@@ -1,6 +1,6 @@
-(ns gui-spec
+(ns tic-tac-toe.gui-spec
   (:require [quil.core :as q]
-            [tic-tac-toe.menu-selector :as menu]
+            [tic-tac-toe.option-selector :as menu]
             [speclj.core :refer :all]
             [tic-tac-toe.gui :refer :all]))
 

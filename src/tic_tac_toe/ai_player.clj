@@ -98,5 +98,4 @@
 (defn play-turn [board ai-symbol difficulty]
   (if (> (rand-int 11) difficulty)
     (place-random-spot board ai-symbol)
-    (mini-max-algo board ai-symbol))
-    )
+    (mini-max-algo board ai-symbol)))

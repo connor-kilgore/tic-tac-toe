@@ -55,12 +55,12 @@
 
 (defn show-options [options]
   (q/background 255)
-  (let [options-text (get-options-text (with-out-str ((:print-statement options))))
-        vals (get-values (with-out-str ((:print-statement options))))]
+  (let [options-text (get-options-text (:print-statement options))
+        vals (get-values (:print-statement options))]
     (doseq [[index option] (map-indexed vector options-text)]
       (make-button 200 (+ 200 (* index 100)) 400 75 option (nth vals index)))))
 
-(defn display-board [board]
+(defn display-board [board] [nil "o" "x"]
   (q/background 255)
   (let [row-len (int (Math/sqrt (count board)))
         side (/ 600 row-len)]
@@ -93,8 +93,8 @@
   (clear-buttons)
   (cond (not (nil? (:print-statement @state))) (show-options @state)
         (string? @state) (make-text @state)
-        (= @state -1) (q/exit)
-        (not (nil? @state)) (display-board @state)))
+        (= @state :close-program) (q/exit)
+        (not (nil? (:board @state))) (display-board (:board @state))))
 
 (defn start-gui []
   (q/defsketch sketch

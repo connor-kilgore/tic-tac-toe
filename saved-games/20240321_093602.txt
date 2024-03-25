@@ -1,0 +1,4 @@
+{:board [1 2 1 2 2 0 0 1 0], :round 7, :players {"Player" 1, "AI" 2}, :difficulty 10}
+{:board [1 2 1 2 2 1 0 1 0], :round 8, :players {"Player" 1, "AI" 2}, :difficulty 10}
+{:board [1 2 1 2 2 1 0 1 2], :round 9, :players {"Player" 1, "AI" 2}, :difficulty 10}
+{:board [1 2 1 2 2 1 1 1 2], :round 10, :players {"Player" 1, "AI" 2}, :difficulty 10}

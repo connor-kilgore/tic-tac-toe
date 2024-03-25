@@ -18,10 +18,7 @@
   (context "last game is retrievable by"
     (it "saving the game state to a json file each round"
       (with-redefs [append-game-state-to-file (fn [_ _] nil)]
-        (should= nil (set-save-game-state (:board game-state)
-                                          (:round game-state)
-                                          (:players game-state)
-                                          (:difficulty game-state) nil))))
+        (should= nil (set-save-game-state game-state nil))))
 
     (it "getting the last game state from a file"
       (should= game-state (get-last-game-state))))

@@ -2,11 +2,34 @@
   (:require [speclj.core :refer :all]
             [tic-tac-toe.file-saver :as file]
             [tic-tac-toe.game-runner :refer :all]
-            [tic-tac-toe.menu-selector :as menu]
+            [tic-tac-toe.option-selector :as menu]
             [tic-tac-toe.tic-tac-toe-board :as tttb]
             [tic-tac-toe.turn-system :as turn]))
 
 (describe "Game Runner Module"
+
+  (context "checks if selected user interface options are a"
+    (it "TUI"
+      (should (tui? :tui))
+      (should-not (tui? :gui)))
+
+    (it "GUI"
+      (should-not (gui? :tui))
+      (should (gui? :gui)))
+
+    (it "archived game"
+      (should-not (archive? :tui))
+      (should (archive? :archive))))
+
+  (it "makes new match data"
+    (should= {:players    {:player-1 1 :player-2 2}
+              :difficulty 10
+              :round      1
+              :board      [0 0 0 0 0 0 0 0 0]} (get-new-game
+                                                 {:players    {:player-1 1 :player-2 2}
+                                                  :difficulty 10
+                                                  :round      3
+                                                  :board      [1 1 1 0 0 0 0 0 0]})))
 
   (context "gives an end condition string by"
     (it "saying you tied when no winner"
@@ -20,18 +43,25 @@
 
   (context "runs the game-loop"
     (it "until a tie"
-      (with-redefs [turn/play-next-turn (fn [_ _ _ _ _] [0 0 0 0 0 0 0 0 0])
-                    tttb/print-tttb (fn [_] nil)
-                    file/set-save-game-state (fn [_ _ _ _ _] nil)]
-        (should= nil (game-loop [0 0 0 0 0 0 0 0 0] 1 {"Player 1" 1 "AI" 2} 10 nil))))
+      (with-redefs [turn/play-next-turn (fn [_ _] [0 0 0 0 0 0 0 0 0])
+                    round-output (fn [_] nil)
+                    file/set-save-game-state (fn [_ _] nil)]
+        (should= nil (game-loop
+                       {:board [0 0 0 0 0 0 0 0 0]
+                        :round 1 :players {"Player 1" 1 "AI" 2}
+                        :difficulty 10} nil))))
+
     (it "until a win"
-      (with-redefs [turn/play-next-turn (fn [_ _ _ _ _] [1 1 1 0 0 0 0 0 0])
-                    tttb/print-tttb (fn [_] nil)
-                    file/set-save-game-state (fn [_ _ _ _ _] nil)]
-        (should= 1 (game-loop [0 0 0 0 0 0 0 0 0] 1 {"Player 1" 1 "AI" 2} 10 nil)))))
+      (with-redefs [turn/play-next-turn (fn [_ _] [1 1 1 0 0 0 0 0 0])
+                    round-output (fn [_] nil)
+                    file/set-save-game-state (fn [_ _] nil)]
+        (should= 1 (game-loop
+                     {:board [0 0 0 0 0 0 0 0 0]
+                      :round 1 :players {"Player 1" 1 "AI" 2}
+                      :difficulty 10} nil)))))
 
   (it "initializes a one player game"
-    (with-redefs [menu/get-selection (fn [_ _] 2)]
+    (with-redefs [menu/get-selection (fn [_] 2)]
       (should= {"Player" 2 "AI" 1} (initialize-one-player))))
 
   (it "makes an empty board given a side length"

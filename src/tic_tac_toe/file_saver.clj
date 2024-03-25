@@ -1,18 +1,18 @@
-(ns tic-tac-toe.file-saver)
+(ns tic-tac-toe.file-saver
+  (:import (java.text SimpleDateFormat)
+           (java.util Date)))
 
 (def last-game-path "saved-games/last.txt")
 
 (defn append-game-state-to-file [path state]
     (spit path (str state "\n") :append true))
 
-(defn set-save-game-state [board round players difficulty archive-path]
-  (let [saved-state
-        {:board      board
-         :round      round
-         :players    players
-         :difficulty difficulty}]
-  (spit last-game-path saved-state)
-  (append-game-state-to-file archive-path saved-state)))
+(defn get-archive-path []
+  (str "saved-games/" (.format (SimpleDateFormat. "yyyyMMdd_HHmmss") (Date.)) ".txt"))
+
+(defn set-save-game-state [game archive-path]
+  (spit last-game-path game)
+  (append-game-state-to-file archive-path game))
 
 (defn get-last-game-state []
   (try
