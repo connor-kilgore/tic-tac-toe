@@ -22,7 +22,7 @@
    "2"              false})
 
 (def symbol-options
-  {:print-statement "\nPlease select a symbol!\n[X] X (first turn).\n[O] O(second turn)."
+  {:print-statement "\nPlease select a symbol!\n[X] X (first turn).\n[O] O (second turn)."
    :error           "\nPlease select a valid symbol."
    "x"              1 "X" 1
    "o"              2 "O" 2})
@@ -35,7 +35,11 @@
    16 (conj
         {:print-statement "\nSelect a space [0-15]"
          :error           "\nPlease select a valid space."}
-        (zipmap (map str (range 16)) (range 16)))})
+        (zipmap (map str (range 16)) (range 16)))
+   27 (conj
+        {:print-statement "\nSelect a space [0-26]"
+         :error           "\nPlease select a valid space."}
+        (zipmap (map str (range 27)) (range 27)))})
 
 (def difficulty-options
   {:print-statement "\nPlease select a difficulty!\n[1] Unbeatable\n[2] Medium\n[3] Easy"

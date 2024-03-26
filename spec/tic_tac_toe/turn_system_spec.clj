@@ -17,7 +17,7 @@
 
   (context "Play's the"
     (it "ai's turn"
-      (with-redefs [ai/play-turn (fn [_ _ _] "AI")
+      (with-redefs [ai/play-turn (fn [_ _] "AI")
                     println (fn [_] nil)]
         (should= "AI" (turn/play-next-turn {:board   [0 0 0 0 0 0 0 0 0]
                                             :players {"Player 1" 1 "AI" 2}

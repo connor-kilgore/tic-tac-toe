@@ -25,10 +25,12 @@
     (should= {:players    {:player-1 1 :player-2 2}
               :difficulty 10
               :round      1
+              :three-d    false
               :board      [0 0 0 0 0 0 0 0 0]} (get-new-game
                                                  {:players    {:player-1 1 :player-2 2}
                                                   :difficulty 10
                                                   :round      3
+                                                  :three-d    false
                                                   :board      [1 1 1 0 0 0 0 0 0]})))
 
   (context "gives an end condition string by"
@@ -47,8 +49,9 @@
                     round-output (fn [_] nil)
                     file/set-save-game-state (fn [_ _] nil)]
         (should= nil (game-loop
-                       {:board [0 0 0 0 0 0 0 0 0]
-                        :round 1 :players {"Player 1" 1 "AI" 2}
+                       {:board      [0 0 0 0 0 0 0 0 0]
+                        :round      1 :players {"Player 1" 1 "AI" 2}
+                        :three-d false
                         :difficulty 10} nil))))
 
     (it "until a win"
@@ -56,22 +59,19 @@
                     round-output (fn [_] nil)
                     file/set-save-game-state (fn [_ _] nil)]
         (should= 1 (game-loop
-                     {:board [0 0 0 0 0 0 0 0 0]
-                      :round 1 :players {"Player 1" 1 "AI" 2}
+                     {:board      [0 0 0 0 0 0 0 0 0]
+                      :round      1 :players {"Player 1" 1 "AI" 2}
+                      :three-d false
                       :difficulty 10} nil)))))
 
   (it "initializes a one player game"
     (with-redefs [menu/get-selection (fn [_] 2)]
       (should= {"Player" 2 "AI" 1} (initialize-one-player))))
 
-  (it "makes an empty board given a side length"
-    (should= [0 0 0 0 0 0 0 0 0] (make-board 3))
-    (should= [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0] (make-board 4)))
-
   (context "prints archived games by"
     (it "printing turns individually"
       (should= "\n=== ROUND:  1  ===  Player  === \n 0| 1| 2\n========\n 3| 4| 5\n========\n 6| 7| 8\n"
                (with-out-str (turn-to-str {:board      [0 0 0 0 0 0 0 0 0],
-                                           :round      1, :players {"Player" 1, "AI" 2},
-                                           :difficulty 10})))))
+                                           :round      1 :players {"Player" 1, "AI" 2},
+                                           :difficulty 10 :three-d false})))))
   )

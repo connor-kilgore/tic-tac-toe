@@ -18,5 +18,5 @@
 (defn play-next-turn [game ui]
   (let [current-player (get-current-player (:players game) (:round game))]
     (if (is-ai? current-player)
-      (ai/play-turn (:board game) (second current-player) (:difficulty game))
-      (user/play-turn (:board game) (second current-player) ui))))
+      (ai/play-turn game (second current-player))
+      (user/play-turn game (second current-player) ui))))

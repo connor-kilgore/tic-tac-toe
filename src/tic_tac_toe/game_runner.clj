@@ -11,12 +11,9 @@
 (defn archive? [ui] (= :archive ui))
 (def ui (atom :tui))
 
-(defn print-to-ui [s]
-  (if @tui?
-    (println s)))
-
 (defn print-gui-text [s]
-  (gui/update-state s))
+  (gui/update-state s)
+  (Thread/sleep 4000))
 
 (defmulti round-output :ui)
 
@@ -25,7 +22,7 @@
                     (turn/get-current-player (:players (:game game)) (:round (:game game)))))
 
 (defmethod round-output :gui [game]
-  (gui/update-state {:board (:board (:game game))}))
+  (gui/update-state (:game game)))
 
 (defn get-end-condition-string [winner players]
   (cond (nil? winner) "\nTie!"
@@ -37,7 +34,7 @@
   (tui/print-text (:end-str end-condition-str)))
 
 (defmethod end-game-to-ui :gui [end-condition-str]
-  (do (print-gui-text (:end-str end-condition-str)) (Thread/sleep 4000)))
+  (do (print-gui-text (:end-str end-condition-str))))
 
 (defn end-game [winner players]
   (file/wipe-saved-game)
@@ -48,12 +45,13 @@
 (defn game-loop [game archive-path]
   (file/set-save-game-state game archive-path)
   (round-output {:game game :ui @ui})
-  (let [winner (win?/get-winner (:board game))]
+  (let [winner (win?/get-winner game)]
     (cond (not (nil? winner)) winner
           (> (:round game) (count (:board game))) nil
           :else (recur {:board      (turn/play-next-turn game @ui)
                         :round      (inc (:round game))
                         :players    (:players game)
+                        :three-d    (:three-d game)
                         :difficulty (:difficulty game)}
                        archive-path))))
 
@@ -62,19 +60,19 @@
     {"Player" user-symbol "AI" (-> user-symbol (mod 2) inc)}))
 
 (def board-size-options
-  {:print-statement "\nPlease select a board size!\n[1] 3x3 (classic)\n[2] 4x4"
+  {:print-statement "\nPlease select a board side length!\n[1] 3x3 (classic)\n[2] 4x4\n[3] 3x3x3"
    :error           "\nPlease select a valid size!"
-   "1"              3
-   "2"              4})
-
-(defn make-board [size]
-  (into [] (repeat (* size size) 0)))
+   "1"              {:size 3 :three-d false}
+   "2"              {:size 4 :three-d false}
+   "3"              {:size 3 :three-d true}})
 
 (defn get-new-game [game]
   {:players    (:players game)
    :difficulty (:difficulty game)
    :round      1
-   :board      (make-board (tttb/get-side-len (:board game)))})
+   :three-d    (:three-d game)
+   :board      (tttb/make-board {:size    (tttb/get-side-len game)
+                                 :three-d (:three-d game)})})
 
 (defn run-game-loop [game]
   (let [winner (game-loop game (file/get-archive-path))
@@ -84,8 +82,9 @@
 (defn initialize-game [players]
   (let [difficulty (when (turn/has-ai? (into [] players))
                      (menu/get-selection {:options menu/difficulty-options :ui @ui}))
-        size (menu/get-selection {:options board-size-options :ui @ui})]
-    {:players players :difficulty difficulty :board (make-board size) :round 1}))
+        dimensions (menu/get-selection {:options board-size-options :ui @ui})]
+    {:players players :difficulty difficulty :three-d (:three-d dimensions)
+     :board   (tttb/make-board {:size (:size dimensions) :three-d (:three-d dimensions)}) :round 1}))
 
 (defn close-program []
   (menu/close-program {:ui @ui}))
@@ -93,11 +92,10 @@
 (def menu-options
   {:print-statement "\nPlease select an option!\n[1] Single Player\n[2] Two Player\n[3] AI vs. AI\n[4] Close Program"
    :error           "\nPlease select a valid option."
-   "1"              :one-player ;(fn [] (initialize-one-player))
+   "1"              :one-player                             ;(fn [] (initialize-one-player))
    "2"              {"Player 1" 1 "Player 2" 2}
    "3"              {"AI 1" 1 "AI 2" 2}
-   "4"              :close-program
-   })
+   "4"              :close-program})
 
 (defn start-menu-loop [game ui]
   (when (= game :resume-game)
@@ -121,7 +119,7 @@
     (println
       "\n=== ROUND: " (:round turn-state)
       " === " (first current-player) " ==="
-      (tui/get-tttb-string (:board turn-state)))))
+      (tui/get-tttb-string turn-state))))
 
 (defn game-to-str [game-state]
   (doseq [turn-state game-state] (turn-to-str turn-state)))

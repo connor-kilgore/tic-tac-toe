@@ -60,15 +60,28 @@
     (doseq [[index option] (map-indexed vector options-text)]
       (make-button 200 (+ 200 (* index 100)) 400 75 option (nth vals index)))))
 
-(defn display-board [board] [nil "o" "x"]
+(defmulti display-board :three-d)
+
+(defmethod display-board true [game]
   (q/background 255)
-  (let [row-len (int (Math/sqrt (count board)))
+  (let [row-len (int (Math/pow (count (:board game)) (/ 1 3)))
+        side (/ 600 (* row-len row-len))]
+    (doseq [i (range (count (:board game)))]
+      (make-button (+ (+ 100 (* (mod i row-len) side)) (* row-len side (quot i (* row-len row-len))) )
+                   (+ 100 (* (quot i row-len) side))
+                   side side
+                   (get symbols/gui-symbols (get (:board game) i))
+                   i))))
+
+(defmethod display-board false [game]
+  (q/background 255)
+  (let [row-len (int (Math/sqrt (count (:board game))))
         side (/ 600 row-len)]
-    (doseq [i (range (count board))]
+    (doseq [i (range (count (:board game)))]
       (make-button (+ 100 (* (mod i row-len) side))
                    (+ 100 (* (quot i row-len) side))
                    side side
-                   (get symbols/gui-symbols (get board i))
+                   (get symbols/gui-symbols (get (:board game) i))
                    i))))
 
 (defn wait-for-selection []
@@ -94,7 +107,7 @@
   (cond (not (nil? (:print-statement @state))) (show-options @state)
         (string? @state) (make-text @state)
         (= @state :close-program) (q/exit)
-        (not (nil? (:board @state))) (display-board (:board @state))))
+        (not (nil? (:board @state))) (display-board @state)))
 
 (defn start-gui []
   (q/defsketch sketch

@@ -9,16 +9,16 @@
 
 (defmulti make-move :ui)
 
-(defmethod make-move :tui [board]
-  (menu/get-selection {:options (get menu/move-options (count (:board board))) :ui (:ui board)}))
+(defmethod make-move :tui [game]
+  (menu/get-selection {:options (get menu/move-options (count (:board (:game game)))) :ui (:ui game)}))
 
-(defmethod make-move :gui [board]
-  (gui/get-selection {:board (:board board)}))
+(defmethod make-move :gui [game]
+  (gui/get-selection (:game game)))
 
 (defn play-turn
-  ([board symbol ui]
-  (let [position (make-move {:board board :ui ui})
-        new-board (tttb/place-value-into-tttb board symbol position)]
-    (if (not (= new-board board))
+  ([game symbol ui]
+  (let [position (make-move {:game game :ui ui})
+        new-board (tttb/place-value-into-tttb (:board game) symbol position)]
+    (if (not (= new-board (:board game)))
       new-board
-      (do (print-spot-taken ui) (recur board symbol ui))))))
+      (do (print-spot-taken ui) (recur game symbol ui))))))

@@ -12,8 +12,13 @@
        (map-indexed replace-0-with-index)
        (partition (int (Math/sqrt (count board))))))
 
+(defn convert-three-d-board-vals-to-symbols [board]
+  (->> board (map symbols/symbols)
+       (map-indexed replace-0-with-index)
+       (partition (int (Math/pow (count board) (/ 1 3))))))
+
 (defn add-vertical-dividers [board]
-  (map #(interpose "|" %) (convert-board-vals-to-symbols board)))
+  (map #(interpose "|" %) board))
 
 (def horizontal-divider-count
   {9  8
@@ -23,12 +28,23 @@
   (->> board-str (interpose
                    (str "\n" (apply str (repeat (get horizontal-divider-count
                                                      (count board)) "=")) "\n"))))
+(defmulti get-tttb-string :three-d)
 
-(defn get-tttb-string [board]
-  (str "\n" (->> (add-vertical-dividers board)
-                 (add-horizontal-dividers board)
-                 (apply concat) (apply str))))
+(defmethod get-tttb-string true [game]
+  (let [boards (->> (flatten (:board game))
+                    (convert-three-d-board-vals-to-symbols)
+                    (partition (int (Math/pow (count (flatten (:board game))) (/ 1 3)))))]
+    (->> (for [board boards] (get-tttb-string {:board (flatten board) :three-d false} board))
+    (interpose "\n") (apply str))))
+
+(defmethod get-tttb-string false
+  ([game] (get-tttb-string game (convert-board-vals-to-symbols (:board game))))
+  ([game board]
+  (str "\n" (->> board
+                 (add-vertical-dividers)
+                 (add-horizontal-dividers (:board game))
+                 (apply concat) (apply str)))))
 
 (defn round-output [game current-player]
   (println "\n=== " (first current-player) " === ROUND " (:round game) " ===")
-  (println (get-tttb-string (:board game))))
+  (println (get-tttb-string game)))

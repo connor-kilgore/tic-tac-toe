@@ -5,7 +5,8 @@
 
 (def depth-limit
   {9  5
-   16 6})
+   16 6
+   27 4})
 
 (defn below-depth-limit? [board]
   (< (tttb/get-absolute-depth board) (get depth-limit (count board))))
@@ -18,13 +19,13 @@
 (defn get-current-symbol [depth symbol]
   (if (is-ai-turn? depth) symbol (symbols/reverse-symbol symbol)))
 
-(defn get-end-score [board ai-symbol]
-  (let [end-condition (win?/get-winner-or-tie board)
-        depth (tttb/get-absolute-depth board)]
+(defn get-end-score [game ai-symbol]
+  (let [end-condition (win?/get-winner-or-tie game)
+        depth (tttb/get-absolute-depth (:board game))]
     (cond (= end-condition "tie") 0
           (nil? end-condition) nil
-          (not (= end-condition ai-symbol)) (- depth (inc (count board)))
-          :else (- (inc (count board)) depth))))
+          (not (= end-condition ai-symbol)) (- depth (inc (count (:board game))))
+          :else (- (inc (count (:board game))) depth))))
 
 (defn make-hypothetical-moves
   ([board symbol] (make-hypothetical-moves board symbol 0 {}))
@@ -63,26 +64,27 @@
     (* depth -1)))
 
 (defn mini-max-algo
-  ([board symbol] (mini-max-algo
-                    board symbol 0
-                    (-> board (count) (inc) (* -1)) (-> board (count) (inc))))
-  ([board symbol depth alpha beta]
-   (let [end-condition (get-end-score board symbol)]
+  ([game symbol]
+   (mini-max-algo
+     game symbol 0
+     (-> (:board game) (count) (inc) (* -1)) (-> (:board game) (count) (inc))))
+  ([game symbol depth alpha beta]
+   (let [end-condition (get-end-score game symbol)]
      (if (not (nil? end-condition))
        end-condition
-       (let [moves (make-hypothetical-moves board (get-current-symbol depth symbol))]
+       (let [moves (make-hypothetical-moves (:board game) (get-current-symbol depth symbol))]
 
          (loop [i 0
                 a alpha
                 b beta
                 best-score []]
 
-           (cond (> depth (get depth-limit (count board))) (get-depth-score depth)
-                 (and (= depth 0) (>= i (count board))) (get moves (first best-score))
-                 (>= i (count board)) (second best-score)
+           (cond (> depth (get depth-limit (count (:board game)))) (get-depth-score depth)
+                 (and (= depth 0) (>= i (count (:board game)))) (get moves (first best-score))
+                 (>= i (count (:board game))) (second best-score)
                  (nil? (get moves i)) (recur (inc i) a b best-score)
                  (<= b a) (recur (inc i) a b best-score)
-                 :else (let [score [i (mini-max-algo (get moves i) symbol (inc depth) a b)]
+                 :else (let [score [i (mini-max-algo (assoc game :board (get moves i)) symbol (inc depth) a b)]
                              new-score (get-new-score best-score score depth)
                              new-alpha (get-new-alpha score a depth)
                              new-beta (get-new-beta score b depth)]
@@ -95,7 +97,7 @@
       (tttb/place-value-into-tttb board symbol position)
       (recur board symbol))))
 
-(defn play-turn [board ai-symbol difficulty]
-  (if (> (rand-int 11) difficulty)
-    (place-random-spot board ai-symbol)
-    (mini-max-algo board ai-symbol)))
+(defn play-turn [game ai-symbol]
+  (if (> (rand-int 11) (:difficulty game))
+    (place-random-spot (:board game) ai-symbol)
+    (mini-max-algo game ai-symbol)))

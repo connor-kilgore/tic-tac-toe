@@ -1,6 +1,18 @@
 (ns tic-tac-toe.tic-tac-toe-board)
-(defn get-side-len [board]
-  (int (Math/sqrt (count board))))
+
+(defmulti get-side-len :three-d)
+(defmethod get-side-len true [game]
+  (int (Math/pow (count (:board game)) (/ 1 3))))
+(defmethod get-side-len false [game]
+  (int (Math/sqrt (count (:board game)))))
+
+(defmulti make-board :three-d)
+
+(defmethod make-board true [size]
+  (into [] (repeat (* (:size size) (:size size) (:size size)) 0)))
+
+(defmethod make-board false [size]
+  (into [] (repeat (* (:size size) (:size size)) 0)))
 
 (defn spot-available? [board position]
   (= (get board position) 0))
