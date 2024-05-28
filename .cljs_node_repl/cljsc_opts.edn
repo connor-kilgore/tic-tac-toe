@@ -1,0 +1,1 @@
+{:output-dir ".cljs_node_repl", :target :nodejs, :main tic-tac-toe.core, :output-to ".cljs_node_repl/main.js", :aot-cache true}

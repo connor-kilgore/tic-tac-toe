@@ -1,0 +1,20 @@
+{:paths   ["src/clj" "src/cljc" "src/cljs" "resources"]
+ :deps    {org.clojure/clojure       {:mvn/version "1.10.3"}
+           quil/quil                 {:mvn/version "4.3.1563" :exclusions [cljsjs/p5]}
+           org.clojure/java.jdbc     {:mvn/version "0.7.12"}
+           speclj/speclj             {:mvn/version "3.4.2" :scope "test"}
+           org.postgresql/postgresql {:mvn/version "42.7.3" :scope "test"}
+           cljsjs/react-dom          {:mvn/version "18.2.0-1"}
+           cljsjs/react              {:mvn/version "18.2.0-1"}
+           reagent/reagent           {:mvn/version "1.2.0"}}
+ :aliases {:test    {:extra-deps  {com.cleancoders.c3kit/scaffold {:git/url "git@github.com:cleancoders/c3kit-scaffold.git" :git/sha "173ee966970a742e08c6718c58b5d8eed934a1e5"}
+                                   io.github.clojure/tools.build  {:mvn/version "0.9.6"}
+                                   org.clojure/clojurescript      {:mvn/version "1.11.60"}
+                                   speclj/speclj                  {:mvn/version "3.4.2"}}
+                     :extra-paths ["spec/clj" "spec/cljc" "spec/cljs"]
+                     }
+           :spec    {:main-opts ["-m" "speclj.main" "-c"]}
+           :cljs    {:main-opts ["-m" "c3kit.scaffold.cljs"]}
+           :clj-run {:main-opts ["-m" "tic-tac-toe.core"]}
+           }
+ }

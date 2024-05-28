@@ -1,0 +1,5 @@
+--main
+cljs.main
+--compile
+tic_tac_toe.core
+--repl

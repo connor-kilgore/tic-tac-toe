@@ -1,0 +1,47 @@
+{
+ :ns-prefix "tic-tac-toe"  ;; required - only namespaces with these prefix will trigger recompile
+ ; :env-keys ["property.name" "ENV_NAME"] ;; optional - environment keys for the environment (development, production, ...) default: ["c3.env" "C3_ENV"]
+ :ignore-errors [".*goog/i18n/bidi.js"] ;; optional - any error message matching any of these regex strings will be ignored
+ :ignore-console [] ;; optional - any console messages matching any of these regex strings will be ignored
+
+ ;; Build configuration for each environment, mostly ClojureScript compiler options: https://clojurescript.org/reference/compiler-options
+ :development {:cache-analysis true
+               :libs           ["src/js/" "target/goog/base.js"]
+               :optimizations  :none
+               :output-dir     "target"
+               :output-to      "target/ttt_dev.js"
+               :pretty-print   true
+               :source-map     true
+               :sources        ["spec" "src"]
+               :specs          true                                   ;; Run speclj specs after compile
+               :verbose        false
+               :watch-fn       c3kit.scaffold.cljs/on-dev-compiled    ;; Callback to run speclj specs after each compile when in auto mode
+               }
+ :production  {
+               :cache-analysis false
+               :infer-externs  true
+               :libs           ["src/js/"]
+               :optimizations  :advanced
+               :output-dir     "target"
+               :output-to      "target/ttt.js"
+               :pretty-print   false
+               ;:pretty-print   true
+               ;:pseudo-names   true
+               :sources        ["spec" "src"]
+               :specs          false
+               :verbose        false
+               }
+ :staging     {
+               :cache-analysis false
+               :infer-externs  true
+               :libs           ["src/js/"]
+               :optimizations  :whitespace
+               :output-dir     "target/"
+               :output-to      "target/ttt.js"
+               :pretty-print   true
+               :pseudo-names   true
+               :sources        ["spec" "src"]
+               :specs          false
+               :verbose        false
+               }
+ }

@@ -1,0 +1,8 @@
+-m
+cljs.main
+--target
+node
+--output-to
+target/main.js
+-c
+tic-tac-toe.core
