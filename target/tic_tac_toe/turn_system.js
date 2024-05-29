@@ -18,8 +18,8 @@ tic_tac_toe.turn_system.is_ai_QMARK_ = (function tic_tac_toe$turn_system$is_ai_Q
 return cljs.core._EQ_.call(null,cljs.core.subs.call(null,cljs.core.first.call(null,player),(0),(2)),"AI");
 });
 tic_tac_toe.turn_system.has_ai_QMARK_ = (function tic_tac_toe$turn_system$has_ai_QMARK_(players){
-return cljs.core.some.call(null,cljs.core.true_QMARK_,cljs.core.map.call(null,(function (p1__6391_SHARP_){
-return tic_tac_toe.turn_system.is_ai_QMARK_.call(null,p1__6391_SHARP_);
+return cljs.core.some.call(null,cljs.core.true_QMARK_,cljs.core.map.call(null,(function (p1__13438_SHARP_){
+return tic_tac_toe.turn_system.is_ai_QMARK_.call(null,p1__13438_SHARP_);
 }),players));
 });
 tic_tac_toe.turn_system.play_next_turn = (function tic_tac_toe$turn_system$play_next_turn(game){

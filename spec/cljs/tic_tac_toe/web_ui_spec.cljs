@@ -92,20 +92,24 @@
       (should= ["1" "2" "3" "4"]
                (sut/get-values (:print-statement menu/menu-options)))))
 
-  (it "displays a row"
-    (should= (str "([:button {:on-click #object[Function], :style {:width \"150px\", "
-                  ":height \"150px\", :vertical-align \"middle\", :font-size \"80px\"}} "
-                  "\" \"] [:button {:on-click #object[Function], :style {:width \"150px\", "
-                  ":height \"150px\", :vertical-align \"middle\", :font-size \"80px\"}} \" "
-                  "\"] [:button {:on-click #object[Function], :style {:width \"150px\", :height "
-                  "\"150px\", :vertical-align \"middle\", :font-size \"80px\"}} \" \"])")
+  (it "displays a row" ; TODO make css so this test doesn't break so easily
+    ;(should= 9 (count buttons))
+    ;(should= "X" (text (nth buttons 3)))
+    ;(should= "X" (text (nth buttons 4)))
+    ;(should= "X" (text (nth buttons 5)))
+    (should= (str "([:button {:on-click #object[Function], :style {:width \"50px\", "
+                  ":height \"50px\", :vertical-align \"middle\", :font-size \"20px\"}} "
+                  "\" \"] [:button {:on-click #object[Function], :style {:width \"50px\", "
+                  ":height \"50px\", :vertical-align \"middle\", :font-size \"20px\"}} \" "
+                  "\"] [:button {:on-click #object[Function], :style {:width \"50px\", :height "
+                  "\"50px\", :vertical-align \"middle\", :font-size \"20px\"}} \" \"])")
              (str (sut/display-row {:board [0 0 0 1 1 1 0 0 0] :three-d? false} 0 1)))
 
-    (should= (str "([:button {:on-click #object[Function], :style {:width \"150px\", :height "
-                  "\"150px\", :vertical-align \"middle\", :font-size \"80px\"}} \"X\"] "
-                  "[:button {:on-click #object[Function], :style {:width \"150px\", :height "
-                  "\"150px\", :vertical-align \"middle\", :font-size \"80px\"}} \"X\"] "
-                  "[:button {:on-click #object[Function], :style {:width \"150px\", :height \"150px\", "
-                  ":vertical-align \"middle\", :font-size \"80px\"}} \"X\"])")
+    (should= (str "([:button {:on-click #object[Function], :style {:width \"50px\", :height "
+                  "\"50px\", :vertical-align \"middle\", :font-size \"20px\"}} \"X\"] "
+                  "[:button {:on-click #object[Function], :style {:width \"50px\", :height "
+                  "\"50px\", :vertical-align \"middle\", :font-size \"20px\"}} \"X\"] "
+                  "[:button {:on-click #object[Function], :style {:width \"50px\", :height \"50px\", "
+                  ":vertical-align \"middle\", :font-size \"20px\"}} \"X\"])")
              (str (sut/display-row {:board [0 0 0 1 1 1 0 0 0] :three-d? false} 1 1))))
   )

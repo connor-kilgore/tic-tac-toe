@@ -1,7 +1,7 @@
 (ns tic-tac-toe.edndb
   (:require [tic-tac-toe.save-interface :as save]))
 
-(def saved-games-dir "/Users/connor_kilgore/Desktop/CleanCoders/apprenticeship/projects/tic-tac-toe/saved-games/")
+(def saved-games-dir "saved-games/")
 (def last-game-path (str saved-games-dir "/last.txt"))
 
 (defn append-game-state-to-file [path game]

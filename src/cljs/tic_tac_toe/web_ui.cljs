@@ -93,7 +93,7 @@
 
 (defmethod ui/initialize-ui :web-ui [_]
   (render-root)
-  (call-game-initialize))
+  (ui/initialize-game {:ui :web-ui}))
 
 (defn update-game! [key val]
   (let [updated-game (assoc @game-state key val)]
@@ -114,7 +114,7 @@
 (defn valid-move? [game position symbol]
   (or (nil? symbol) (board/spot-available? (:board game) position)))
 
-(defn play-move [game i symbol]
+(defn play-move! [game i symbol]
   (when (valid-player-move? game i symbol)
     (swap! game-state assoc :board (board/place-value-into-tttb
                                      (:board game) symbol i))
@@ -132,11 +132,11 @@
   (let [side-len (board/get-side-len game)
         start-index (* row# side-len)]
     (for [i (range start-index (+ start-index side-len))]
-      ^{:key i} [:button {:on-click #(play-move game i symbol)
-                          :style    {:width          "150px"
-                                     :height         "150px"
+      ^{:key i} [:button {:on-click #(play-move! game i symbol)
+                          :style    {:width          "50px"
+                                     :height         "50px"
                                      :vertical-align "middle"
-                                     :font-size      "80px"}}
+                                     :font-size      "20px"}}
                  (get symbols/gui-symbols (nth (:board game) i))])))
 
 (defmulti display-board :three-d?)
@@ -150,7 +150,7 @@
   (let [side-len (board/get-side-len game)]
     (for [i (range (* side-len side-len))]
       (let [board-index (quot i side-len)]
-        ^{:key i} [:div {:style {:margin-left (str (* board-index 70.26) "px")}}
+        ^{:key i} [:div {:style {:margin-left (str (* board-index 150) "px")}}
                    (display-row game i symbol)]))))
 
 (defmethod ui/round-output :web-ui [game]

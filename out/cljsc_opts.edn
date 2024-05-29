@@ -1,1 +1,0 @@
-{:browser-repl true, :main tic_tac_toe.core, :output-to "out/main.js", :output-dir "out", :aot-cache true}
