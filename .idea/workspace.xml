@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="53cf6d28-3fb1-4f0e-bbee-94c86b131774" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ClojureProjectResolveSettings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__aopalliance_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__bouncycastle_bcmail_jdk14_138.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__bouncycastle_bcprov_jdk14_138.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__cljsjs_react_18_2_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__cljsjs_react_dom_18_2_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_andrewmcveigh_cljs_time_0_5_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_cleancoders_c3kit_apron_2_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_cleancoders_c3kit_scaffold_173ee9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_cognitect_aws_api_0_8_612.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_cognitect_aws_endpoints_1_1_12_321.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_cognitect_aws_s3_822_2_1145_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_cognitect_http_client_1_0_115.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_cognitect_transit_clj_1_0_329.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_cognitect_transit_cljs_0_8_280.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_cognitect_transit_java_1_0_362.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_cognitect_transit_js_0_8_874.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_fasterxml_jackson_core_jackson_core_2_8_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_google_code_findbugs_jsr305_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_google_code_gson_gson_2_8_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_google_errorprone_error_prone_annotations_2_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_google_guava_failureaccess_1_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_google_guava_guava_31_1_android.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_google_inject_guice_no_aop_4_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_google_j2objc_j2objc_annotations_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_google_javascript_closure_compiler_unshaded_v20220502.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_googlecode_json_simple_json_simple_1_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_lowagie_itext_2_1_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_microsoft_playwright_driver_1_28_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_microsoft_playwright_driver_bundle_1_28_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_microsoft_playwright_playwright_1_28_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_taoensso_encore_3_60_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_taoensso_timbre_6_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_taoensso_truss_1_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__com_yahoo_platform_yui_yuicompressor_2_4_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__commons_codec_1_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__commons_io_2_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__commons_logging_1_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__fresh_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__garden_1_3_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__io_aviso_pretty_1_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__io_github_clojure_tools_build_0_9_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__javax_annotation_javax_annotation_api_1_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__javax_inject_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__javax_xml_bind_jaxb_api_2_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__mmargs_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_commons_commons_lang3_3_12_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_httpcomponents_httpclient_4_5_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_httpcomponents_httpcore_4_4_15.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_maven_maven_artifact_3_8_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_maven_maven_builder_support_3_8_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_maven_maven_core_3_8_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_maven_maven_model_3_8_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_maven_maven_model_builder_3_8_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_maven_maven_plugin_api_3_8_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_maven_maven_repository_metadata_3_8_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_maven_maven_resolver_provider_3_8_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_maven_maven_settings_3_8_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_maven_maven_settings_builder_3_8_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_maven_resolver_maven_resolver_api_1_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_maven_resolver_maven_resolver_connector_basic_1_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_maven_resolver_maven_resolver_impl_1_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_maven_resolver_maven_resolver_named_locks_1_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_maven_resolver_maven_resolver_spi_1_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_maven_resolver_maven_resolver_transport_file_1_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_maven_resolver_maven_resolver_transport_http_1_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_maven_resolver_maven_resolver_util_1_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_maven_shared_maven_shared_utils_3_3_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_xmlgraphics_batik_awt_util_1_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_xmlgraphics_batik_constants_1_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_xmlgraphics_batik_css_1_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_xmlgraphics_batik_dom_1_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_xmlgraphics_batik_ext_1_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_xmlgraphics_batik_i18n_1_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_xmlgraphics_batik_shared_resources_1_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_xmlgraphics_batik_svggen_1_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_xmlgraphics_batik_util_1_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_xmlgraphics_batik_xml_1_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_apache_xmlgraphics_xmlgraphics_commons_2_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_bouncycastle_bcmail_jdk14_1_38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_bouncycastle_bcprov_jdk14_1_38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_bouncycastle_bctsp_jdk14_1_38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_checkerframework_checker_qual_3_42_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_clojure_clojure_1_10_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_clojure_clojurescript_1_11_60.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_clojure_core_async_1_6_681.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_clojure_core_cache_1_0_225.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_clojure_core_memoize_1_0_253.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_clojure_core_specs_alpha_0_2_56.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_clojure_data_json_2_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_clojure_data_priority_map_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_clojure_data_xml_0_2_0_alpha8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_clojure_google_closure_library_0_0_20211011_0726fdeb.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_clojure_google_closure_library_third_party_0_0_20211011_0726fdeb.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_clojure_java_classpath_1_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_clojure_java_jdbc_0_7_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_clojure_spec_alpha_0_2_194.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_clojure_tools_analyzer_1_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_clojure_tools_analyzer_jvm_1_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_clojure_tools_cli_1_0_214.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_clojure_tools_deps_0_18_1354.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_clojure_tools_gitlibs_2_5_197.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_clojure_tools_logging_1_2_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_clojure_tools_namespace_1_4_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_clojure_tools_reader_1_3_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_codehaus_plexus_plexus_cipher_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_codehaus_plexus_plexus_classworlds_2_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_codehaus_plexus_plexus_component_annotations_2_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_codehaus_plexus_plexus_interpolation_1_26.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_codehaus_plexus_plexus_sec_dispatcher_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_codehaus_plexus_plexus_utils_3_4_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_eclipse_jetty_jetty_client_9_4_48_v20220622.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_eclipse_jetty_jetty_http_9_4_48_v20220622.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_eclipse_jetty_jetty_io_9_4_48_v20220622.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_eclipse_jetty_jetty_util_9_4_48_v20220622.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_eclipse_sisu_org_eclipse_sisu_inject_0_3_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_eclipse_sisu_org_eclipse_sisu_plexus_0_3_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_javassist_javassist_3_18_1_GA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_msgpack_msgpack_0_6_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_ow2_asm_asm_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_postgresql_postgresql_42_7_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_slf4j_jcl_over_slf4j_1_7_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_slf4j_slf4j_api_1_7_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__org_slf4j_slf4j_nop_1_7_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__quil_4_3_1563.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__quil_processing_core_4_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__quil_processing_dxf_4_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__quil_processing_pdf_4_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__quil_processing_svg_4_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__reagent_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__speclj_3_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__trptcolin_versioneer_0_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__xalan_2_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__xalan_serializer_2_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__xml_apis_1_4_01.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Deps__xml_apis_xml_apis_ext_1_3_04.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved-games/last.txt" beforeDir="false" afterPath="$PROJECT_DIR$/saved-games/last.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tic-tac-toe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tic-tac-toe.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CLJC Test Namespace" />
+        <option value="Clojure Test Namespace" />
+        <option value="Clojure Namespace" />
+        <option value="ClojureScript Namespace" />
+        <option value="ClojureScript Test Namespace" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2gc68oeqlBO4Y9AqTFnEe4WoktD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Clojure Application.tic-tac-toe.core-spec.executor": "Run",
+    "Clojure Application.tic-tac-toe.web-ui.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "cursive.last.file.extension./Users/connor_kilgore/Desktop/CleanCoders/apprenticeship/projects/ttt-cljs/spec/clj": "clj",
+    "cursive.last.file.extension./Users/connor_kilgore/Desktop/CleanCoders/apprenticeship/projects/ttt-cljs/spec/cljc": "cljc",
+    "cursive.last.file.extension./Users/connor_kilgore/Desktop/CleanCoders/apprenticeship/projects/ttt-cljs/spec/cljs": "cljs",
+    "cursive.last.file.extension./Users/connor_kilgore/Desktop/CleanCoders/apprenticeship/projects/ttt-cljs/src/clj": "clj",
+    "cursive.last.file.extension./Users/connor_kilgore/Desktop/CleanCoders/apprenticeship/projects/ttt-cljs/src/cljs": "cljs",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/connor_kilgore/Desktop/CleanCoders/apprenticeship/projects/ttt-cljs",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "advanced.settings"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "HTML"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/cljs/tic_tac_toe" />
+      <recent name="$PROJECT_DIR$/src/cljc/tic_tac_toe" />
+      <recent name="$PROJECT_DIR$/spec/clj/tic_tac_toe" />
+      <recent name="$PROJECT_DIR$/src/clj/tic_tac_toe" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/public" />
+      <recent name="$PROJECT_DIR$/src/cljc/tic_tac_toe" />
+      <recent name="$PROJECT_DIR$/spec/cljc/tic_tac_toe" />
+      <recent name="$PROJECT_DIR$/spec/clj/tic_tac_toe" />
+      <recent name="$PROJECT_DIR$/src/clj/tic_tac_toe" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
+      <setting name="displayName" value="" />
+      <setting name="bbPath" value="" />
+      <setting name="parameters" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <setting name="workingDir" value="" />
+      <setting name="focusEditor" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <option name="configVersion" value="1" />
+      <option name="options" />
+      <option name="profiles" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
+      <setting name="displayName" value="" />
+      <setting name="host" value="" />
+      <setting name="port" value="0" />
+      <setting name="replType" value="SOCKET" />
+      <setting name="configType" value="SPECIFY" />
+      <setting name="replPortFileType" value="STANDARD" />
+      <setting name="customPortFile" value="" />
+      <setting name="fixLineNumbers" value="false" />
+      <setting name="focusEditor" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="53cf6d28-3fb1-4f0e-bbee-94c86b131774" name="Changes" comment="" />
+      <created>1715984361222</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715984361222</updated>
+    </task>
+    <servers />
+  </component>
+</project>
