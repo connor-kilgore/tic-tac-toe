@@ -76,8 +76,8 @@ goog.addDependency("../reagent/core.js", ['reagent.core'], ['reagent.impl.util',
 goog.addDependency("../tic_tac_toe/option_selector.js", ['tic_tac_toe.option_selector'], ['cljs.core']);
 goog.addDependency("../cljsjs/react-dom/development/react-dom.inc.js", ['react_dom', 'react_dom.client', 'cljsjs.react.dom'], ['react'], {'foreign-lib': true});
 goog.addDependency("../reagent/dom.js", ['reagent.dom'], ['reagent.impl.util', 'reagent.impl.protocols', 'reagent.ratom', 'cljs.core', 'reagent.impl.template', 'reagent.impl.batching', 'react_dom']);
-goog.addDependency("../tic_tac_toe/web_ui.js", ['tic_tac_toe.web_ui'], ['reagent.core', 'cljs.core', 'tic_tac_toe.symbols', 'tic_tac_toe.game_runner', 'tic_tac_toe.ui_interface', 'clojure.string', 'tic_tac_toe.tic_tac_toe_board', 'tic_tac_toe.option_selector', 'reagent.dom']);
-goog.addDependency("../tic_tac_toe/web_ui_spec.js", ['tic_tac_toe.web_ui_spec'], ['cljs.core', 'tic_tac_toe.web_ui', 'speclj.core', 'tic_tac_toe.ui_interface', 'clojure.string', 'tic_tac_toe.option_selector']);
+goog.addDependency("../tic_tac_toe/web_ui.js", ['tic_tac_toe.web_ui'], ['reagent.core', 'cljs.core', 'tic_tac_toe.symbols', 'tic_tac_toe.game_runner', 'tic_tac_toe.ui_interface', 'tic_tac_toe.tic_tac_toe_board', 'tic_tac_toe.option_selector', 'reagent.dom']);
+goog.addDependency("../tic_tac_toe/web_ui_spec.js", ['tic_tac_toe.web_ui_spec'], ['cljs.core', 'tic_tac_toe.web_ui', 'tic_tac_toe.game_runner', 'speclj.core', 'tic_tac_toe.ui_interface', 'clojure.string', 'tic_tac_toe.option_selector']);
 goog.addDependency("../tic_tac_toe/win_checker_spec.js", ['tic_tac_toe.win_checker_spec'], ['cljs.core', 'tic_tac_toe.win_checker', 'speclj.core']);
 goog.addDependency("../tic_tac_toe/option_selector_spec.js", ['tic_tac_toe.option_selector_spec'], ['cljs.core', 'speclj.core', 'tic_tac_toe.option_selector']);
 goog.addDependency("../tic_tac_toe/main.js", ['tic_tac_toe.main'], ['cljs.core', 'tic_tac_toe.web_ui', 'tic_tac_toe.ui_interface']);

@@ -161,7 +161,7 @@
 
 (defmethod ui/initialize-ui :gui [_]
   (q/defsketch sketch
-    :title "Tic Tac Toe"
+    :text "Tic Tac Toe"
     :size [800 800]
     :setup setup
     :draw draw

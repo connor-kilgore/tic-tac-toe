@@ -6,100 +6,100 @@ goog.require('tic_tac_toe.turn_system');
 goog.require('tic_tac_toe.ui_interface');
 goog.require('speclj.core');
 tic_tac_toe.game_runner_spec.base_initialized_game = new cljs.core.PersistentArrayMap(null, 8, [new cljs.core.Keyword(null,"players","players",-1361554569),new cljs.core.PersistentArrayMap(null, 2, ["Player",(1),"AI",(2)], null),new cljs.core.Keyword(null,"difficulty","difficulty",755680807),(10),new cljs.core.Keyword(null,"round","round",2009433328),(1),new cljs.core.Keyword(null,"three-d?","three-d?",-1505114667),false,new cljs.core.Keyword(null,"board","board",-1907017633),new cljs.core.PersistentVector(null, 9, 5, cljs.core.PersistentVector.EMPTY_NODE, [(0),(0),(0),(0),(0),(0),(0),(0),(0)], null),new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"tui","tui",-1217057309),new cljs.core.Keyword(null,"save-location","save-location",1426336611),new cljs.core.Keyword(null,"edndb","edndb",1239103406),new cljs.core.Keyword(null,"parameters","parameters",-1229919748),cljs.core.List.EMPTY], null);
-var description__7524__auto___14575 = speclj.components.new_description.call(null,"Game Runner Module",false,"tic-tac-toe.game-runner-spec");
-var _STAR_parent_description_STAR__orig_val__14465_14576 = speclj.config._STAR_parent_description_STAR_;
-var _STAR_parent_description_STAR__temp_val__14466_14577 = description__7524__auto___14575;
-(speclj.config._STAR_parent_description_STAR_ = _STAR_parent_description_STAR__temp_val__14466_14577);
+var description__7511__auto___22424 = speclj.components.new_description.call(null,"Game Runner Module",false,"tic-tac-toe.game-runner-spec");
+var _STAR_parent_description_STAR__orig_val__22314_22425 = speclj.config._STAR_parent_description_STAR_;
+var _STAR_parent_description_STAR__temp_val__22315_22426 = description__7511__auto___22424;
+(speclj.config._STAR_parent_description_STAR_ = _STAR_parent_description_STAR__temp_val__22315_22426);
 
-try{var seq__14467_14578 = cljs.core.seq.call(null,(new cljs.core.PersistentVector(null,5,(5),cljs.core.PersistentVector.EMPTY_NODE,[speclj.components.new_characteristic.call(null,"makes new match data",((function (_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575){
+try{var seq__22316_22427 = cljs.core.seq.call(null,(new cljs.core.PersistentVector(null,5,(5),cljs.core.PersistentVector.EMPTY_NODE,[speclj.components.new_characteristic.call(null,"makes new match data",((function (_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424){
 return (function (){
-var expected__7651__auto__ = new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"players","players",-1361554569),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"player-1","player-1",-857374100),(1),new cljs.core.Keyword(null,"player-2","player-2",-227455796),(2)], null),new cljs.core.Keyword(null,"difficulty","difficulty",755680807),(10),new cljs.core.Keyword(null,"round","round",2009433328),(1),new cljs.core.Keyword(null,"three-d?","three-d?",-1505114667),false,new cljs.core.Keyword(null,"board","board",-1907017633),new cljs.core.PersistentVector(null, 9, 5, cljs.core.PersistentVector.EMPTY_NODE, [(0),(0),(0),(0),(0),(0),(0),(0),(0)], null)], null);
-var actual__7652__auto__ = tic_tac_toe.game_runner.reset_game.call(null,new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"players","players",-1361554569),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"player-1","player-1",-857374100),(1),new cljs.core.Keyword(null,"player-2","player-2",-227455796),(2)], null),new cljs.core.Keyword(null,"difficulty","difficulty",755680807),(10),new cljs.core.Keyword(null,"round","round",2009433328),(3),new cljs.core.Keyword(null,"three-d?","three-d?",-1505114667),false,new cljs.core.Keyword(null,"board","board",-1907017633),new cljs.core.PersistentVector(null, 9, 5, cljs.core.PersistentVector.EMPTY_NODE, [(1),(1),(1),(0),(0),(0),(0),(0),(0)], null)], null));
-if(cljs.core._EQ_.call(null,expected__7651__auto__,actual__7652__auto__)){
+var expected__7644__auto__ = new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"players","players",-1361554569),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"player-1","player-1",-857374100),(1),new cljs.core.Keyword(null,"player-2","player-2",-227455796),(2)], null),new cljs.core.Keyword(null,"difficulty","difficulty",755680807),(10),new cljs.core.Keyword(null,"round","round",2009433328),(1),new cljs.core.Keyword(null,"three-d?","three-d?",-1505114667),false,new cljs.core.Keyword(null,"board","board",-1907017633),new cljs.core.PersistentVector(null, 9, 5, cljs.core.PersistentVector.EMPTY_NODE, [(0),(0),(0),(0),(0),(0),(0),(0),(0)], null)], null);
+var actual__7645__auto__ = tic_tac_toe.game_runner.reset_game.call(null,new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"players","players",-1361554569),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"player-1","player-1",-857374100),(1),new cljs.core.Keyword(null,"player-2","player-2",-227455796),(2)], null),new cljs.core.Keyword(null,"difficulty","difficulty",755680807),(10),new cljs.core.Keyword(null,"round","round",2009433328),(3),new cljs.core.Keyword(null,"three-d?","three-d?",-1505114667),false,new cljs.core.Keyword(null,"board","board",-1907017633),new cljs.core.PersistentVector(null, 9, 5, cljs.core.PersistentVector.EMPTY_NODE, [(1),(1),(1),(0),(0),(0),(0),(0),(0)], null)], null));
+if(cljs.core._EQ_.call(null,expected__7644__auto__,actual__7645__auto__)){
 return null;
 } else {
-throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7651__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7651__auto__)),speclj.platform.endl,"     got: ",(((actual__7652__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7652__auto__))," (using =)"].join('')));
+throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7644__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7644__auto__)),speclj.platform.endl,"     got: ",(((actual__7645__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7645__auto__))," (using =)"].join('')));
 }
-});})(_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575))
-,false),(function (){var description__7524__auto____$1 = speclj.components.new_description.call(null,"gives an end condition string by",false,"tic-tac-toe.game-runner-spec");
-var _STAR_parent_description_STAR__orig_val__14523_14582 = speclj.config._STAR_parent_description_STAR_;
-var _STAR_parent_description_STAR__temp_val__14524_14583 = description__7524__auto____$1;
-(speclj.config._STAR_parent_description_STAR_ = _STAR_parent_description_STAR__temp_val__14524_14583);
+});})(_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424))
+,false),(function (){var description__7511__auto____$1 = speclj.components.new_description.call(null,"gives an end condition string by",false,"tic-tac-toe.game-runner-spec");
+var _STAR_parent_description_STAR__orig_val__22372_22431 = speclj.config._STAR_parent_description_STAR_;
+var _STAR_parent_description_STAR__temp_val__22373_22432 = description__7511__auto____$1;
+(speclj.config._STAR_parent_description_STAR_ = _STAR_parent_description_STAR__temp_val__22373_22432);
 
-try{var seq__14525_14584 = cljs.core.seq.call(null,(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[speclj.components.new_characteristic.call(null,"saying you tied when no winner",((function (_STAR_parent_description_STAR__orig_val__14523_14582,_STAR_parent_description_STAR__temp_val__14524_14583,description__7524__auto____$1,_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575){
+try{var seq__22374_22433 = cljs.core.seq.call(null,(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[speclj.components.new_characteristic.call(null,"saying you tied when no winner",((function (_STAR_parent_description_STAR__orig_val__22372_22431,_STAR_parent_description_STAR__temp_val__22373_22432,description__7511__auto____$1,_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424){
 return (function (){
-var expected__7651__auto__ = "\nTie!";
-var actual__7652__auto__ = tic_tac_toe.game_runner.get_end_condition_string.call(null,null,new cljs.core.PersistentArrayMap(null, 2, ["Player 1",(1),"AI",(2)], null));
-if(cljs.core._EQ_.call(null,expected__7651__auto__,actual__7652__auto__)){
+var expected__7644__auto__ = "\nTie!";
+var actual__7645__auto__ = tic_tac_toe.game_runner.get_end_condition_string.call(null,null,new cljs.core.PersistentArrayMap(null, 2, ["Player 1",(1),"AI",(2)], null));
+if(cljs.core._EQ_.call(null,expected__7644__auto__,actual__7645__auto__)){
 return null;
 } else {
-throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7651__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7651__auto__)),speclj.platform.endl,"     got: ",(((actual__7652__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7652__auto__))," (using =)"].join('')));
+throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7644__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7644__auto__)),speclj.platform.endl,"     got: ",(((actual__7645__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7645__auto__))," (using =)"].join('')));
 }
-});})(_STAR_parent_description_STAR__orig_val__14523_14582,_STAR_parent_description_STAR__temp_val__14524_14583,description__7524__auto____$1,_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575))
-,false),speclj.components.new_characteristic.call(null,"saying who won if there is a winner",((function (_STAR_parent_description_STAR__orig_val__14523_14582,_STAR_parent_description_STAR__temp_val__14524_14583,description__7524__auto____$1,_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575){
+});})(_STAR_parent_description_STAR__orig_val__22372_22431,_STAR_parent_description_STAR__temp_val__22373_22432,description__7511__auto____$1,_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424))
+,false),speclj.components.new_characteristic.call(null,"saying who won if there is a winner",((function (_STAR_parent_description_STAR__orig_val__22372_22431,_STAR_parent_description_STAR__temp_val__22373_22432,description__7511__auto____$1,_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424){
 return (function (){
-var expected__7651__auto___14588 = "\nAI wins!";
-var actual__7652__auto___14589 = tic_tac_toe.game_runner.get_end_condition_string.call(null,(2),new cljs.core.PersistentArrayMap(null, 2, ["Player 1",(1),"AI",(2)], null));
-if(cljs.core._EQ_.call(null,expected__7651__auto___14588,actual__7652__auto___14589)){
+var expected__7644__auto___22437 = "\nAI wins!";
+var actual__7645__auto___22438 = tic_tac_toe.game_runner.get_end_condition_string.call(null,(2),new cljs.core.PersistentArrayMap(null, 2, ["Player 1",(1),"AI",(2)], null));
+if(cljs.core._EQ_.call(null,expected__7644__auto___22437,actual__7645__auto___22438)){
 } else {
-throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7651__auto___14588 == null))?"nil":cljs.core.pr_str.call(null,expected__7651__auto___14588)),speclj.platform.endl,"     got: ",(((actual__7652__auto___14589 == null))?"nil":cljs.core.pr_str.call(null,actual__7652__auto___14589))," (using =)"].join('')));
+throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7644__auto___22437 == null))?"nil":cljs.core.pr_str.call(null,expected__7644__auto___22437)),speclj.platform.endl,"     got: ",(((actual__7645__auto___22438 == null))?"nil":cljs.core.pr_str.call(null,actual__7645__auto___22438))," (using =)"].join('')));
 }
 
-var expected__7651__auto__ = "\nPlayer 1 wins!";
-var actual__7652__auto__ = tic_tac_toe.game_runner.get_end_condition_string.call(null,(1),new cljs.core.PersistentArrayMap(null, 2, ["Player 1",(1),"AI",(2)], null));
-if(cljs.core._EQ_.call(null,expected__7651__auto__,actual__7652__auto__)){
+var expected__7644__auto__ = "\nPlayer 1 wins!";
+var actual__7645__auto__ = tic_tac_toe.game_runner.get_end_condition_string.call(null,(1),new cljs.core.PersistentArrayMap(null, 2, ["Player 1",(1),"AI",(2)], null));
+if(cljs.core._EQ_.call(null,expected__7644__auto__,actual__7645__auto__)){
 return null;
 } else {
-throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7651__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7651__auto__)),speclj.platform.endl,"     got: ",(((actual__7652__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7652__auto__))," (using =)"].join('')));
+throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7644__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7644__auto__)),speclj.platform.endl,"     got: ",(((actual__7645__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7645__auto__))," (using =)"].join('')));
 }
-});})(_STAR_parent_description_STAR__orig_val__14523_14582,_STAR_parent_description_STAR__temp_val__14524_14583,description__7524__auto____$1,_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575))
+});})(_STAR_parent_description_STAR__orig_val__22372_22431,_STAR_parent_description_STAR__temp_val__22373_22432,description__7511__auto____$1,_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424))
 ,false)],null)));
-var chunk__14526_14585 = null;
-var count__14527_14586 = (0);
-var i__14528_14587 = (0);
+var chunk__22375_22434 = null;
+var count__22376_22435 = (0);
+var i__22377_22436 = (0);
 while(true){
-if((i__14528_14587 < count__14527_14586)){
-var component__7525__auto___14590 = cljs.core._nth.call(null,chunk__14526_14585,i__14528_14587);
-speclj.components.install.call(null,component__7525__auto___14590,description__7524__auto____$1);
+if((i__22377_22436 < count__22376_22435)){
+var component__7512__auto___22439 = cljs.core._nth.call(null,chunk__22375_22434,i__22377_22436);
+speclj.components.install.call(null,component__7512__auto___22439,description__7511__auto____$1);
 
 
-var G__14591 = seq__14525_14584;
-var G__14592 = chunk__14526_14585;
-var G__14593 = count__14527_14586;
-var G__14594 = (i__14528_14587 + (1));
-seq__14525_14584 = G__14591;
-chunk__14526_14585 = G__14592;
-count__14527_14586 = G__14593;
-i__14528_14587 = G__14594;
+var G__22440 = seq__22374_22433;
+var G__22441 = chunk__22375_22434;
+var G__22442 = count__22376_22435;
+var G__22443 = (i__22377_22436 + (1));
+seq__22374_22433 = G__22440;
+chunk__22375_22434 = G__22441;
+count__22376_22435 = G__22442;
+i__22377_22436 = G__22443;
 continue;
 } else {
-var temp__5753__auto___14595 = cljs.core.seq.call(null,seq__14525_14584);
-if(temp__5753__auto___14595){
-var seq__14525_14596__$1 = temp__5753__auto___14595;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__14525_14596__$1)){
-var c__5568__auto___14597 = cljs.core.chunk_first.call(null,seq__14525_14596__$1);
-var G__14598 = cljs.core.chunk_rest.call(null,seq__14525_14596__$1);
-var G__14599 = c__5568__auto___14597;
-var G__14600 = cljs.core.count.call(null,c__5568__auto___14597);
-var G__14601 = (0);
-seq__14525_14584 = G__14598;
-chunk__14526_14585 = G__14599;
-count__14527_14586 = G__14600;
-i__14528_14587 = G__14601;
+var temp__5753__auto___22444 = cljs.core.seq.call(null,seq__22374_22433);
+if(temp__5753__auto___22444){
+var seq__22374_22445__$1 = temp__5753__auto___22444;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__22374_22445__$1)){
+var c__5568__auto___22446 = cljs.core.chunk_first.call(null,seq__22374_22445__$1);
+var G__22447 = cljs.core.chunk_rest.call(null,seq__22374_22445__$1);
+var G__22448 = c__5568__auto___22446;
+var G__22449 = cljs.core.count.call(null,c__5568__auto___22446);
+var G__22450 = (0);
+seq__22374_22433 = G__22447;
+chunk__22375_22434 = G__22448;
+count__22376_22435 = G__22449;
+i__22377_22436 = G__22450;
 continue;
 } else {
-var component__7525__auto___14602 = cljs.core.first.call(null,seq__14525_14596__$1);
-speclj.components.install.call(null,component__7525__auto___14602,description__7524__auto____$1);
+var component__7512__auto___22451 = cljs.core.first.call(null,seq__22374_22445__$1);
+speclj.components.install.call(null,component__7512__auto___22451,description__7511__auto____$1);
 
 
-var G__14603 = cljs.core.next.call(null,seq__14525_14596__$1);
-var G__14604 = null;
-var G__14605 = (0);
-var G__14606 = (0);
-seq__14525_14584 = G__14603;
-chunk__14526_14585 = G__14604;
-count__14527_14586 = G__14605;
-i__14528_14587 = G__14606;
+var G__22452 = cljs.core.next.call(null,seq__22374_22445__$1);
+var G__22453 = null;
+var G__22454 = (0);
+var G__22455 = (0);
+seq__22374_22433 = G__22452;
+chunk__22375_22434 = G__22453;
+count__22376_22435 = G__22454;
+i__22377_22436 = G__22455;
 continue;
 }
 } else {
@@ -107,116 +107,116 @@ continue;
 }
 break;
 }
-}finally {(speclj.config._STAR_parent_description_STAR_ = _STAR_parent_description_STAR__orig_val__14523_14582);
+}finally {(speclj.config._STAR_parent_description_STAR_ = _STAR_parent_description_STAR__orig_val__22372_22431);
 }
 if(cljs.core.truth_(speclj.config._STAR_parent_description_STAR_)){
 } else {
-speclj.running.submit_description.call(null,speclj.config.active_runner.call(null),description__7524__auto____$1);
+speclj.running.submit_description.call(null,speclj.config.active_runner.call(null),description__7511__auto____$1);
 }
 
-return description__7524__auto____$1;
-})(),(function (){var description__7524__auto____$1 = speclj.components.new_description.call(null,"runs the game-loop",false,"tic-tac-toe.game-runner-spec");
-var _STAR_parent_description_STAR__orig_val__14529_14607 = speclj.config._STAR_parent_description_STAR_;
-var _STAR_parent_description_STAR__temp_val__14530_14608 = description__7524__auto____$1;
-(speclj.config._STAR_parent_description_STAR_ = _STAR_parent_description_STAR__temp_val__14530_14608);
+return description__7511__auto____$1;
+})(),(function (){var description__7511__auto____$1 = speclj.components.new_description.call(null,"runs the game-loop",false,"tic-tac-toe.game-runner-spec");
+var _STAR_parent_description_STAR__orig_val__22378_22456 = speclj.config._STAR_parent_description_STAR_;
+var _STAR_parent_description_STAR__temp_val__22379_22457 = description__7511__auto____$1;
+(speclj.config._STAR_parent_description_STAR_ = _STAR_parent_description_STAR__temp_val__22379_22457);
 
-try{var seq__14531_14609 = cljs.core.seq.call(null,(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[speclj.components.new_characteristic.call(null,"until a tie",((function (_STAR_parent_description_STAR__orig_val__14529_14607,_STAR_parent_description_STAR__temp_val__14530_14608,description__7524__auto____$1,_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575){
+try{var seq__22380_22458 = cljs.core.seq.call(null,(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[speclj.components.new_characteristic.call(null,"until a tie",((function (_STAR_parent_description_STAR__orig_val__22378_22456,_STAR_parent_description_STAR__temp_val__22379_22457,description__7511__auto____$1,_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424){
 return (function (){
-var round_output_orig_val__14543 = tic_tac_toe.ui_interface.round_output;
-var play_next_turn_orig_val__14544 = tic_tac_toe.turn_system.play_next_turn;
-var round_output_temp_val__14545 = (function (_){
+var round_output_orig_val__22392 = tic_tac_toe.ui_interface.round_output;
+var play_next_turn_orig_val__22393 = tic_tac_toe.turn_system.play_next_turn;
+var round_output_temp_val__22394 = (function (_){
 return null;
 });
-var play_next_turn_temp_val__14546 = (function (_){
+var play_next_turn_temp_val__22395 = (function (_){
 return null;
 });
-(tic_tac_toe.ui_interface.round_output = round_output_temp_val__14545);
+(tic_tac_toe.ui_interface.round_output = round_output_temp_val__22394);
 
-(tic_tac_toe.turn_system.play_next_turn = play_next_turn_temp_val__14546);
+(tic_tac_toe.turn_system.play_next_turn = play_next_turn_temp_val__22395);
 
-try{var expected__7651__auto__ = null;
-var actual__7652__auto__ = tic_tac_toe.game_runner.game_loop.call(null,tic_tac_toe.game_runner_spec.base_initialized_game);
-if(cljs.core._EQ_.call(null,expected__7651__auto__,actual__7652__auto__)){
+try{var expected__7644__auto__ = null;
+var actual__7645__auto__ = tic_tac_toe.game_runner.game_loop.call(null,tic_tac_toe.game_runner_spec.base_initialized_game);
+if(cljs.core._EQ_.call(null,expected__7644__auto__,actual__7645__auto__)){
 return null;
 } else {
-throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7651__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7651__auto__)),speclj.platform.endl,"     got: ",(((actual__7652__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7652__auto__))," (using =)"].join('')));
+throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7644__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7644__auto__)),speclj.platform.endl,"     got: ",(((actual__7645__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7645__auto__))," (using =)"].join('')));
 }
-}finally {(tic_tac_toe.turn_system.play_next_turn = play_next_turn_orig_val__14544);
+}finally {(tic_tac_toe.turn_system.play_next_turn = play_next_turn_orig_val__22393);
 
-(tic_tac_toe.ui_interface.round_output = round_output_orig_val__14543);
-}});})(_STAR_parent_description_STAR__orig_val__14529_14607,_STAR_parent_description_STAR__temp_val__14530_14608,description__7524__auto____$1,_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575))
-,false),speclj.components.new_characteristic.call(null,"until a win",((function (_STAR_parent_description_STAR__orig_val__14529_14607,_STAR_parent_description_STAR__temp_val__14530_14608,description__7524__auto____$1,_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575){
+(tic_tac_toe.ui_interface.round_output = round_output_orig_val__22392);
+}});})(_STAR_parent_description_STAR__orig_val__22378_22456,_STAR_parent_description_STAR__temp_val__22379_22457,description__7511__auto____$1,_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424))
+,false),speclj.components.new_characteristic.call(null,"until a win",((function (_STAR_parent_description_STAR__orig_val__22378_22456,_STAR_parent_description_STAR__temp_val__22379_22457,description__7511__auto____$1,_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424){
 return (function (){
-var round_output_orig_val__14547 = tic_tac_toe.ui_interface.round_output;
-var play_next_turn_orig_val__14548 = tic_tac_toe.turn_system.play_next_turn;
-var round_output_temp_val__14549 = (function (_){
+var round_output_orig_val__22396 = tic_tac_toe.ui_interface.round_output;
+var play_next_turn_orig_val__22397 = tic_tac_toe.turn_system.play_next_turn;
+var round_output_temp_val__22398 = (function (_){
 return null;
 });
-var play_next_turn_temp_val__14550 = (function (_){
+var play_next_turn_temp_val__22399 = (function (_){
 return null;
 });
-(tic_tac_toe.ui_interface.round_output = round_output_temp_val__14549);
+(tic_tac_toe.ui_interface.round_output = round_output_temp_val__22398);
 
-(tic_tac_toe.turn_system.play_next_turn = play_next_turn_temp_val__14550);
+(tic_tac_toe.turn_system.play_next_turn = play_next_turn_temp_val__22399);
 
-try{var expected__7651__auto__ = (1);
-var actual__7652__auto__ = tic_tac_toe.game_runner.game_loop.call(null,cljs.core.assoc.call(null,tic_tac_toe.game_runner_spec.base_initialized_game,new cljs.core.Keyword(null,"board","board",-1907017633),new cljs.core.PersistentVector(null, 9, 5, cljs.core.PersistentVector.EMPTY_NODE, [(1),(1),(1),(0),(0),(0),(0),(0),(0)], null)));
-if(cljs.core._EQ_.call(null,expected__7651__auto__,actual__7652__auto__)){
+try{var expected__7644__auto__ = (1);
+var actual__7645__auto__ = tic_tac_toe.game_runner.game_loop.call(null,cljs.core.assoc.call(null,tic_tac_toe.game_runner_spec.base_initialized_game,new cljs.core.Keyword(null,"board","board",-1907017633),new cljs.core.PersistentVector(null, 9, 5, cljs.core.PersistentVector.EMPTY_NODE, [(1),(1),(1),(0),(0),(0),(0),(0),(0)], null)));
+if(cljs.core._EQ_.call(null,expected__7644__auto__,actual__7645__auto__)){
 return null;
 } else {
-throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7651__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7651__auto__)),speclj.platform.endl,"     got: ",(((actual__7652__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7652__auto__))," (using =)"].join('')));
+throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7644__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7644__auto__)),speclj.platform.endl,"     got: ",(((actual__7645__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7645__auto__))," (using =)"].join('')));
 }
-}finally {(tic_tac_toe.turn_system.play_next_turn = play_next_turn_orig_val__14548);
+}finally {(tic_tac_toe.turn_system.play_next_turn = play_next_turn_orig_val__22397);
 
-(tic_tac_toe.ui_interface.round_output = round_output_orig_val__14547);
-}});})(_STAR_parent_description_STAR__orig_val__14529_14607,_STAR_parent_description_STAR__temp_val__14530_14608,description__7524__auto____$1,_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575))
+(tic_tac_toe.ui_interface.round_output = round_output_orig_val__22396);
+}});})(_STAR_parent_description_STAR__orig_val__22378_22456,_STAR_parent_description_STAR__temp_val__22379_22457,description__7511__auto____$1,_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424))
 ,false)],null)));
-var chunk__14532_14610 = null;
-var count__14533_14611 = (0);
-var i__14534_14612 = (0);
+var chunk__22381_22459 = null;
+var count__22382_22460 = (0);
+var i__22383_22461 = (0);
 while(true){
-if((i__14534_14612 < count__14533_14611)){
-var component__7525__auto___14613 = cljs.core._nth.call(null,chunk__14532_14610,i__14534_14612);
-speclj.components.install.call(null,component__7525__auto___14613,description__7524__auto____$1);
+if((i__22383_22461 < count__22382_22460)){
+var component__7512__auto___22462 = cljs.core._nth.call(null,chunk__22381_22459,i__22383_22461);
+speclj.components.install.call(null,component__7512__auto___22462,description__7511__auto____$1);
 
 
-var G__14614 = seq__14531_14609;
-var G__14615 = chunk__14532_14610;
-var G__14616 = count__14533_14611;
-var G__14617 = (i__14534_14612 + (1));
-seq__14531_14609 = G__14614;
-chunk__14532_14610 = G__14615;
-count__14533_14611 = G__14616;
-i__14534_14612 = G__14617;
+var G__22463 = seq__22380_22458;
+var G__22464 = chunk__22381_22459;
+var G__22465 = count__22382_22460;
+var G__22466 = (i__22383_22461 + (1));
+seq__22380_22458 = G__22463;
+chunk__22381_22459 = G__22464;
+count__22382_22460 = G__22465;
+i__22383_22461 = G__22466;
 continue;
 } else {
-var temp__5753__auto___14618 = cljs.core.seq.call(null,seq__14531_14609);
-if(temp__5753__auto___14618){
-var seq__14531_14619__$1 = temp__5753__auto___14618;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__14531_14619__$1)){
-var c__5568__auto___14620 = cljs.core.chunk_first.call(null,seq__14531_14619__$1);
-var G__14621 = cljs.core.chunk_rest.call(null,seq__14531_14619__$1);
-var G__14622 = c__5568__auto___14620;
-var G__14623 = cljs.core.count.call(null,c__5568__auto___14620);
-var G__14624 = (0);
-seq__14531_14609 = G__14621;
-chunk__14532_14610 = G__14622;
-count__14533_14611 = G__14623;
-i__14534_14612 = G__14624;
+var temp__5753__auto___22467 = cljs.core.seq.call(null,seq__22380_22458);
+if(temp__5753__auto___22467){
+var seq__22380_22468__$1 = temp__5753__auto___22467;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__22380_22468__$1)){
+var c__5568__auto___22469 = cljs.core.chunk_first.call(null,seq__22380_22468__$1);
+var G__22470 = cljs.core.chunk_rest.call(null,seq__22380_22468__$1);
+var G__22471 = c__5568__auto___22469;
+var G__22472 = cljs.core.count.call(null,c__5568__auto___22469);
+var G__22473 = (0);
+seq__22380_22458 = G__22470;
+chunk__22381_22459 = G__22471;
+count__22382_22460 = G__22472;
+i__22383_22461 = G__22473;
 continue;
 } else {
-var component__7525__auto___14625 = cljs.core.first.call(null,seq__14531_14619__$1);
-speclj.components.install.call(null,component__7525__auto___14625,description__7524__auto____$1);
+var component__7512__auto___22474 = cljs.core.first.call(null,seq__22380_22468__$1);
+speclj.components.install.call(null,component__7512__auto___22474,description__7511__auto____$1);
 
 
-var G__14626 = cljs.core.next.call(null,seq__14531_14619__$1);
-var G__14627 = null;
-var G__14628 = (0);
-var G__14629 = (0);
-seq__14531_14609 = G__14626;
-chunk__14532_14610 = G__14627;
-count__14533_14611 = G__14628;
-i__14534_14612 = G__14629;
+var G__22475 = cljs.core.next.call(null,seq__22380_22468__$1);
+var G__22476 = null;
+var G__22477 = (0);
+var G__22478 = (0);
+seq__22380_22458 = G__22475;
+chunk__22381_22459 = G__22476;
+count__22382_22460 = G__22477;
+i__22383_22461 = G__22478;
 continue;
 }
 } else {
@@ -224,161 +224,161 @@ continue;
 }
 break;
 }
-}finally {(speclj.config._STAR_parent_description_STAR_ = _STAR_parent_description_STAR__orig_val__14529_14607);
+}finally {(speclj.config._STAR_parent_description_STAR_ = _STAR_parent_description_STAR__orig_val__22378_22456);
 }
 if(cljs.core.truth_(speclj.config._STAR_parent_description_STAR_)){
 } else {
-speclj.running.submit_description.call(null,speclj.config.active_runner.call(null),description__7524__auto____$1);
+speclj.running.submit_description.call(null,speclj.config.active_runner.call(null),description__7511__auto____$1);
 }
 
-return description__7524__auto____$1;
-})(),(function (){var description__7524__auto____$1 = speclj.components.new_description.call(null,"parses arguments to set the",false,"tic-tac-toe.game-runner-spec");
-var _STAR_parent_description_STAR__orig_val__14551_14630 = speclj.config._STAR_parent_description_STAR_;
-var _STAR_parent_description_STAR__temp_val__14552_14631 = description__7524__auto____$1;
-(speclj.config._STAR_parent_description_STAR_ = _STAR_parent_description_STAR__temp_val__14552_14631);
+return description__7511__auto____$1;
+})(),(function (){var description__7511__auto____$1 = speclj.components.new_description.call(null,"parses arguments to set the",false,"tic-tac-toe.game-runner-spec");
+var _STAR_parent_description_STAR__orig_val__22400_22479 = speclj.config._STAR_parent_description_STAR_;
+var _STAR_parent_description_STAR__temp_val__22401_22480 = description__7511__auto____$1;
+(speclj.config._STAR_parent_description_STAR_ = _STAR_parent_description_STAR__temp_val__22401_22480);
 
-try{var seq__14553_14632 = cljs.core.seq.call(null,(new cljs.core.PersistentVector(null,6,(5),cljs.core.PersistentVector.EMPTY_NODE,[speclj.components.new_characteristic.call(null,"valid arguments",((function (_STAR_parent_description_STAR__orig_val__14551_14630,_STAR_parent_description_STAR__temp_val__14552_14631,description__7524__auto____$1,_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575){
+try{var seq__22402_22481 = cljs.core.seq.call(null,(new cljs.core.PersistentVector(null,6,(5),cljs.core.PersistentVector.EMPTY_NODE,[speclj.components.new_characteristic.call(null,"valid arguments",((function (_STAR_parent_description_STAR__orig_val__22400_22479,_STAR_parent_description_STAR__temp_val__22401_22480,description__7511__auto____$1,_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424){
 return (function (){
-var expected__7651__auto___14636 = new cljs.core.Keyword(null,"gui","gui",604532813);
-var actual__7652__auto___14637 = tic_tac_toe.game_runner.get_valid_arg.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["--gui"], null),tic_tac_toe.game_runner.ui_types);
-if(cljs.core._EQ_.call(null,expected__7651__auto___14636,actual__7652__auto___14637)){
+var expected__7644__auto___22485 = new cljs.core.Keyword(null,"gui","gui",604532813);
+var actual__7645__auto___22486 = tic_tac_toe.game_runner.get_valid_arg.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["--gui"], null),tic_tac_toe.game_runner.ui_types);
+if(cljs.core._EQ_.call(null,expected__7644__auto___22485,actual__7645__auto___22486)){
 } else {
-throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7651__auto___14636 == null))?"nil":cljs.core.pr_str.call(null,expected__7651__auto___14636)),speclj.platform.endl,"     got: ",(((actual__7652__auto___14637 == null))?"nil":cljs.core.pr_str.call(null,actual__7652__auto___14637))," (using =)"].join('')));
+throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7644__auto___22485 == null))?"nil":cljs.core.pr_str.call(null,expected__7644__auto___22485)),speclj.platform.endl,"     got: ",(((actual__7645__auto___22486 == null))?"nil":cljs.core.pr_str.call(null,actual__7645__auto___22486))," (using =)"].join('')));
 }
 
-var expected__7651__auto___14638 = new cljs.core.Keyword(null,"archive","archive",1466927419);
-var actual__7652__auto___14639 = tic_tac_toe.game_runner.get_valid_arg.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["--archive","--gui"], null),tic_tac_toe.game_runner.ui_types);
-if(cljs.core._EQ_.call(null,expected__7651__auto___14638,actual__7652__auto___14639)){
+var expected__7644__auto___22487 = new cljs.core.Keyword(null,"archive","archive",1466927419);
+var actual__7645__auto___22488 = tic_tac_toe.game_runner.get_valid_arg.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["--archive","--gui"], null),tic_tac_toe.game_runner.ui_types);
+if(cljs.core._EQ_.call(null,expected__7644__auto___22487,actual__7645__auto___22488)){
 } else {
-throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7651__auto___14638 == null))?"nil":cljs.core.pr_str.call(null,expected__7651__auto___14638)),speclj.platform.endl,"     got: ",(((actual__7652__auto___14639 == null))?"nil":cljs.core.pr_str.call(null,actual__7652__auto___14639))," (using =)"].join('')));
+throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7644__auto___22487 == null))?"nil":cljs.core.pr_str.call(null,expected__7644__auto___22487)),speclj.platform.endl,"     got: ",(((actual__7645__auto___22488 == null))?"nil":cljs.core.pr_str.call(null,actual__7645__auto___22488))," (using =)"].join('')));
 }
 
-var expected__7651__auto__ = new cljs.core.Keyword(null,"tui","tui",-1217057309);
-var actual__7652__auto__ = tic_tac_toe.game_runner.get_valid_arg.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["--not-a-real-arg"], null),tic_tac_toe.game_runner.ui_types);
-if(cljs.core._EQ_.call(null,expected__7651__auto__,actual__7652__auto__)){
+var expected__7644__auto__ = new cljs.core.Keyword(null,"tui","tui",-1217057309);
+var actual__7645__auto__ = tic_tac_toe.game_runner.get_valid_arg.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["--not-a-real-arg"], null),tic_tac_toe.game_runner.ui_types);
+if(cljs.core._EQ_.call(null,expected__7644__auto__,actual__7645__auto__)){
 return null;
 } else {
-throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7651__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7651__auto__)),speclj.platform.endl,"     got: ",(((actual__7652__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7652__auto__))," (using =)"].join('')));
+throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7644__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7644__auto__)),speclj.platform.endl,"     got: ",(((actual__7645__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7645__auto__))," (using =)"].join('')));
 }
-});})(_STAR_parent_description_STAR__orig_val__14551_14630,_STAR_parent_description_STAR__temp_val__14552_14631,description__7524__auto____$1,_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575))
-,false),speclj.components.new_characteristic.call(null,"valid parameters",((function (_STAR_parent_description_STAR__orig_val__14551_14630,_STAR_parent_description_STAR__temp_val__14552_14631,description__7524__auto____$1,_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575){
+});})(_STAR_parent_description_STAR__orig_val__22400_22479,_STAR_parent_description_STAR__temp_val__22401_22480,description__7511__auto____$1,_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424))
+,false),speclj.components.new_characteristic.call(null,"valid parameters",((function (_STAR_parent_description_STAR__orig_val__22400_22479,_STAR_parent_description_STAR__temp_val__22401_22480,description__7511__auto____$1,_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424){
 return (function (){
-var expected__7651__auto___14640 = cljs.core.List.EMPTY;
-var actual__7652__auto___14641 = tic_tac_toe.game_runner.get_valid_parameters.call(null,null);
-if(cljs.core._EQ_.call(null,expected__7651__auto___14640,actual__7652__auto___14641)){
+var expected__7644__auto___22489 = cljs.core.List.EMPTY;
+var actual__7645__auto___22490 = tic_tac_toe.game_runner.get_valid_parameters.call(null,null);
+if(cljs.core._EQ_.call(null,expected__7644__auto___22489,actual__7645__auto___22490)){
 } else {
-throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7651__auto___14640 == null))?"nil":cljs.core.pr_str.call(null,expected__7651__auto___14640)),speclj.platform.endl,"     got: ",(((actual__7652__auto___14641 == null))?"nil":cljs.core.pr_str.call(null,actual__7652__auto___14641))," (using =)"].join('')));
+throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7644__auto___22489 == null))?"nil":cljs.core.pr_str.call(null,expected__7644__auto___22489)),speclj.platform.endl,"     got: ",(((actual__7645__auto___22490 == null))?"nil":cljs.core.pr_str.call(null,actual__7645__auto___22490))," (using =)"].join('')));
 }
 
-var expected__7651__auto___14642 = cljs.core.List.EMPTY;
-var actual__7652__auto___14643 = tic_tac_toe.game_runner.get_valid_parameters.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["--gui"], null));
-if(cljs.core._EQ_.call(null,expected__7651__auto___14642,actual__7652__auto___14643)){
+var expected__7644__auto___22491 = cljs.core.List.EMPTY;
+var actual__7645__auto___22492 = tic_tac_toe.game_runner.get_valid_parameters.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["--gui"], null));
+if(cljs.core._EQ_.call(null,expected__7644__auto___22491,actual__7645__auto___22492)){
 } else {
-throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7651__auto___14642 == null))?"nil":cljs.core.pr_str.call(null,expected__7651__auto___14642)),speclj.platform.endl,"     got: ",(((actual__7652__auto___14643 == null))?"nil":cljs.core.pr_str.call(null,actual__7652__auto___14643))," (using =)"].join('')));
+throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7644__auto___22491 == null))?"nil":cljs.core.pr_str.call(null,expected__7644__auto___22491)),speclj.platform.endl,"     got: ",(((actual__7645__auto___22492 == null))?"nil":cljs.core.pr_str.call(null,actual__7645__auto___22492))," (using =)"].join('')));
 }
 
-var expected__7651__auto___14644 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["test.txt"], null);
-var actual__7652__auto___14645 = tic_tac_toe.game_runner.get_valid_parameters.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["test.txt"], null));
-if(cljs.core._EQ_.call(null,expected__7651__auto___14644,actual__7652__auto___14645)){
+var expected__7644__auto___22493 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["test.txt"], null);
+var actual__7645__auto___22494 = tic_tac_toe.game_runner.get_valid_parameters.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["test.txt"], null));
+if(cljs.core._EQ_.call(null,expected__7644__auto___22493,actual__7645__auto___22494)){
 } else {
-throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7651__auto___14644 == null))?"nil":cljs.core.pr_str.call(null,expected__7651__auto___14644)),speclj.platform.endl,"     got: ",(((actual__7652__auto___14645 == null))?"nil":cljs.core.pr_str.call(null,actual__7652__auto___14645))," (using =)"].join('')));
+throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7644__auto___22493 == null))?"nil":cljs.core.pr_str.call(null,expected__7644__auto___22493)),speclj.platform.endl,"     got: ",(((actual__7645__auto___22494 == null))?"nil":cljs.core.pr_str.call(null,actual__7645__auto___22494))," (using =)"].join('')));
 }
 
-var expected__7651__auto__ = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["test.txt"], null);
-var actual__7652__auto__ = tic_tac_toe.game_runner.get_valid_parameters.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["--archive","test.txt"], null));
-if(cljs.core._EQ_.call(null,expected__7651__auto__,actual__7652__auto__)){
+var expected__7644__auto__ = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["test.txt"], null);
+var actual__7645__auto__ = tic_tac_toe.game_runner.get_valid_parameters.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["--archive","test.txt"], null));
+if(cljs.core._EQ_.call(null,expected__7644__auto__,actual__7645__auto__)){
 return null;
 } else {
-throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7651__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7651__auto__)),speclj.platform.endl,"     got: ",(((actual__7652__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7652__auto__))," (using =)"].join('')));
+throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7644__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7644__auto__)),speclj.platform.endl,"     got: ",(((actual__7645__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7645__auto__))," (using =)"].join('')));
 }
-});})(_STAR_parent_description_STAR__orig_val__14551_14630,_STAR_parent_description_STAR__temp_val__14552_14631,description__7524__auto____$1,_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575))
-,false),speclj.components.new_characteristic.call(null,"ui",((function (_STAR_parent_description_STAR__orig_val__14551_14630,_STAR_parent_description_STAR__temp_val__14552_14631,description__7524__auto____$1,_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575){
+});})(_STAR_parent_description_STAR__orig_val__22400_22479,_STAR_parent_description_STAR__temp_val__22401_22480,description__7511__auto____$1,_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424))
+,false),speclj.components.new_characteristic.call(null,"ui",((function (_STAR_parent_description_STAR__orig_val__22400_22479,_STAR_parent_description_STAR__temp_val__22401_22480,description__7511__auto____$1,_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424){
 return (function (){
-var expected__7651__auto__ = cljs.core.assoc.call(null,cljs.core.assoc.call(null,tic_tac_toe.game_runner_spec.base_initialized_game,new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"gui","gui",604532813)),new cljs.core.Keyword(null,"save-location","save-location",1426336611),new cljs.core.Keyword(null,"edndb","edndb",1239103406));
-var actual__7652__auto__ = tic_tac_toe.game_runner.parse_arguments.call(null,tic_tac_toe.game_runner_spec.base_initialized_game,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["--gui"], null));
-if(cljs.core._EQ_.call(null,expected__7651__auto__,actual__7652__auto__)){
+var expected__7644__auto__ = cljs.core.assoc.call(null,cljs.core.assoc.call(null,tic_tac_toe.game_runner_spec.base_initialized_game,new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"gui","gui",604532813)),new cljs.core.Keyword(null,"save-location","save-location",1426336611),new cljs.core.Keyword(null,"edndb","edndb",1239103406));
+var actual__7645__auto__ = tic_tac_toe.game_runner.parse_arguments.call(null,tic_tac_toe.game_runner_spec.base_initialized_game,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["--gui"], null));
+if(cljs.core._EQ_.call(null,expected__7644__auto__,actual__7645__auto__)){
 return null;
 } else {
-throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7651__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7651__auto__)),speclj.platform.endl,"     got: ",(((actual__7652__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7652__auto__))," (using =)"].join('')));
+throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7644__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7644__auto__)),speclj.platform.endl,"     got: ",(((actual__7645__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7645__auto__))," (using =)"].join('')));
 }
-});})(_STAR_parent_description_STAR__orig_val__14551_14630,_STAR_parent_description_STAR__temp_val__14552_14631,description__7524__auto____$1,_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575))
-,false),speclj.components.new_characteristic.call(null,"save-location",((function (_STAR_parent_description_STAR__orig_val__14551_14630,_STAR_parent_description_STAR__temp_val__14552_14631,description__7524__auto____$1,_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575){
+});})(_STAR_parent_description_STAR__orig_val__22400_22479,_STAR_parent_description_STAR__temp_val__22401_22480,description__7511__auto____$1,_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424))
+,false),speclj.components.new_characteristic.call(null,"save-location",((function (_STAR_parent_description_STAR__orig_val__22400_22479,_STAR_parent_description_STAR__temp_val__22401_22480,description__7511__auto____$1,_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424){
 return (function (){
-var expected__7651__auto__ = cljs.core.assoc.call(null,cljs.core.assoc.call(null,tic_tac_toe.game_runner_spec.base_initialized_game,new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"tui","tui",-1217057309)),new cljs.core.Keyword(null,"save-location","save-location",1426336611),new cljs.core.Keyword(null,"psqldb","psqldb",-581718637));
-var actual__7652__auto__ = tic_tac_toe.game_runner.parse_arguments.call(null,tic_tac_toe.game_runner_spec.base_initialized_game,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["--psqldb"], null));
-if(cljs.core._EQ_.call(null,expected__7651__auto__,actual__7652__auto__)){
+var expected__7644__auto__ = cljs.core.assoc.call(null,cljs.core.assoc.call(null,tic_tac_toe.game_runner_spec.base_initialized_game,new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"tui","tui",-1217057309)),new cljs.core.Keyword(null,"save-location","save-location",1426336611),new cljs.core.Keyword(null,"psqldb","psqldb",-581718637));
+var actual__7645__auto__ = tic_tac_toe.game_runner.parse_arguments.call(null,tic_tac_toe.game_runner_spec.base_initialized_game,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["--psqldb"], null));
+if(cljs.core._EQ_.call(null,expected__7644__auto__,actual__7645__auto__)){
 return null;
 } else {
-throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7651__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7651__auto__)),speclj.platform.endl,"     got: ",(((actual__7652__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7652__auto__))," (using =)"].join('')));
+throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7644__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7644__auto__)),speclj.platform.endl,"     got: ",(((actual__7645__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7645__auto__))," (using =)"].join('')));
 }
-});})(_STAR_parent_description_STAR__orig_val__14551_14630,_STAR_parent_description_STAR__temp_val__14552_14631,description__7524__auto____$1,_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575))
-,false),speclj.components.new_characteristic.call(null,"archive",((function (_STAR_parent_description_STAR__orig_val__14551_14630,_STAR_parent_description_STAR__temp_val__14552_14631,description__7524__auto____$1,_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575){
+});})(_STAR_parent_description_STAR__orig_val__22400_22479,_STAR_parent_description_STAR__temp_val__22401_22480,description__7511__auto____$1,_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424))
+,false),speclj.components.new_characteristic.call(null,"archive",((function (_STAR_parent_description_STAR__orig_val__22400_22479,_STAR_parent_description_STAR__temp_val__22401_22480,description__7511__auto____$1,_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424){
 return (function (){
-var expected__7651__auto__ = cljs.core.assoc.call(null,cljs.core.assoc.call(null,cljs.core.assoc.call(null,tic_tac_toe.game_runner_spec.base_initialized_game,new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"archive","archive",1466927419)),new cljs.core.Keyword(null,"save-location","save-location",1426336611),new cljs.core.Keyword(null,"edndb","edndb",1239103406)),new cljs.core.Keyword(null,"parameters","parameters",-1229919748),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["test.txt"], null));
-var actual__7652__auto__ = tic_tac_toe.game_runner.parse_arguments.call(null,tic_tac_toe.game_runner_spec.base_initialized_game,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["--archive","test.txt"], null));
-if(cljs.core._EQ_.call(null,expected__7651__auto__,actual__7652__auto__)){
+var expected__7644__auto__ = cljs.core.assoc.call(null,cljs.core.assoc.call(null,cljs.core.assoc.call(null,tic_tac_toe.game_runner_spec.base_initialized_game,new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"archive","archive",1466927419)),new cljs.core.Keyword(null,"save-location","save-location",1426336611),new cljs.core.Keyword(null,"edndb","edndb",1239103406)),new cljs.core.Keyword(null,"parameters","parameters",-1229919748),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["test.txt"], null));
+var actual__7645__auto__ = tic_tac_toe.game_runner.parse_arguments.call(null,tic_tac_toe.game_runner_spec.base_initialized_game,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["--archive","test.txt"], null));
+if(cljs.core._EQ_.call(null,expected__7644__auto__,actual__7645__auto__)){
 return null;
 } else {
-throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7651__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7651__auto__)),speclj.platform.endl,"     got: ",(((actual__7652__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7652__auto__))," (using =)"].join('')));
+throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7644__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7644__auto__)),speclj.platform.endl,"     got: ",(((actual__7645__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7645__auto__))," (using =)"].join('')));
 }
-});})(_STAR_parent_description_STAR__orig_val__14551_14630,_STAR_parent_description_STAR__temp_val__14552_14631,description__7524__auto____$1,_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575))
-,false),speclj.components.new_characteristic.call(null,"any arguments",((function (_STAR_parent_description_STAR__orig_val__14551_14630,_STAR_parent_description_STAR__temp_val__14552_14631,description__7524__auto____$1,_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575){
+});})(_STAR_parent_description_STAR__orig_val__22400_22479,_STAR_parent_description_STAR__temp_val__22401_22480,description__7511__auto____$1,_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424))
+,false),speclj.components.new_characteristic.call(null,"any arguments",((function (_STAR_parent_description_STAR__orig_val__22400_22479,_STAR_parent_description_STAR__temp_val__22401_22480,description__7511__auto____$1,_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424){
 return (function (){
-var expected__7651__auto__ = cljs.core.assoc.call(null,cljs.core.assoc.call(null,cljs.core.assoc.call(null,tic_tac_toe.game_runner_spec.base_initialized_game,new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"gui","gui",604532813)),new cljs.core.Keyword(null,"save-location","save-location",1426336611),new cljs.core.Keyword(null,"psqldb","psqldb",-581718637)),new cljs.core.Keyword(null,"parameters","parameters",-1229919748),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["test.txt"], null));
-var actual__7652__auto__ = tic_tac_toe.game_runner.parse_arguments.call(null,tic_tac_toe.game_runner_spec.base_initialized_game,new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, ["--psqldb","--gui","--not-real","--archive","test.txt"], null));
-if(cljs.core._EQ_.call(null,expected__7651__auto__,actual__7652__auto__)){
+var expected__7644__auto__ = cljs.core.assoc.call(null,cljs.core.assoc.call(null,cljs.core.assoc.call(null,tic_tac_toe.game_runner_spec.base_initialized_game,new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"gui","gui",604532813)),new cljs.core.Keyword(null,"save-location","save-location",1426336611),new cljs.core.Keyword(null,"psqldb","psqldb",-581718637)),new cljs.core.Keyword(null,"parameters","parameters",-1229919748),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["test.txt"], null));
+var actual__7645__auto__ = tic_tac_toe.game_runner.parse_arguments.call(null,tic_tac_toe.game_runner_spec.base_initialized_game,new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, ["--psqldb","--gui","--not-real","--archive","test.txt"], null));
+if(cljs.core._EQ_.call(null,expected__7644__auto__,actual__7645__auto__)){
 return null;
 } else {
-throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7651__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7651__auto__)),speclj.platform.endl,"     got: ",(((actual__7652__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7652__auto__))," (using =)"].join('')));
+throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7644__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7644__auto__)),speclj.platform.endl,"     got: ",(((actual__7645__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7645__auto__))," (using =)"].join('')));
 }
-});})(_STAR_parent_description_STAR__orig_val__14551_14630,_STAR_parent_description_STAR__temp_val__14552_14631,description__7524__auto____$1,_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575))
+});})(_STAR_parent_description_STAR__orig_val__22400_22479,_STAR_parent_description_STAR__temp_val__22401_22480,description__7511__auto____$1,_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424))
 ,false)],null)));
-var chunk__14554_14633 = null;
-var count__14555_14634 = (0);
-var i__14556_14635 = (0);
+var chunk__22403_22482 = null;
+var count__22404_22483 = (0);
+var i__22405_22484 = (0);
 while(true){
-if((i__14556_14635 < count__14555_14634)){
-var component__7525__auto___14646 = cljs.core._nth.call(null,chunk__14554_14633,i__14556_14635);
-speclj.components.install.call(null,component__7525__auto___14646,description__7524__auto____$1);
+if((i__22405_22484 < count__22404_22483)){
+var component__7512__auto___22495 = cljs.core._nth.call(null,chunk__22403_22482,i__22405_22484);
+speclj.components.install.call(null,component__7512__auto___22495,description__7511__auto____$1);
 
 
-var G__14647 = seq__14553_14632;
-var G__14648 = chunk__14554_14633;
-var G__14649 = count__14555_14634;
-var G__14650 = (i__14556_14635 + (1));
-seq__14553_14632 = G__14647;
-chunk__14554_14633 = G__14648;
-count__14555_14634 = G__14649;
-i__14556_14635 = G__14650;
+var G__22496 = seq__22402_22481;
+var G__22497 = chunk__22403_22482;
+var G__22498 = count__22404_22483;
+var G__22499 = (i__22405_22484 + (1));
+seq__22402_22481 = G__22496;
+chunk__22403_22482 = G__22497;
+count__22404_22483 = G__22498;
+i__22405_22484 = G__22499;
 continue;
 } else {
-var temp__5753__auto___14651 = cljs.core.seq.call(null,seq__14553_14632);
-if(temp__5753__auto___14651){
-var seq__14553_14652__$1 = temp__5753__auto___14651;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__14553_14652__$1)){
-var c__5568__auto___14653 = cljs.core.chunk_first.call(null,seq__14553_14652__$1);
-var G__14654 = cljs.core.chunk_rest.call(null,seq__14553_14652__$1);
-var G__14655 = c__5568__auto___14653;
-var G__14656 = cljs.core.count.call(null,c__5568__auto___14653);
-var G__14657 = (0);
-seq__14553_14632 = G__14654;
-chunk__14554_14633 = G__14655;
-count__14555_14634 = G__14656;
-i__14556_14635 = G__14657;
+var temp__5753__auto___22500 = cljs.core.seq.call(null,seq__22402_22481);
+if(temp__5753__auto___22500){
+var seq__22402_22501__$1 = temp__5753__auto___22500;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__22402_22501__$1)){
+var c__5568__auto___22502 = cljs.core.chunk_first.call(null,seq__22402_22501__$1);
+var G__22503 = cljs.core.chunk_rest.call(null,seq__22402_22501__$1);
+var G__22504 = c__5568__auto___22502;
+var G__22505 = cljs.core.count.call(null,c__5568__auto___22502);
+var G__22506 = (0);
+seq__22402_22481 = G__22503;
+chunk__22403_22482 = G__22504;
+count__22404_22483 = G__22505;
+i__22405_22484 = G__22506;
 continue;
 } else {
-var component__7525__auto___14658 = cljs.core.first.call(null,seq__14553_14652__$1);
-speclj.components.install.call(null,component__7525__auto___14658,description__7524__auto____$1);
+var component__7512__auto___22507 = cljs.core.first.call(null,seq__22402_22501__$1);
+speclj.components.install.call(null,component__7512__auto___22507,description__7511__auto____$1);
 
 
-var G__14659 = cljs.core.next.call(null,seq__14553_14652__$1);
-var G__14660 = null;
-var G__14661 = (0);
-var G__14662 = (0);
-seq__14553_14632 = G__14659;
-chunk__14554_14633 = G__14660;
-count__14555_14634 = G__14661;
-i__14556_14635 = G__14662;
+var G__22508 = cljs.core.next.call(null,seq__22402_22501__$1);
+var G__22509 = null;
+var G__22510 = (0);
+var G__22511 = (0);
+seq__22402_22481 = G__22508;
+chunk__22403_22482 = G__22509;
+count__22404_22483 = G__22510;
+i__22405_22484 = G__22511;
 continue;
 }
 } else {
@@ -386,108 +386,108 @@ continue;
 }
 break;
 }
-}finally {(speclj.config._STAR_parent_description_STAR_ = _STAR_parent_description_STAR__orig_val__14551_14630);
+}finally {(speclj.config._STAR_parent_description_STAR_ = _STAR_parent_description_STAR__orig_val__22400_22479);
 }
 if(cljs.core.truth_(speclj.config._STAR_parent_description_STAR_)){
 } else {
-speclj.running.submit_description.call(null,speclj.config.active_runner.call(null),description__7524__auto____$1);
+speclj.running.submit_description.call(null,speclj.config.active_runner.call(null),description__7511__auto____$1);
 }
 
-return description__7524__auto____$1;
-})(),(function (){var description__7524__auto____$1 = speclj.components.new_description.call(null,"plays a single round by",false,"tic-tac-toe.game-runner-spec");
-var _STAR_parent_description_STAR__orig_val__14557_14663 = speclj.config._STAR_parent_description_STAR_;
-var _STAR_parent_description_STAR__temp_val__14558_14664 = description__7524__auto____$1;
-(speclj.config._STAR_parent_description_STAR_ = _STAR_parent_description_STAR__temp_val__14558_14664);
+return description__7511__auto____$1;
+})(),(function (){var description__7511__auto____$1 = speclj.components.new_description.call(null,"plays a single round by",false,"tic-tac-toe.game-runner-spec");
+var _STAR_parent_description_STAR__orig_val__22406_22512 = speclj.config._STAR_parent_description_STAR_;
+var _STAR_parent_description_STAR__temp_val__22407_22513 = description__7511__auto____$1;
+(speclj.config._STAR_parent_description_STAR_ = _STAR_parent_description_STAR__temp_val__22407_22513);
 
-try{var seq__14559_14665 = cljs.core.seq.call(null,(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[speclj.components.new_characteristic.call(null,"Then returns a winner if there is one",((function (_STAR_parent_description_STAR__orig_val__14557_14663,_STAR_parent_description_STAR__temp_val__14558_14664,description__7524__auto____$1,_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575){
+try{var seq__22408_22514 = cljs.core.seq.call(null,(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[speclj.components.new_characteristic.call(null,"Then returns a winner if there is one",((function (_STAR_parent_description_STAR__orig_val__22406_22512,_STAR_parent_description_STAR__temp_val__22407_22513,description__7511__auto____$1,_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424){
 return (function (){
-var play_next_turn_orig_val__14569 = tic_tac_toe.turn_system.play_next_turn;
-var round_output_orig_val__14570 = tic_tac_toe.ui_interface.round_output;
-var play_next_turn_temp_val__14571 = (function (_){
+var play_next_turn_orig_val__22418 = tic_tac_toe.turn_system.play_next_turn;
+var round_output_orig_val__22419 = tic_tac_toe.ui_interface.round_output;
+var play_next_turn_temp_val__22420 = (function (_){
 return null;
 });
-var round_output_temp_val__14572 = (function (_){
+var round_output_temp_val__22421 = (function (_){
 return null;
 });
-(tic_tac_toe.turn_system.play_next_turn = play_next_turn_temp_val__14571);
+(tic_tac_toe.turn_system.play_next_turn = play_next_turn_temp_val__22420);
 
-(tic_tac_toe.ui_interface.round_output = round_output_temp_val__14572);
+(tic_tac_toe.ui_interface.round_output = round_output_temp_val__22421);
 
-try{var expected__7651__auto__ = (1);
-var actual__7652__auto__ = tic_tac_toe.game_runner.game_round.call(null,cljs.core.assoc.call(null,tic_tac_toe.game_runner_spec.base_initialized_game,new cljs.core.Keyword(null,"board","board",-1907017633),new cljs.core.PersistentVector(null, 9, 5, cljs.core.PersistentVector.EMPTY_NODE, [(1),(1),(1),(0),(0),(0),(0),(0),(0)], null)));
-if(cljs.core._EQ_.call(null,expected__7651__auto__,actual__7652__auto__)){
+try{var expected__7644__auto__ = (1);
+var actual__7645__auto__ = tic_tac_toe.game_runner.game_round.call(null,cljs.core.assoc.call(null,tic_tac_toe.game_runner_spec.base_initialized_game,new cljs.core.Keyword(null,"board","board",-1907017633),new cljs.core.PersistentVector(null, 9, 5, cljs.core.PersistentVector.EMPTY_NODE, [(1),(1),(1),(0),(0),(0),(0),(0),(0)], null)));
+if(cljs.core._EQ_.call(null,expected__7644__auto__,actual__7645__auto__)){
 return null;
 } else {
-throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7651__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7651__auto__)),speclj.platform.endl,"     got: ",(((actual__7652__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7652__auto__))," (using =)"].join('')));
+throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7644__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7644__auto__)),speclj.platform.endl,"     got: ",(((actual__7645__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7645__auto__))," (using =)"].join('')));
 }
-}finally {(tic_tac_toe.ui_interface.round_output = round_output_orig_val__14570);
+}finally {(tic_tac_toe.ui_interface.round_output = round_output_orig_val__22419);
 
-(tic_tac_toe.turn_system.play_next_turn = play_next_turn_orig_val__14569);
-}});})(_STAR_parent_description_STAR__orig_val__14557_14663,_STAR_parent_description_STAR__temp_val__14558_14664,description__7524__auto____$1,_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575))
-,false),speclj.components.new_characteristic.call(null,"Then returns nil if there are no moves left",((function (_STAR_parent_description_STAR__orig_val__14557_14663,_STAR_parent_description_STAR__temp_val__14558_14664,description__7524__auto____$1,_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575){
+(tic_tac_toe.turn_system.play_next_turn = play_next_turn_orig_val__22418);
+}});})(_STAR_parent_description_STAR__orig_val__22406_22512,_STAR_parent_description_STAR__temp_val__22407_22513,description__7511__auto____$1,_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424))
+,false),speclj.components.new_characteristic.call(null,"Then returns nil if there are no moves left",((function (_STAR_parent_description_STAR__orig_val__22406_22512,_STAR_parent_description_STAR__temp_val__22407_22513,description__7511__auto____$1,_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424){
 return (function (){
-var round_output_orig_val__14573 = tic_tac_toe.ui_interface.round_output;
-var round_output_temp_val__14574 = (function (_){
+var round_output_orig_val__22422 = tic_tac_toe.ui_interface.round_output;
+var round_output_temp_val__22423 = (function (_){
 return null;
 });
-(tic_tac_toe.ui_interface.round_output = round_output_temp_val__14574);
+(tic_tac_toe.ui_interface.round_output = round_output_temp_val__22423);
 
-try{var expected__7651__auto__ = null;
-var actual__7652__auto__ = tic_tac_toe.game_runner.game_round.call(null,cljs.core.assoc.call(null,tic_tac_toe.game_runner_spec.base_initialized_game,new cljs.core.Keyword(null,"round","round",2009433328),(10)));
-if(cljs.core._EQ_.call(null,expected__7651__auto__,actual__7652__auto__)){
+try{var expected__7644__auto__ = null;
+var actual__7645__auto__ = tic_tac_toe.game_runner.game_round.call(null,cljs.core.assoc.call(null,tic_tac_toe.game_runner_spec.base_initialized_game,new cljs.core.Keyword(null,"round","round",2009433328),(10)));
+if(cljs.core._EQ_.call(null,expected__7644__auto__,actual__7645__auto__)){
 return null;
 } else {
-throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7651__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7651__auto__)),speclj.platform.endl,"     got: ",(((actual__7652__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7652__auto__))," (using =)"].join('')));
+throw (new speclj.platform.SpecFailure(["Expected: ",(((expected__7644__auto__ == null))?"nil":cljs.core.pr_str.call(null,expected__7644__auto__)),speclj.platform.endl,"     got: ",(((actual__7645__auto__ == null))?"nil":cljs.core.pr_str.call(null,actual__7645__auto__))," (using =)"].join('')));
 }
-}finally {(tic_tac_toe.ui_interface.round_output = round_output_orig_val__14573);
-}});})(_STAR_parent_description_STAR__orig_val__14557_14663,_STAR_parent_description_STAR__temp_val__14558_14664,description__7524__auto____$1,_STAR_parent_description_STAR__orig_val__14465_14576,_STAR_parent_description_STAR__temp_val__14466_14577,description__7524__auto___14575))
+}finally {(tic_tac_toe.ui_interface.round_output = round_output_orig_val__22422);
+}});})(_STAR_parent_description_STAR__orig_val__22406_22512,_STAR_parent_description_STAR__temp_val__22407_22513,description__7511__auto____$1,_STAR_parent_description_STAR__orig_val__22314_22425,_STAR_parent_description_STAR__temp_val__22315_22426,description__7511__auto___22424))
 ,false)],null)));
-var chunk__14560_14666 = null;
-var count__14561_14667 = (0);
-var i__14562_14668 = (0);
+var chunk__22409_22515 = null;
+var count__22410_22516 = (0);
+var i__22411_22517 = (0);
 while(true){
-if((i__14562_14668 < count__14561_14667)){
-var component__7525__auto___14669 = cljs.core._nth.call(null,chunk__14560_14666,i__14562_14668);
-speclj.components.install.call(null,component__7525__auto___14669,description__7524__auto____$1);
+if((i__22411_22517 < count__22410_22516)){
+var component__7512__auto___22518 = cljs.core._nth.call(null,chunk__22409_22515,i__22411_22517);
+speclj.components.install.call(null,component__7512__auto___22518,description__7511__auto____$1);
 
 
-var G__14670 = seq__14559_14665;
-var G__14671 = chunk__14560_14666;
-var G__14672 = count__14561_14667;
-var G__14673 = (i__14562_14668 + (1));
-seq__14559_14665 = G__14670;
-chunk__14560_14666 = G__14671;
-count__14561_14667 = G__14672;
-i__14562_14668 = G__14673;
+var G__22519 = seq__22408_22514;
+var G__22520 = chunk__22409_22515;
+var G__22521 = count__22410_22516;
+var G__22522 = (i__22411_22517 + (1));
+seq__22408_22514 = G__22519;
+chunk__22409_22515 = G__22520;
+count__22410_22516 = G__22521;
+i__22411_22517 = G__22522;
 continue;
 } else {
-var temp__5753__auto___14674 = cljs.core.seq.call(null,seq__14559_14665);
-if(temp__5753__auto___14674){
-var seq__14559_14675__$1 = temp__5753__auto___14674;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__14559_14675__$1)){
-var c__5568__auto___14676 = cljs.core.chunk_first.call(null,seq__14559_14675__$1);
-var G__14677 = cljs.core.chunk_rest.call(null,seq__14559_14675__$1);
-var G__14678 = c__5568__auto___14676;
-var G__14679 = cljs.core.count.call(null,c__5568__auto___14676);
-var G__14680 = (0);
-seq__14559_14665 = G__14677;
-chunk__14560_14666 = G__14678;
-count__14561_14667 = G__14679;
-i__14562_14668 = G__14680;
+var temp__5753__auto___22523 = cljs.core.seq.call(null,seq__22408_22514);
+if(temp__5753__auto___22523){
+var seq__22408_22524__$1 = temp__5753__auto___22523;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__22408_22524__$1)){
+var c__5568__auto___22525 = cljs.core.chunk_first.call(null,seq__22408_22524__$1);
+var G__22526 = cljs.core.chunk_rest.call(null,seq__22408_22524__$1);
+var G__22527 = c__5568__auto___22525;
+var G__22528 = cljs.core.count.call(null,c__5568__auto___22525);
+var G__22529 = (0);
+seq__22408_22514 = G__22526;
+chunk__22409_22515 = G__22527;
+count__22410_22516 = G__22528;
+i__22411_22517 = G__22529;
 continue;
 } else {
-var component__7525__auto___14681 = cljs.core.first.call(null,seq__14559_14675__$1);
-speclj.components.install.call(null,component__7525__auto___14681,description__7524__auto____$1);
+var component__7512__auto___22530 = cljs.core.first.call(null,seq__22408_22524__$1);
+speclj.components.install.call(null,component__7512__auto___22530,description__7511__auto____$1);
 
 
-var G__14682 = cljs.core.next.call(null,seq__14559_14675__$1);
-var G__14683 = null;
-var G__14684 = (0);
-var G__14685 = (0);
-seq__14559_14665 = G__14682;
-chunk__14560_14666 = G__14683;
-count__14561_14667 = G__14684;
-i__14562_14668 = G__14685;
+var G__22531 = cljs.core.next.call(null,seq__22408_22524__$1);
+var G__22532 = null;
+var G__22533 = (0);
+var G__22534 = (0);
+seq__22408_22514 = G__22531;
+chunk__22409_22515 = G__22532;
+count__22410_22516 = G__22533;
+i__22411_22517 = G__22534;
 continue;
 }
 } else {
@@ -495,61 +495,61 @@ continue;
 }
 break;
 }
-}finally {(speclj.config._STAR_parent_description_STAR_ = _STAR_parent_description_STAR__orig_val__14557_14663);
+}finally {(speclj.config._STAR_parent_description_STAR_ = _STAR_parent_description_STAR__orig_val__22406_22512);
 }
 if(cljs.core.truth_(speclj.config._STAR_parent_description_STAR_)){
 } else {
-speclj.running.submit_description.call(null,speclj.config.active_runner.call(null),description__7524__auto____$1);
+speclj.running.submit_description.call(null,speclj.config.active_runner.call(null),description__7511__auto____$1);
 }
 
-return description__7524__auto____$1;
+return description__7511__auto____$1;
 })()],null)));
-var chunk__14468_14579 = null;
-var count__14469_14580 = (0);
-var i__14470_14581 = (0);
+var chunk__22317_22428 = null;
+var count__22318_22429 = (0);
+var i__22319_22430 = (0);
 while(true){
-if((i__14470_14581 < count__14469_14580)){
-var component__7525__auto___14686 = cljs.core._nth.call(null,chunk__14468_14579,i__14470_14581);
-speclj.components.install.call(null,component__7525__auto___14686,description__7524__auto___14575);
+if((i__22319_22430 < count__22318_22429)){
+var component__7512__auto___22535 = cljs.core._nth.call(null,chunk__22317_22428,i__22319_22430);
+speclj.components.install.call(null,component__7512__auto___22535,description__7511__auto___22424);
 
 
-var G__14687 = seq__14467_14578;
-var G__14688 = chunk__14468_14579;
-var G__14689 = count__14469_14580;
-var G__14690 = (i__14470_14581 + (1));
-seq__14467_14578 = G__14687;
-chunk__14468_14579 = G__14688;
-count__14469_14580 = G__14689;
-i__14470_14581 = G__14690;
+var G__22536 = seq__22316_22427;
+var G__22537 = chunk__22317_22428;
+var G__22538 = count__22318_22429;
+var G__22539 = (i__22319_22430 + (1));
+seq__22316_22427 = G__22536;
+chunk__22317_22428 = G__22537;
+count__22318_22429 = G__22538;
+i__22319_22430 = G__22539;
 continue;
 } else {
-var temp__5753__auto___14691 = cljs.core.seq.call(null,seq__14467_14578);
-if(temp__5753__auto___14691){
-var seq__14467_14692__$1 = temp__5753__auto___14691;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__14467_14692__$1)){
-var c__5568__auto___14693 = cljs.core.chunk_first.call(null,seq__14467_14692__$1);
-var G__14694 = cljs.core.chunk_rest.call(null,seq__14467_14692__$1);
-var G__14695 = c__5568__auto___14693;
-var G__14696 = cljs.core.count.call(null,c__5568__auto___14693);
-var G__14697 = (0);
-seq__14467_14578 = G__14694;
-chunk__14468_14579 = G__14695;
-count__14469_14580 = G__14696;
-i__14470_14581 = G__14697;
+var temp__5753__auto___22540 = cljs.core.seq.call(null,seq__22316_22427);
+if(temp__5753__auto___22540){
+var seq__22316_22541__$1 = temp__5753__auto___22540;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__22316_22541__$1)){
+var c__5568__auto___22542 = cljs.core.chunk_first.call(null,seq__22316_22541__$1);
+var G__22543 = cljs.core.chunk_rest.call(null,seq__22316_22541__$1);
+var G__22544 = c__5568__auto___22542;
+var G__22545 = cljs.core.count.call(null,c__5568__auto___22542);
+var G__22546 = (0);
+seq__22316_22427 = G__22543;
+chunk__22317_22428 = G__22544;
+count__22318_22429 = G__22545;
+i__22319_22430 = G__22546;
 continue;
 } else {
-var component__7525__auto___14698 = cljs.core.first.call(null,seq__14467_14692__$1);
-speclj.components.install.call(null,component__7525__auto___14698,description__7524__auto___14575);
+var component__7512__auto___22547 = cljs.core.first.call(null,seq__22316_22541__$1);
+speclj.components.install.call(null,component__7512__auto___22547,description__7511__auto___22424);
 
 
-var G__14699 = cljs.core.next.call(null,seq__14467_14692__$1);
-var G__14700 = null;
-var G__14701 = (0);
-var G__14702 = (0);
-seq__14467_14578 = G__14699;
-chunk__14468_14579 = G__14700;
-count__14469_14580 = G__14701;
-i__14470_14581 = G__14702;
+var G__22548 = cljs.core.next.call(null,seq__22316_22541__$1);
+var G__22549 = null;
+var G__22550 = (0);
+var G__22551 = (0);
+seq__22316_22427 = G__22548;
+chunk__22317_22428 = G__22549;
+count__22318_22429 = G__22550;
+i__22319_22430 = G__22551;
 continue;
 }
 } else {
@@ -557,11 +557,11 @@ continue;
 }
 break;
 }
-}finally {(speclj.config._STAR_parent_description_STAR_ = _STAR_parent_description_STAR__orig_val__14465_14576);
+}finally {(speclj.config._STAR_parent_description_STAR_ = _STAR_parent_description_STAR__orig_val__22314_22425);
 }
 if(cljs.core.truth_(speclj.config._STAR_parent_description_STAR_)){
 } else {
-speclj.running.submit_description.call(null,speclj.config.active_runner.call(null),description__7524__auto___14575);
+speclj.running.submit_description.call(null,speclj.config.active_runner.call(null),description__7511__auto___22424);
 }
 
 
