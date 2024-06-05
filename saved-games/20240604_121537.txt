@@ -1,0 +1,13 @@
+{:players {"Player" 1, "AI" 2}, :difficulty 10, :round 1, :three-d false, :board [0 0 0 0 0 0 0 0 0], :ui :tui, :save-location :edndb, :parameters ()}
+{:players {"Player" 1, "AI" 2}, :difficulty 10, :round 1, :three-d? false, :board [0 0 0 0 0 0 0 0 0], :ui :tui, :save-location :edndb, :parameters ()}
+{:players {"Player" 1, "AI" 2}, :difficulty 10, :round 1, :three-d? false, :board [1 1 1 0 0 0 0 0 0], :ui :tui, :save-location :edndb, :parameters ()}
+{:players {"Player" 1, "AI" 2}, :difficulty 10, :round 1, :three-d? false, :board [1 1 1 0 0 0 0 0 0], :ui :tui, :save-location :edndb, :parameters ()}
+{:players {"Player" 1, "AI" 2}, :difficulty 10, :round 10, :three-d? false, :board [0 0 0 0 0 0 0 0 0], :ui :tui, :save-location :edndb, :parameters ()}
+{:players {"Player" 1, "AI" 2}, :difficulty 10, :round 1, :three-d? false, :board [0 0 0 0 0 0 0 0 0], :ui :tui, :save-location :edndb, :parameters ()}
+{:players {"Player" 1, "AI" 2}, :difficulty 10, :round 1, :three-d? true, :board [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0], :ui :gui, :save-location :edndb, :parameters ()}
+{:players {"Player" 1, "AI" 2}, :difficulty 10, :round 2, :three-d? true, :board [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0], :ui :gui, :save-location :edndb, :parameters ()}
+{:players {"Player" 1, "AI" 2}, :difficulty 10, :round 3, :three-d? true, :board [2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0], :ui :gui, :save-location :edndb, :parameters ()}
+{:players {"Player" 1, "AI" 2}, :difficulty 10, :round 4, :three-d? true, :board [2 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0], :ui :gui, :save-location :edndb, :parameters ()}
+{:players {"Player" 1, "AI" 2}, :difficulty 10, :round 5, :three-d? true, :board [2 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 2 0 0], :ui :gui, :save-location :edndb, :parameters ()}
+{:players {"Player" 1, "AI" 2}, :difficulty 10, :round 6, :three-d? true, :board [2 0 1 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 2 0 0], :ui :gui, :save-location :edndb, :parameters ()}
+{:players {"Player" 1, "AI" 2}, :difficulty 10, :round 7, :three-d? true, :board [2 0 1 0 0 0 0 0 0 0 0 1 2 1 0 0 0 0 0 0 0 0 0 0 2 0 0], :ui :gui, :save-location :edndb, :parameters ()}

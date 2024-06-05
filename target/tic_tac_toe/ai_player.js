@@ -34,8 +34,8 @@ return ((cljs.core.count.call(null,new cljs.core.Keyword(null,"board","board",-1
 }
 });
 tic_tac_toe.ai_player.make_hypothetical_moves = (function tic_tac_toe$ai_player$make_hypothetical_moves(var_args){
-var G__13409 = arguments.length;
-switch (G__13409) {
+var G__6506 = arguments.length;
+switch (G__6506) {
 case 2:
 return tic_tac_toe.ai_player.make_hypothetical_moves.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -60,24 +60,24 @@ if((position >= cljs.core.count.call(null,board))){
 return new_boards;
 } else {
 if(tic_tac_toe.tic_tac_toe_board.spot_available_QMARK_.call(null,board,position)){
-var G__13411 = board;
-var G__13412 = symbol;
-var G__13413 = (position + (1));
-var G__13414 = cljs.core.conj.call(null,cljs.core.PersistentArrayMap.createAsIfByAssoc([position,tic_tac_toe.tic_tac_toe_board.place_value_into_tttb.call(null,board,symbol,position)]),new_boards);
-board = G__13411;
-symbol = G__13412;
-position = G__13413;
-new_boards = G__13414;
+var G__6508 = board;
+var G__6509 = symbol;
+var G__6510 = (position + (1));
+var G__6511 = cljs.core.conj.call(null,cljs.core.PersistentArrayMap.createAsIfByAssoc([position,tic_tac_toe.tic_tac_toe_board.place_value_into_tttb.call(null,board,symbol,position)]),new_boards);
+board = G__6508;
+symbol = G__6509;
+position = G__6510;
+new_boards = G__6511;
 continue;
 } else {
-var G__13415 = board;
-var G__13416 = symbol;
-var G__13417 = (position + (1));
-var G__13418 = new_boards;
-board = G__13415;
-symbol = G__13416;
-position = G__13417;
-new_boards = G__13418;
+var G__6512 = board;
+var G__6513 = symbol;
+var G__6514 = (position + (1));
+var G__6515 = new_boards;
+board = G__6512;
+symbol = G__6513;
+position = G__6514;
+new_boards = G__6515;
 continue;
 
 }
@@ -137,8 +137,8 @@ return (depth * (-1));
 }
 });
 tic_tac_toe.ai_player.mini_max_algo = (function tic_tac_toe$ai_player$mini_max_algo(var_args){
-var G__13420 = arguments.length;
-switch (G__13420) {
+var G__6517 = arguments.length;
+switch (G__6517) {
 case 2:
 return tic_tac_toe.ai_player.mini_max_algo.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -178,39 +178,39 @@ if((i >= cljs.core.count.call(null,new cljs.core.Keyword(null,"board","board",-1
 return cljs.core.second.call(null,best_score);
 } else {
 if((cljs.core.get.call(null,moves,i) == null)){
-var G__13422 = (i + (1));
-var G__13423 = a;
-var G__13424 = b;
-var G__13425 = best_score;
-i = G__13422;
-a = G__13423;
-b = G__13424;
-best_score = G__13425;
+var G__6519 = (i + (1));
+var G__6520 = a;
+var G__6521 = b;
+var G__6522 = best_score;
+i = G__6519;
+a = G__6520;
+b = G__6521;
+best_score = G__6522;
 continue;
 } else {
 if((b <= a)){
-var G__13426 = (i + (1));
-var G__13427 = a;
-var G__13428 = b;
-var G__13429 = best_score;
-i = G__13426;
-a = G__13427;
-b = G__13428;
-best_score = G__13429;
+var G__6523 = (i + (1));
+var G__6524 = a;
+var G__6525 = b;
+var G__6526 = best_score;
+i = G__6523;
+a = G__6524;
+b = G__6525;
+best_score = G__6526;
 continue;
 } else {
 var score = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [i,tic_tac_toe.ai_player.mini_max_algo.call(null,cljs.core.assoc.call(null,game,new cljs.core.Keyword(null,"board","board",-1907017633),cljs.core.get.call(null,moves,i)),symbol,(depth + (1)),a,b)], null);
 var new_score = tic_tac_toe.ai_player.get_new_score.call(null,best_score,score,depth);
 var new_alpha = tic_tac_toe.ai_player.get_new_alpha.call(null,score,a,depth);
 var new_beta = tic_tac_toe.ai_player.get_new_beta.call(null,score,b,depth);
-var G__13430 = (i + (1));
-var G__13431 = new_alpha;
-var G__13432 = new_beta;
-var G__13433 = new_score;
-i = G__13430;
-a = G__13431;
-b = G__13432;
-best_score = G__13433;
+var G__6527 = (i + (1));
+var G__6528 = new_alpha;
+var G__6529 = new_beta;
+var G__6530 = new_score;
+i = G__6527;
+a = G__6528;
+b = G__6529;
+best_score = G__6530;
 continue;
 
 }
@@ -231,10 +231,10 @@ var position = cljs.core.rand_int.call(null,cljs.core.count.call(null,board));
 if(tic_tac_toe.tic_tac_toe_board.spot_available_QMARK_.call(null,board,position)){
 return tic_tac_toe.tic_tac_toe_board.place_value_into_tttb.call(null,board,symbol,position);
 } else {
-var G__13434 = board;
-var G__13435 = symbol;
-board = G__13434;
-symbol = G__13435;
+var G__6531 = board;
+var G__6532 = symbol;
+board = G__6531;
+symbol = G__6532;
 continue;
 }
 break;

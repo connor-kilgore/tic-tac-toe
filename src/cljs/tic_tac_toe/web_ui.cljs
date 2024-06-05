@@ -17,9 +17,8 @@
 (def page-title "Welcome to TicTacToe!")
 
 (defn ttt-page []
-  [:div
+  [:div {:class "centered"}
    [:h2 (:text @page)]
-   [:div (:board @page)]
    [:div (:content @page)]])
 
 (defn call-game-initialize []
@@ -105,8 +104,8 @@
          (conj (:content @page)
                ^{:key "retry-div"}
                [:div {:class "end-condition"}
-                ^{:key "reset"} [:button {:on-click #(reset-game)} "Retry"]
-                ^{:key "back"} [:button {:on-click #(call-game-initialize)} "Back to Menu"]])))
+                ^{:key "reset"} [:button {:id "retry" :on-click #(reset-game)} "Retry"]
+                ^{:key "back"} [:button {:id "back" :on-click #(call-game-initialize)} "Back to Menu"]])))
 
 (defn get-default-game []
   (let [new-game game/base-game]
@@ -136,6 +135,7 @@
   [:div
    [:label [:input {:type      "radio"
                     :name      "players"
+                    :id        "pve"
                     :checked   (not (= (:players @game-state) (get menu/menu-options "2")))
                     :value     "1"
                     :on-change #(update-game-attribute menu/symbol-options
@@ -144,6 +144,7 @@
     "Player vs. AI"]
    [:label [:input {:type      "radio"
                     :name      "players"
+                    :id        "pvp"
                     :checked   (= (:players @game-state) (get menu/menu-options "2"))
                     :value     "2"
                     :on-change #(update-game-attribute menu/menu-options
@@ -156,6 +157,7 @@
     [:div
      [:label [:input {:type      "radio"
                       :name      "symbol"
+                      :id        "x"
                       :checked   (= (:players @game-state) (get menu/symbol-options "X"))
                       :value     "X"
                       :on-change #(update-game-attribute menu/symbol-options
@@ -164,6 +166,7 @@
       "X (first turn)"]
      [:label [:input {:type      "radio"
                       :name      "symbol"
+                      :id        "o"
                       :checked   (= (:players @game-state) (get menu/symbol-options "O"))
                       :value     "O"
                       :on-change #(update-game-attribute menu/symbol-options
@@ -176,6 +179,7 @@
     [:div
      [:label [:input {:type      "radio"
                       :name      "difficulty"
+                      :id        "hard"
                       :checked   (= (:difficulty @game-state) (get menu/difficulty-options "1"))
                       :value     "1"
                       :on-change #(update-game-attribute menu/difficulty-options
@@ -184,6 +188,7 @@
       "Unbeatable"]
      [:label [:input {:type      "radio"
                       :name      "difficulty"
+                      :id        "medium"
                       :checked   (= (:difficulty @game-state) (get menu/difficulty-options "2"))
                       :value     "2"
                       :on-change #(update-game-attribute menu/difficulty-options
@@ -192,6 +197,7 @@
       "Medium"]
      [:label [:input {:type      "radio"
                       :name      "difficulty"
+                      :id        "easy"
                       :checked   (= (:difficulty @game-state) (get menu/difficulty-options "3"))
                       :value     "3"
                       :on-change #(update-game-attribute menu/difficulty-options
@@ -203,6 +209,7 @@
   [:div
    [:label [:input {:type      "radio"
                     :name      "size"
+                    :id        "classic"
                     :checked   (= (:board @game-state) (board/make-board
                                                          (get menu/board-size-options
                                                               "1")))
@@ -212,6 +219,7 @@
     "3x3"]
    [:label [:input {:type      "radio"
                     :name      "size"
+                    :id        "four"
                     :checked   (= (:board @game-state) (board/make-board
                                                          (get menu/board-size-options
                                                               "2")))
@@ -221,6 +229,7 @@
     "4x4"]
    [:label [:input {:type      "radio"
                     :name      "size"
+                    :id        "classic-3d"
                     :checked   (= (:board @game-state) (board/make-board
                                                          (get menu/board-size-options
                                                               "3")))
@@ -236,6 +245,7 @@
    (difficulty-options)
    (size-options)
    [:button {:type     "button"
+             :id       "start"
              :on-click (fn [e] (start-game))} "Start!"]])
 
 (defn set-options []
@@ -249,7 +259,8 @@
     (set-options)))
 
 (defn render-root []
-  (rd/render [ttt-page] (.getElementById js/document "root")))
+  (rd/render [ttt-page] (.getElementById js/document "root"))
+  )
 
 (defmethod ui/initialize-ui :web-ui [_]
   (render-root)

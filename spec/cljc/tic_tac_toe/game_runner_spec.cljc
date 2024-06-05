@@ -13,7 +13,7 @@
    :three-d?    false, :board [0 0 0 0 0 0 0 0 0],
    :ui         :tui, :save-location :edndb, :parameters ()})
 
-(describe "Game Runner Module"
+(describe "Game Runner"
 
   (it "makes new match data"
     (should= {:players    {:player-1 1 :player-2 2}
@@ -28,7 +28,7 @@
                                                   :board      [1 1 1 0 0 0 0 0 0]})))
 
   (context "gives an end condition string by"
-    (it "saying you tied when no winner"
+    (it "saying you tied whengit a no winner"
       (should= "\nTie!"
                (sut/get-end-condition-string nil {"Player 1" 1 "AI" 2})))
     (it "saying who won if there is a winner"

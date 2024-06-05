@@ -1,12 +1,13 @@
 (ns tic-tac-toe.web-ui-spec
   (:require-macros [speclj.core :refer [describe context it should
                                         should-not should= run-specs
-                                        focus-it focus-describe focus-context]])
+                                        focus-it focus-describe focus-context before]])
   (:require [speclj.core]
             [tic-tac-toe.game-runner :as game]
             [tic-tac-toe.web-ui :as sut]
             [tic-tac-toe.ui-interface :as ui]
             [tic-tac-toe.option-selector :as menu]
+            [reagent.core :as r]
             [clojure.string :as str]))
 
 (def example-game
@@ -19,8 +20,109 @@
    :save-location nil
    :parameters    []})
 
+(defn get-element [selector]
+  (.querySelector js/document selector))
+
+(defn click-flush [button]
+  (.click button)
+  (r/flush))
 
 (describe "Web UI"
+  (context "user interactions have side effects, such as"
+    (before
+      (sut/render-root)
+      (sut/call-game-initialize)
+      (r/flush))
+
+    (context "checking the"
+      (it "game-mode buttons changes the players"
+        (let [pvp-btn (get-element "#pvp")
+              pve-btn (get-element "#pve")]
+          (should= {:players {"Player" 1 "AI" 2} :has-ai true}
+                   (:players @sut/game-state))
+          (click-flush pvp-btn)
+          (should= {:players {"Player 1" 1 "Player 2" 2} :has-ai false}
+                   (:players @sut/game-state))
+          (click-flush pve-btn)
+          (should= {:players {"Player" 1 "AI" 2} :has-ai true}
+                   (:players @sut/game-state))))
+
+      (it "symbol buttons changes the players"
+        (let [x-btn (get-element "#x")
+              o-btn (get-element "#o")]
+          (should= {:players {"Player" 1 "AI" 2} :has-ai true}
+                   (:players @sut/game-state))
+          (click-flush o-btn)
+          (should= {:players {"Player" 2 "AI" 1} :has-ai true}
+                   (:players @sut/game-state))
+          (click-flush x-btn)
+          (should= {:players {"Player" 1 "AI" 2} :has-ai true}
+                   (:players @sut/game-state))))
+
+      (it "difficulty buttons changes the difficulty"
+        (let [hard-btn (get-element "#hard")
+              med-btn (get-element "#medium")
+              easy-btn (get-element "#easy")]
+          (should= 10 (:difficulty @sut/game-state))
+          (click-flush med-btn)
+          (should= 9 (:difficulty @sut/game-state))
+          (click-flush easy-btn)
+          (should= -1 (:difficulty @sut/game-state))
+          (click-flush hard-btn)
+          (should= 10 (:difficulty @sut/game-state))))
+
+      (it "size buttons changes the size"
+        (let [three-2d-btn (get-element "#classic")
+              four-btn (get-element "#four")
+              three-3d-btn (get-element "#classic-3d")]
+          (should= false (:three-d? @sut/game-state))
+          (should= (repeat 9 0) (:board @sut/game-state))
+          (click-flush four-btn)
+          (should= false (:three-d? @sut/game-state))
+          (should= (repeat 16 0) (:board @sut/game-state))
+          (click-flush three-3d-btn)
+          (should= true (:three-d? @sut/game-state))
+          (should= (repeat 27 0) (:board @sut/game-state))
+          (click-flush three-2d-btn)
+          (should= false (:three-d? @sut/game-state))
+          (should= (repeat 9 0) (:board @sut/game-state)))))
+
+    (it "clicking the start button updates the players"
+      (with-redefs [game/game-round (fn [_] nil)]
+        (let [button (get-element "button")]
+          (should= {:players {"Player" 1 "AI" 2} :has-ai true}
+                   (:players @sut/game-state))
+          (click-flush button)
+          (should= {"Player" 1 "AI" 2}
+                   (:players @sut/game-state))))))
+
+  (context "when the game ends, users can press"
+    (before
+      (sut/render-root)
+      (sut/call-game-initialize)
+      (ui/end-game {:ui :web-ui :end-cond "Tie!"})
+      (r/flush))
+
+    (it "retry to restart the game"
+      (swap! sut/game-state assoc :round 7)
+      (with-redefs [game/game-round (fn [game] (reset! sut/game-state game))]
+        (let [retry-btn (get-element "#retry")]
+          (should= 7 (:round @sut/game-state))
+          (should= "Tie!" (:text @sut/page))
+          (click-flush retry-btn)
+          (should= 1 (:round @sut/game-state))
+          (should= sut/page-title (:text @sut/page)))))
+
+    (it "back to go back to the menu"
+      (ui/end-game {:ui :web-ui :end-cond "Tie!"})
+      (swap! sut/game-state assoc :three-d? true)
+      (r/flush)
+      (let [back-btn (get-element "#back")]
+        (should (:three-d? @sut/game-state))
+        (should= "Tie!" (:text @sut/page))
+        (click-flush back-btn)
+        (should-not (:three-d? @sut/game-state))
+        (should= sut/page-title (:text @sut/page)))))
 
   (it "checks if the current move is a valid player move"
     (should (sut/valid-player-move? example-game 3 1)))
@@ -299,15 +401,15 @@
         (should= "\nPlayer wins!" (:text @sut/page))))
 
     (it "ending the game if the next round is an ai turn that ends the game"
-              (let [finished-game (-> example-game
-                                      (assoc :board [2 0 1 2 1 0 0 0 0]))]
-                (reset! sut/game-state finished-game)
-                (sut/play-move! finished-game 1 1)
-                (should= "\nAI wins!" (:text @sut/page)))
+      (let [finished-game (-> example-game
+                              (assoc :board [2 0 1 2 1 0 0 0 0]))]
+        (reset! sut/game-state finished-game)
+        (sut/play-move! finished-game 1 1)
+        (should= "\nAI wins!" (:text @sut/page)))
 
-              (let [finished-game (-> example-game
-                                      (assoc :board [2 1 2 2 2 0 1 2 1])
-                                      (assoc :round 9))]
-                (reset! sut/game-state finished-game)
-                (sut/play-move! finished-game 5 1)
-                (should= "\nTie!" (:text @sut/page))))))
+      (let [finished-game (-> example-game
+                              (assoc :board [2 1 2 2 2 0 1 2 1])
+                              (assoc :round 9))]
+        (reset! sut/game-state finished-game)
+        (sut/play-move! finished-game 5 1)
+        (should= "\nTie!" (:text @sut/page))))))

@@ -24,3 +24,9 @@ html, body{
 .end-condition{
     margin-bottom: 50px;
 }
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -13,7 +13,7 @@
    :three-d?    false, :board [0 0 0 0 0 0 0 0 0],
    :ui         :tui, :save-location :edndb, :parameters ()})
 
-(describe "Game Runner Module"
+(describe "Game Runner"
 
   (it "makes new match data"
     (should= {:players    {:player-1 1 :player-2 2}
